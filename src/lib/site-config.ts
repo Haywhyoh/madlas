@@ -1,0 +1,51 @@
+export const siteConfig = {
+  name: "Madlas Global",
+  legalName: "Madlas Global Ltd.",
+  shortName: "Madlas",
+  tagline: "The Material of Choice for Toughness & Reliability",
+  description:
+    "Madlas Global is a premium steel manufacturing and fabrication company delivering structural steel, pipes, tubes, and custom metal solutions to industries worldwide, backed by 30+ years of engineering excellence.",
+  url: "https://www.madlasglobal.com",
+  ogImage: "/images/og-cover.jpg",
+  locale: "en_US",
+  themeColor: "#0B0B0D",
+  phone: "+1 (800) 555-0199",
+  phoneHref: "+18005550199",
+  email: "info@madlasglobal.com",
+  address: {
+    street: "14 Industrial Harbour Road",
+    city: "Houston",
+    region: "TX",
+    postalCode: "77002",
+    country: "US",
+  },
+  founded: "1994",
+  social: {
+    facebook: "https://facebook.com/madlasglobal",
+    twitter: "https://twitter.com/madlasglobal",
+    linkedin: "https://linkedin.com/company/madlasglobal",
+    instagram: "https://instagram.com/madlasglobal",
+    youtube: "https://youtube.com/@madlasglobal",
+  },
+  keywords: [
+    "steel manufacturer",
+    "steel fabrication company",
+    "structural steel",
+    "steel pipes and tubes",
+    "custom metal manufacturing",
+    "industrial steel supplier",
+    "Madlas Global",
+    "steel plant",
+    "steel export company",
+  ],
+} as const;
+
+export const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Products", href: "/products" },
+  { label: "Projects", href: "/projects" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
+] as const;
