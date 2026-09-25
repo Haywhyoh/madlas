@@ -29,7 +29,7 @@ export function Button({
   return (
     <Link
       href={href}
-      className={`group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-all duration-300 ${variants[variant]} ${className}`}
+      className={`group inline-flex items-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-all duration-300 ${variants[variant]} ${className}`}
       {...rest}
     >
       {children}

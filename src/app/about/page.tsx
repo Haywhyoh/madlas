@@ -4,7 +4,7 @@ import { breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/json-ld";
 import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { Icon } from "@/components/icons/icon";
+import { Icon, type IconName } from "@/components/icons/icon";
 import { Button } from "@/components/ui/button";
 import { StatsBar } from "@/components/sections/stats-bar";
 import { Team } from "@/components/sections/team";
@@ -18,6 +18,29 @@ export const metadata: Metadata = buildMetadata({
   path: "/about",
   keywords: ["about Madlas Global", "steel company history", "steel manufacturer mission"],
 });
+
+const storyHighlights = [
+  "Family-founded, engineering-led leadership team",
+  "Vertically integrated rolling, fabrication & testing",
+  "Full material traceability on every shipment",
+];
+
+const missionVision = [
+  {
+    icon: "shield" as const,
+    eyebrow: "Our Mission",
+    title: "Steel Engineers & Builders Can Trust Without Question",
+    description:
+      "We manufacture certified steel products by investing in disciplined processes, skilled people, and modern equipment — so every beam, pipe, and panel performs exactly as specified, in any climate, on any site, for decades.",
+  },
+  {
+    icon: "spark" as const,
+    eyebrow: "Our Vision",
+    title: "The Most Reliable Steel Partner for Industries That Can't Fail",
+    description:
+      "To be the go-to steel manufacturing partner for construction, energy, marine, and heavy manufacturing clients across every market we serve — where performance is never negotiable.",
+  },
+];
 
 const values = [
   {
@@ -50,6 +73,13 @@ const timeline = [
   { year: "2026", title: "25+ Countries Served", description: "Now exporting certified steel products to more than 25 countries worldwide." },
 ];
 
+const gallery: { icon: IconName; title: string; caption: string }[] = [
+  { icon: "beam", title: "Rolling Mill Floor", caption: "Structural sections rolled to exact tolerance." },
+  { icon: "certificate", title: "Metallurgical Lab", caption: "Every batch tested before it leaves the plant." },
+  { icon: "gear", title: "Fabrication Bay", caption: "CNC cutting and robotic welding in motion." },
+  { icon: "truck", title: "Export Yard", caption: "Certified shipments loading for 25+ countries." },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -69,35 +99,62 @@ export default function AboutPage() {
         crumb="About"
       />
 
+      {/* Our Story */}
       <section className="bg-cream py-20 sm:py-28">
         <Container className="grid gap-14 lg:grid-cols-2 lg:items-center">
-          <div className="relative aspect-[5/4] overflow-hidden rounded-2xl bg-ink">
-            <div className="absolute inset-0 bg-grid opacity-40" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Icon name="certificate" className="h-24 w-24 text-gold/40" />
+          <div className="relative">
+            <div className="relative aspect-[5/4] overflow-hidden rounded-2xl bg-ink">
+              <div className="absolute inset-0 bg-grid opacity-40" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Icon name="beam" className="h-24 w-24 text-gold/40" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
+            </div>
+
+            <div className="absolute -bottom-8 -right-6 flex w-56 items-center gap-4 rounded-2xl border border-gold/20 bg-ink p-5 shadow-2xl sm:-right-10">
+              <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-gold text-ink">
+                <Icon name="certificate" className="h-7 w-7" />
+              </div>
+              <div>
+                <p className="font-display text-lg font-bold text-cream">Est. {siteConfig.founded}</p>
+                <p className="text-xs uppercase tracking-wide text-cream/55">
+                  Houston, TX
+                </p>
+              </div>
             </div>
           </div>
 
           <div>
             <SectionHeading
-              eyebrow="Our Mission & Vision"
-              title="Building the Backbone of Global Industry"
+              eyebrow="Who We Are"
+              title="Forged From a Single Rolling Mill Into a Global Steel Group"
             />
             <p className="mt-5 text-base leading-relaxed text-ink/65">
-              Our mission is simple: manufacture steel products that engineers
-              and builders can trust without question. We invest in
-              certified processes, skilled people, and modern equipment so
-              every beam, pipe, and panel that leaves our plant performs
-              exactly as specified — in any climate, on any site, for
-              decades.
+              Madlas Global began in {siteConfig.founded} with a single rolling
+              mill and a team of twelve people who believed steel should
+              never be a weak link. Three decades later, we&apos;re an
+              integrated manufacturing group producing structural steel,
+              pipes, and custom fabrication for clients who can&apos;t afford
+              to guess about quality.
             </p>
             <p className="mt-4 text-base leading-relaxed text-ink/65">
-              Our vision is to be the most reliable steel manufacturing
-              partner for industries that cannot afford failure —
-              construction, energy, marine, and heavy manufacturing —
-              across every market we serve.
+              Every product that leaves our plant is engineered, tested, and
+              certified — backed by full material traceability and a team
+              that treats every order like a load-bearing responsibility.
             </p>
-            <div className="mt-8">
+
+            <ul className="mt-7 space-y-3">
+              {storyHighlights.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-ink/75">
+                  <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-gold/15 text-gold-dark">
+                    <Icon name="check" className="h-3 w-3" strokeWidth={2.5} />
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-9">
               <Button href="/services" variant="ghost">
                 See Our Capabilities
               </Button>
@@ -108,6 +165,40 @@ export default function AboutPage() {
 
       <StatsBar />
 
+      {/* Mission & Vision */}
+      <section className="bg-cream py-20 sm:py-28">
+        <Container>
+          <SectionHeading
+            eyebrow="Our Mission &amp; Vision"
+            title="Building the Backbone of Global Industry"
+            align="center"
+          />
+
+          <div className="mt-14 grid gap-6 lg:grid-cols-2">
+            {missionVision.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-ink/10 bg-white p-8 transition hover:border-gold/40 hover:shadow-lg sm:p-10"
+              >
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-ink text-gold">
+                  <Icon name={item.icon} className="h-7 w-7" />
+                </div>
+                <p className="mt-6 text-xs font-semibold uppercase tracking-[0.28em] text-gold-dark">
+                  {item.eyebrow}
+                </p>
+                <h3 className="mt-2 font-display text-xl font-bold leading-snug text-ink sm:text-2xl">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-ink/60 sm:text-base">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Core Values */}
       <section className="bg-cream py-20 sm:py-28">
         <Container>
           <SectionHeading
@@ -136,6 +227,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
+      {/* Journey / Timeline */}
       <section className="relative overflow-hidden bg-ink py-20 sm:py-28">
         <div className="absolute inset-0 bg-diagonal opacity-30" aria-hidden="true" />
         <Container className="relative">
@@ -161,6 +253,37 @@ export default function AboutPage() {
               </li>
             ))}
           </ol>
+        </Container>
+      </section>
+
+      {/* Plant Gallery */}
+      <section className="bg-cream py-20 sm:py-28">
+        <Container>
+          <SectionHeading
+            eyebrow="Behind the Scenes"
+            title="Inside Our Operations"
+            description="A glimpse at the plant floor, testing lab, and logistics teams that keep every certified shipment on schedule."
+            align="center"
+          />
+
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {gallery.map((item) => (
+              <div
+                key={item.title}
+                className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-ink/10 bg-ink"
+              >
+                <div className="absolute inset-0 bg-grid opacity-30 transition group-hover:opacity-50" aria-hidden="true" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Icon name={item.icon} className="h-14 w-14 text-gold/40 transition group-hover:text-gold/60" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent" aria-hidden="true" />
+                <div className="absolute inset-x-0 bottom-0 p-5">
+                  <p className="font-display text-sm font-bold text-cream">{item.title}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-cream/55">{item.caption}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </Container>
       </section>
 
