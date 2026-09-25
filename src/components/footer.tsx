@@ -85,9 +85,14 @@ export function Footer() {
             </li>
             <li className="flex gap-3">
               <Icon name="phone" className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold" />
-              <a href={`tel:${siteConfig.phoneHref}`} className="transition hover:text-gold">
-                {siteConfig.phone}
-              </a>
+              <span className="flex flex-col gap-1">
+                <a href={`tel:${siteConfig.phoneHref}`} className="transition hover:text-gold">
+                  {siteConfig.phone}
+                </a>
+                <a href={`tel:${siteConfig.phoneSecondaryHref}`} className="transition hover:text-gold">
+                  {siteConfig.phoneSecondary}
+                </a>
+              </span>
             </li>
             <li className="flex gap-3">
               <Icon name="mail" className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold" />

@@ -19,10 +19,7 @@ export function Hero() {
       <Container className="relative">
         <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div className="animate-fade-up">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-              <Icon name="spark" className="h-3.5 w-3.5" />
-              ISO 9001:2015 Certified Steel Manufacturer
-            </div>
+            
 
             <h1 className="max-w-2xl text-4xl font-bold leading-[1.08] text-cream sm:text-5xl md:text-6xl">
               The Material of{" "}

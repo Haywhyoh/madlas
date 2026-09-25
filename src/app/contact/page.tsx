@@ -35,6 +35,12 @@ const contactCards = [
     href: "#location",
   },
   {
+    icon: "beam" as const,
+    title: "Our Factory",
+    value: `${siteConfig.factoryAddress.street}, ${siteConfig.factoryAddress.city}, ${siteConfig.factoryAddress.region}`,
+    href: "#location",
+  },
+  {
     icon: "clock" as const,
     title: "Working Hours",
     value: "Mon - Sat: 8:00am - 6:00pm",
@@ -63,7 +69,7 @@ export default function ContactPage() {
 
       <section className="bg-cream py-14">
         <Container>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
             {contactCards.map((card) => (
               <a
                 key={card.title}
@@ -90,17 +96,29 @@ export default function ContactPage() {
           <div className="overflow-hidden rounded-2xl border border-ink/10 bg-ink">
             <div className="relative flex aspect-[4/3] items-center justify-center">
               <div className="absolute inset-0 bg-grid opacity-40" />
-              <div className="relative flex flex-col items-center gap-3 px-8 text-center">
+              <div className="relative flex flex-col items-center gap-4 px-8 text-center">
                 <Icon name="map-pin" className="h-10 w-10 text-gold" />
-                <p className="font-display text-lg font-bold text-cream">
-                  Madlas Global Plant &amp; HQ
-                </p>
-                <p className="text-sm text-cream/60">
-                  {siteConfig.address.street}
-                  <br />
-                  {siteConfig.address.city}, {siteConfig.address.region}{" "}
-                  {siteConfig.address.postalCode}
-                </p>
+                <div>
+                  <p className="font-display text-lg font-bold text-cream">
+                    Registered Office
+                  </p>
+                  <p className="mt-1 text-sm text-cream/60">
+                    {siteConfig.address.street}
+                    <br />
+                    {siteConfig.address.city}, {siteConfig.address.region}{" "}
+                    {siteConfig.address.postalCode}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-display text-lg font-bold text-cream">
+                    Factory
+                  </p>
+                  <p className="mt-1 text-sm text-cream/60">
+                    {siteConfig.factoryAddress.street}
+                    <br />
+                    {siteConfig.factoryAddress.city}, {siteConfig.factoryAddress.region}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

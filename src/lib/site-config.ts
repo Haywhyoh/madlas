@@ -1,23 +1,39 @@
 export const siteConfig = {
   name: "Madlas Global",
-  legalName: "Madlas Global Ltd.",
+  legalName: "Madlas Global Investment Company Limited",
   shortName: "Madlas",
+  /** CAC (Corporate Affairs Commission) registration number, per company letterhead. */
+  registrationNumber: "RC 630568",
+  /** Parent/affiliate company, per company letterhead. */
+  affiliateOf: "Adelak Sho. Ent.",
   tagline: "The Material of Choice for Toughness & Reliability",
   description:
-    "Madlas Global is a premium steel manufacturing and fabrication company delivering structural steel, pipes, tubes, and custom metal solutions to industries worldwide, backed by 30+ years of engineering excellence.",
+    "Madlas Global Investment Company Limited (RC 630568), an affiliate of Adelak Sho. Ent., is a Nigerian steel structural fabrication, tanks & trucks, and construction engineering company operating from Lagos and Ogun State.",
   url: "https://www.madlasglobal.com",
   ogImage: "/images/og-cover.jpg",
-  locale: "en_US",
+  locale: "en_NG",
   themeColor: "#0B0B0D",
-  phone: "+1 (800) 555-0199",
-  phoneHref: "+18005550199",
-  email: "info@madlasglobal.com",
+  /** Mobile line, per company letterhead. */
+  phone: "+234 802 320 1933",
+  phoneHref: "+2348023201933",
+  /** Office landline, per company letterhead. */
+  phoneSecondary: "+234 702 504 3686",
+  phoneSecondaryHref: "+2347025043686",
+  email: "madlasglobal@yahoo.com",
+  /** Registered office address, per company letterhead. */
   address: {
-    street: "14 Industrial Harbour Road",
-    city: "Houston",
-    region: "TX",
-    postalCode: "77002",
-    country: "US",
+    street: "6 Ifelodun Street, Off Yusuff Drive, Kollington, Alagbado",
+    city: "Agege",
+    region: "Lagos",
+    postalCode: "P.O. Box 4547",
+    country: "Nigeria",
+  },
+  /** Factory / plant address, per company letterhead. */
+  factoryAddress: {
+    street: "Km. 30, Abeokuta / Lagos Expressway, Ilepa",
+    city: "Ifo",
+    region: "Ogun State",
+    country: "Nigeria",
   },
   founded: "1994",
   social: {
@@ -28,15 +44,14 @@ export const siteConfig = {
     youtube: "https://youtube.com/@madlasglobal",
   },
   keywords: [
-    "steel manufacturer",
-    "steel fabrication company",
-    "structural steel",
-    "steel pipes and tubes",
-    "custom metal manufacturing",
-    "industrial steel supplier",
+    "steel structural fabricators",
+    "tanks and trucks",
+    "construction engineers",
+    "structural steel Nigeria",
+    "steel fabrication company Lagos",
+    "steel plant Ogun State",
     "Madlas Global",
-    "steel plant",
-    "steel export company",
+    "Madlas Global Investment Company Limited",
   ],
 } as const;
 

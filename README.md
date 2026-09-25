@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Madlas Global
+
+Marketing website for **Madlas Global**, a steel manufacturing & fabrication
+company. Built with the latest **Next.js (App Router)**, TypeScript, and
+Tailwind CSS v4, styled in a **gold / black / white** industrial theme.
+
+## Tech Stack
+
+- **Next.js 16** (App Router, React 19, Turbopack)
+- **TypeScript**
+- **Tailwind CSS v4**
+- Fully static-friendly rendering (SSG for blog posts, static pages elsewhere)
+
+## SEO Features
+
+- Centralized metadata builder (`src/lib/seo.ts`) — canonical URLs, Open
+  Graph, Twitter cards, and keyword tags on every route.
+- Structured data (JSON-LD) for `Organization`, `WebSite`, `BreadcrumbList`,
+  `Service`, `Article`, and `FAQPage` (`src/lib/json-ld.ts`).
+- Dynamic `sitemap.xml`, `robots.txt`, and `manifest.webmanifest`
+  (`src/app/sitemap.ts`, `robots.ts`, `manifest.ts`).
+- Semantic HTML (`header`/`nav`/`main`/`section`/`article`/`footer`), a single
+  `<h1>` per page, and a "skip to content" link.
+- `next/font` (Oswald + Inter, `display: swap`) for fast, self-hosted fonts.
+- Descriptive `alt`/`aria` attributes and accessible focus states.
+
+## Pages
+
+| Route | Description |
+| --- | --- |
+| `/` | Full homepage (hero, services, process, team, testimonials, projects, blog, FAQ, CTA) |
+| `/about` | Company story, mission/vision, values, timeline, team |
+| `/services` | Full service catalog with details |
+| `/products` | Product catalog with specs |
+| `/projects` | Project/portfolio showcase |
+| `/blog` + `/blog/[slug]` | Blog listing and individual article pages (SSG) |
+| `/contact` | Contact form, contact details, map placeholder |
+| `/privacy-policy`, `/terms-of-service` | Legal placeholder pages |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Notes
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Content in `src/lib/data.ts` (services, products, projects, blog posts,
+  team, testimonials, FAQs) is placeholder/dummy data — swap in real content,
+  imagery, and copy before launch.
+- Update `src/lib/site-config.ts` with real contact details, social links,
+  and domain before deploying.
+- Replace the SVG-based visuals with real photography (`next/image`) for
+  production.

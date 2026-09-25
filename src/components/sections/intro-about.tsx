@@ -22,12 +22,12 @@ export function IntroAbout() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
             </div>
 
-            <div className="absolute -bottom-8 -right-6 flex w-56 items-center gap-4 rounded-2xl border border-gold/20 bg-ink p-5 shadow-2xl sm:-right-10">
-              <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-gold text-ink">
-                <Icon name="certificate" className="h-7 w-7" />
+            <div className="absolute -bottom-6 -right-4 flex w-48 max-w-[calc(100%-1rem)] items-center gap-3 rounded-2xl border border-gold/20 bg-ink p-4 shadow-2xl sm:-bottom-8 sm:-right-6 sm:w-56 sm:gap-4 sm:p-5 lg:-right-8">
+              <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-gold text-ink sm:h-14 sm:w-14">
+                <Icon name="certificate" className="h-5 w-5 sm:h-7 sm:w-7" />
               </div>
               <div>
-                <p className="font-display text-lg font-bold text-cream">30+ Years</p>
+                <p className="font-display text-base font-bold text-cream sm:text-lg">30+ Years</p>
                 <p className="text-xs uppercase tracking-wide text-cream/55">
                   Manufacturing Excellence
                 </p>

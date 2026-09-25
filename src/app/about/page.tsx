@@ -66,7 +66,7 @@ const values = [
 ];
 
 const timeline = [
-  { year: "1994", title: "Founded in Houston, TX", description: "Madlas Global opens its first rolling mill with a team of 12." },
+  { year: "1994", title: "Founded in Lagos, Nigeria", description: "Madlas Global opens its first rolling mill with a team of 12." },
   { year: "2003", title: "First Export Contract", description: "Shipped our first international order of structural steel to Latin America." },
   { year: "2011", title: "ISO 9001 Certification", description: "Achieved ISO 9001 certification and opened our metallurgical testing lab." },
   { year: "2018", title: "Pipe & Tube Division Launch", description: "Expanded capacity with a dedicated seamless pipe manufacturing line." },
@@ -111,14 +111,14 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
             </div>
 
-            <div className="absolute -bottom-8 -right-6 flex w-56 items-center gap-4 rounded-2xl border border-gold/20 bg-ink p-5 shadow-2xl sm:-right-10">
-              <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-gold text-ink">
-                <Icon name="certificate" className="h-7 w-7" />
+            <div className="absolute -bottom-6 -right-4 flex w-48 max-w-[calc(100%-1rem)] items-center gap-3 rounded-2xl border border-gold/20 bg-ink p-4 shadow-2xl sm:-bottom-8 sm:-right-6 sm:w-56 sm:gap-4 sm:p-5 lg:-right-8">
+              <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-gold text-ink sm:h-14 sm:w-14">
+                <Icon name="certificate" className="h-5 w-5 sm:h-7 sm:w-7" />
               </div>
               <div>
-                <p className="font-display text-lg font-bold text-cream">Est. {siteConfig.founded}</p>
+                <p className="font-display text-base font-bold text-cream sm:text-lg">Est. {siteConfig.founded}</p>
                 <p className="text-xs uppercase tracking-wide text-cream/55">
-                  Houston, TX
+                  {siteConfig.address.city}, {siteConfig.address.region}
                 </p>
               </div>
             </div>
@@ -291,9 +291,9 @@ export default function AboutPage() {
 
       <section className="bg-cream py-16">
         <Container className="rounded-2xl border border-gold/20 bg-ink p-10 text-center sm:p-14">
-          <p className="font-display text-2xl font-bold text-cream sm:text-3xl">
+          <h2 className="font-display text-2xl font-bold text-cream sm:text-3xl">
             Certified, Accountable, and Built on Trust
-          </p>
+          </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm text-cream/60 sm:text-base">
             {siteConfig.name} is proud to hold ISO 9001:2015 certification
             across all manufacturing facilities, with full material
