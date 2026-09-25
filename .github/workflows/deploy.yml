@@ -74,7 +74,7 @@ jobs:
             set -euo pipefail
             echo "$GHCR_TOKEN" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
             cd "${{ secrets.APP_PATH }}"
-            git -c http.extraheader="AUTHORIZATION: bearer ${GHCR_TOKEN}" fetch https://github.com/${{ github.repository }}.git main
+            git fetch "https://x-access-token:${GHCR_TOKEN}@github.com/${{ github.repository }}.git" main
             git reset --hard FETCH_HEAD
             docker compose pull
             docker compose up -d --pull never
