@@ -198,37 +198,42 @@ export const team: TeamMember[] = [
     name: "Alhaji A.O. Shorunke",
     role: "CEO / Project Director",
     initials: "AOS",
+    image: "/images/CEO_madlasglobal.jpeg",
   },
   {
     name: "Afeez Ogunbunmi",
     role: "Head of Contractor",
     initials: "AO",
+    image: "/images/ogunbumi_afeez.jpeg",
   },
   {
     name: "Rafiu Moshood",
     role: "Procurement / Purchasing Manager",
     initials: "RM",
+    image: "/images/rafiu_moshood.jpeg",
   },
   {
     name: "Monsuru Shorunke",
     role: "Admin / Workshop Manager",
     initials: "MS",
+    image: "/images/afeez_shorunke.jpeg",
   },
   {
     name: "Abiola Shorunke",
     role: "Assistant to Admin / Workshop Manager",
     initials: "AS",
   },
-
   {
     name: "Isiaka Bolaji",
     role: "Secretary / P.A. to the M.D.",
     initials: "IB",
+    image: "/images/bolajii-secretary.jpeg",
   },
   {
     name: "Saheed Raheem",
-    role: "Project Coordinator",
+    role: "Head of Design and Detailing",
     initials: "SR",
+    image: "/images/raheem_saheed.jpeg",
   },
   {
     name: "Alao Cyprian",
