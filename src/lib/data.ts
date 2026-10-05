@@ -216,12 +216,12 @@ export const team: TeamMember[] = [
     name: "Monsuru Shorunke",
     role: "Admin / Workshop Manager",
     initials: "MS",
-    image: "/images/afeez_shorunke.jpeg",
   },
   {
     name: "Abiola Shorunke",
     role: "Assistant to Admin / Workshop Manager",
     initials: "AS",
+    image: "/images/afeez_shorunke.jpeg",
   },
   {
     name: "Isiaka Bolaji",
