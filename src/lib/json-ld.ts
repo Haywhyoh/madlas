@@ -16,8 +16,11 @@ export function organizationJsonLd() {
       name: siteConfig.affiliateOf,
     },
     url: siteConfig.url,
-    logo: absoluteUrl("/images/logo.png"),
-    image: absoluteUrl(siteConfig.ogImage),
+    logo: absoluteUrl(siteConfig.logoSquare),
+    image: [
+      absoluteUrl(siteConfig.ogImage),
+      absoluteUrl(siteConfig.logo),
+    ],
     description: siteConfig.description,
     foundingDate: siteConfig.founded,
     email: siteConfig.email,

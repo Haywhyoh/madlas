@@ -20,7 +20,10 @@ export function Footer() {
     <footer className="border-t border-gold/10 bg-ink text-cream">
       <Container className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
         <div>
-          <Logo dark />
+          <Logo dark size="lg" />
+          <p className="mt-2 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-gold/70">
+            {siteConfig.registrationNumber} · Affiliate of {siteConfig.affiliateOf}
+          </p>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream/60">
             {siteConfig.description}
           </p>

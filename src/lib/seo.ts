@@ -39,13 +39,13 @@ export function buildMetadata({
       locale: siteConfig.locale,
       type: "website",
       images: [
-        {
-          url: image,
-          width: 1200,
-          height: 630,
-          alt: `${siteConfig.name} — ${title}`,
-        },
-      ],
+      {
+        url: image,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} — ${siteConfig.tagline}`,
+      },
+    ],
     },
     twitter: {
       card: "summary_large_image",

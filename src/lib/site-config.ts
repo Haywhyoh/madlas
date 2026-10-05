@@ -10,6 +10,11 @@ export const siteConfig = {
   description:
     "Madlas Global Investment Company Limited (RC 630568), an affiliate of Adelak Sho. Ent., is a Nigerian steel structural fabrication, tanks & trucks, and construction engineering company operating from Lagos and Ogun State.",
   url: "https://www.madlasglobal.com",
+  /** Primary brand mark (header, footer, schema.org logo). */
+  logo: "/images/mgil_logo.jpeg",
+  /** Square padded mark for PWA / apple touch / schema fallbacks. */
+  logoSquare: "/images/logo.png",
+  /** Open Graph / Twitter share image (1200×630). */
   ogImage: "/images/og-cover.jpg",
   locale: "en_NG",
   themeColor: "#0B0B0D",
