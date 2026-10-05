@@ -246,8 +246,8 @@ export default function ServicesPage() {
               </ul>
 
               <div className="mt-8">
-                <Button href="/products" variant="secondary">
-                  View All Products
+                <Button href="/contact" variant="secondary">
+                  Request a Quote
                 </Button>
               </div>
             </div>
