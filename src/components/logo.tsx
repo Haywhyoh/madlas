@@ -10,9 +10,9 @@ type LogoProps = {
 };
 
 const sizes = {
-  sm: { mark: 40, markW: 58, text: "text-base", sub: "text-[0.55rem]" },
-  md: { mark: 48, markW: 70, text: "text-lg", sub: "text-[0.6rem]" },
-  lg: { mark: 64, markW: 94, text: "text-xl", sub: "text-[0.65rem]" },
+  sm: { mark: 40, markW: 58, text: "text-base" },
+  md: { mark: 48, markW: 70, text: "text-lg" },
+  lg: { mark: 64, markW: 94, text: "text-xl" },
 } as const;
 
 export function Logo({ dark = false, size = "md" }: LogoProps) {
@@ -50,11 +50,6 @@ export function Logo({ dark = false, size = "md" }: LogoProps) {
           }`}
         >
           MADLAS
-        </span>
-        <span
-          className={`mt-1 font-semibold uppercase tracking-[0.38em] text-gold ${s.sub}`}
-        >
-          Global · MGIL
         </span>
       </span>
     </Link>
