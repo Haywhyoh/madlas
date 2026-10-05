@@ -214,6 +214,7 @@ export const team: TeamMember[] = [
     name: "Monsuru Shorunke",
     role: "Admin / Workshop Manager",
     initials: "MS",
+    image: "/images/monsuru.jpeg",
     featured: true,
   },
   {
