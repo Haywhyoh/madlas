@@ -250,7 +250,6 @@ export const team: TeamMember[] = [
 ];
 
 export const featuredTeam = team.filter((member) => member.featured);
-export const remainingTeam = team.filter((member) => !member.featured);
 
 export type Testimonial = {
   quote: string;

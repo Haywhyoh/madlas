@@ -4,7 +4,7 @@ import { breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/json-ld";
 import { PageHero } from "@/components/sections/page-hero";
 import { Team } from "@/components/sections/team";
 import { CtaBanner } from "@/components/sections/cta-banner";
-import { remainingTeam } from "@/lib/data";
+import { team } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
   title: "Our Team | Madlas Global Leadership & Operations",
@@ -29,15 +29,15 @@ export default function TeamPage() {
       <PageHero
         eyebrow="Our Team"
         title="The People Behind Every Project"
-        description="From procurement and workshop management to project coordination and administration — meet the wider Madlas Global team."
+        description="From leadership and design to procurement, workshop, and administration — meet the full Madlas Global team."
         crumb="Team"
       />
 
       <Team
-        members={remainingTeam}
-        eyebrow="Operations Team"
-        title="Supporting Every Job From Bid to Delivery"
-        description="The specialists who keep fabrication, procurement, and site coordination running day to day."
+        members={team}
+        eyebrow="Full Team"
+        title="Leadership & Operations"
+        description="The people who keep fabrication, procurement, and site coordination running from bid to delivery."
       />
 
       <CtaBanner />
