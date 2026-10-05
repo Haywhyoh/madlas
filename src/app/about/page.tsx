@@ -287,7 +287,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <Team />
+      <Team showViewAll />
 
       <section className="bg-cream py-16">
         <Container className="rounded-2xl border border-gold/20 bg-ink p-10 text-center sm:p-14">

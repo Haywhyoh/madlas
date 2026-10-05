@@ -37,7 +37,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <Industries />
       <Process />
-      <Team />
+      <Team showViewAll />
       <Testimonials />
       <ProjectsShowcase />
       <BlogPreview />
