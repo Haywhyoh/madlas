@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Icon } from "@/components/icons/icon";
@@ -20,11 +21,23 @@ export function Team() {
               key={member.name}
               className="group overflow-hidden rounded-2xl border border-ink/10 bg-white text-center transition hover:border-gold/40 hover:shadow-lg"
             >
-              <div className="relative flex aspect-square items-center justify-center bg-ink">
-                <div className="absolute inset-0 bg-grid opacity-30" />
-                <span className="font-display text-3xl font-bold text-gold">
-                  {member.initials}
-                </span>
+              <div className="relative flex aspect-square items-center justify-center overflow-hidden bg-ink">
+                {member.image ? (
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-grid opacity-30" />
+                    <span className="font-display text-3xl font-bold text-gold">
+                      {member.initials}
+                    </span>
+                  </>
+                )}
               </div>
               <div className="p-5">
                 <h3 className="font-display text-base font-bold text-ink">

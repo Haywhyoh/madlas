@@ -189,13 +189,52 @@ export type TeamMember = {
   name: string;
   role: string;
   initials: string;
+  /** Optional headshot path under /public (e.g. "/team/afeez.jpg"). Falls back to initials. */
+  image?: string;
 };
 
 export const team: TeamMember[] = [
-  { name: "Daniel Okafor", role: "Chief Executive Officer", initials: "DO" },
-  { name: "Amara Chukwu", role: "Head of Engineering", initials: "AC" },
-  { name: "Femi Balogun", role: "Plant Operations Director", initials: "FB" },
-  { name: "Grace Adeyemi", role: "Quality Assurance Lead", initials: "GA" },
+  {
+    name: "Alhaji A.O. Shorunke",
+    role: "CEO / Project Director",
+    initials: "AOS",
+  },
+  {
+    name: "Afeez Ogunbunmi",
+    role: "Head of Contractor",
+    initials: "AO",
+  },
+  {
+    name: "Rafiu Moshood",
+    role: "Procurement / Purchasing Manager",
+    initials: "RM",
+  },
+  {
+    name: "Monsuru Shorunke",
+    role: "Admin / Workshop Manager",
+    initials: "MS",
+  },
+  {
+    name: "Abiola Shorunke",
+    role: "Assistant to Admin / Workshop Manager",
+    initials: "AS",
+  },
+
+  {
+    name: "Isiaka Bolaji",
+    role: "Secretary / P.A. to the M.D.",
+    initials: "IB",
+  },
+  {
+    name: "Saheed Raheem",
+    role: "Project Coordinator",
+    initials: "SR",
+  },
+  {
+    name: "Alao Cyprian",
+    role: "Workshop Coordinator",
+    initials: "AC",
+  },
 ];
 
 export type Testimonial = {
