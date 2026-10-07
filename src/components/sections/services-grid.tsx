@@ -37,8 +37,7 @@ export function ServicesGrid() {
           {services.map((service, index) => (
             <Link
               key={service.slug}
-              href={`/services#${service.slug}`}
-              id={service.slug}
+              href={`/services/${service.slug}`}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-ink/10 bg-white transition-all duration-300 hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-xl"
             >
               <div className="relative aspect-[16/10] overflow-hidden bg-ink">
