@@ -3,13 +3,48 @@ export type WorkImage = {
   alt: string;
 };
 
+export type ServiceFeature = {
+  title: string;
+  description: string;
+};
+
+export type ServiceSpec = {
+  label: string;
+  value: string;
+};
+
+export type ServiceProcessStep = {
+  title: string;
+  description: string;
+};
+
 export type Service = {
   slug: string;
   title: string;
+  /** Main SEO target keyword for this service's dedicated page. */
+  primaryKeyword: string;
+  /** Supporting long-tail keywords targeted on the service page. */
+  secondaryKeywords: string[];
+  /** Optimized <title> for the dedicated service page. */
+  metaTitle: string;
+  /** Optimized meta description for the dedicated service page. */
+  metaDescription: string;
   shortDescription: string;
   description: string;
+  /** Longer-form paragraphs for the dedicated service page. */
+  overview: string[];
   icon: string;
   points: string[];
+  /** Detailed feature cards for the dedicated service page. */
+  features: ServiceFeature[];
+  /** Industries / use cases this service serves. */
+  applications: string[];
+  /** Quick-reference spec sheet shown on the dedicated service page. */
+  specifications: ServiceSpec[];
+  /** Fabrication/erection process specific to this service. */
+  process: ServiceProcessStep[];
+  /** Service-specific FAQs (also rendered as FAQPage structured data). */
+  faqs: Faq[];
   images: WorkImage[];
 };
 
@@ -22,11 +57,101 @@ export const services: Service[] = [
     description:
       "We build new fuel tanker trailers in the workshop: tank shells, ladders, chassis, landing legs, and painted finishes, ready to couple to a truck head.",
     icon: "truck",
+    primaryKeyword: "fuel tanker fabrication",
+    secondaryKeywords: [
+      "tanker trailer manufacturer",
+      "petroleum tanker trailer",
+      "semi-trailer tanker fabrication Nigeria",
+      "tanker chassis and ladder fabrication",
+    ],
+    metaTitle:
+      "Fuel Tanker Fabrication & Tanker Trailer Manufacturer | Madlas Global",
+    metaDescription:
+      "Madlas Global fabricates fuel tanker trailers in our Ogun State workshop — tank shells, chassis, ladders, landing legs, and painted finishes, ready to couple to a truck head.",
+    overview: [
+      "Madlas Global fabricates new semi-trailer fuel tankers from the ground up in our Ogun State workshop. Every tank shell is cut, rolled, and welded in-house, then mounted onto a heavy-duty chassis built to carry petroleum products, diesel, and other bulk liquids across Nigerian roads.",
+      "Each trailer leaves our yard with ladders and walkways for safe top access, landing legs for stand-alone parking, and a full workshop paint finish. We build to the axle configuration, compartment layout, and capacity your haulage operation needs, then quality-check the completed unit before it is coupled to a truck head.",
+    ],
     points: [
       "New semi-trailer tankers",
       "Ladders and walkways",
       "Chassis and landing legs",
       "Workshop painting",
+    ],
+    features: [
+      {
+        title: "Rolled & Welded Tank Shells",
+        description:
+          "Steel plate is cut, rolled, and seam-welded in-house to form single or multi-compartment tanker shells built for petroleum and bulk liquid haulage.",
+      },
+      {
+        title: "Heavy-Duty Chassis Fabrication",
+        description:
+          "Tandem and tri-axle semi-trailer chassis engineered to carry a full tanker load on Nigerian depot and highway routes.",
+      },
+      {
+        title: "Ladders, Walkways & Landing Legs",
+        description:
+          "Top-mount ladders, catwalks, and landing legs are fitted for safe loading access and stand-alone parking without a truck head.",
+      },
+      {
+        title: "Workshop Painting & Finishing",
+        description:
+          "Degreasing, priming, and a full painted finish are completed before the trailer leaves our workshop.",
+      },
+    ],
+    applications: [
+      "Petroleum (PMS/AGO/DPK) distribution",
+      "Depot-to-retail fuel haulage",
+      "Lubricant & bulk liquid transport",
+      "Filling station fuel supply",
+    ],
+    specifications: [
+      { label: "Build Type", value: "New semi-trailer tanker, built to order" },
+      { label: "Compartments", value: "Single or multi-compartment tank shell" },
+      { label: "Chassis", value: "Tandem/tri-axle chassis with landing legs" },
+      { label: "Access", value: "Top ladder, walkway, and handrails" },
+      { label: "Finish", value: "Degreased, primed, and workshop-painted" },
+    ],
+    process: [
+      {
+        title: "Shell Rolling & Welding",
+        description:
+          "Steel plate is rolled to the tank diameter and seam-welded into the tanker shell and end caps.",
+      },
+      {
+        title: "Chassis Fabrication",
+        description:
+          "The semi-trailer chassis is built and matched to the tank shell and axle configuration.",
+      },
+      {
+        title: "Fittings & Access",
+        description:
+          "Ladders, walkways, landing legs, and handrails are welded and bolted into place.",
+      },
+      {
+        title: "Painting & Quality Check",
+        description:
+          "The trailer is degreased, primed, painted, and inspected before it is coupled to a truck head.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can you build a tanker trailer to a specific capacity?",
+        answer:
+          "Yes. We build the tank shell, compartment layout, and chassis to the capacity and axle configuration your haulage operation requires.",
+      },
+      {
+        question:
+          "Do your tanker trailers come with ladders and landing legs fitted?",
+        answer:
+          "Every tanker trailer we fabricate leaves the workshop with ladders, walkways, and landing legs fitted, plus a full painted finish.",
+      },
+      {
+        question: "Can you supply a trailer without a truck head?",
+        answer:
+          "Yes, we fabricate the semi-trailer tanker on its own. We can also assist with coupling and servicing when the trailer is paired with a truck head.",
+      },
     ],
     images: [
       {
