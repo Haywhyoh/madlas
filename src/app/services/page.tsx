@@ -73,7 +73,7 @@ export default function ServicesPage() {
             serviceJsonLd({
               name: service.title,
               description: service.description,
-              path: `/services#${service.slug}`,
+              path: `/services/${service.slug}`,
             })
           )}
         />
