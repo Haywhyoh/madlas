@@ -17,14 +17,10 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Madlas Global fabricates fuel tankers, storage tanks, steel structures and roof trusses, filling station canopies, truck bodies, and elevated water-tank towers.",
   path: "/services",
-  keywords: [
-    "fuel tanker fabrication",
-    "storage tank fabrication",
-    "steel roof trusses",
-    "filling station construction",
-    "truck body building",
-    "elevated water tank tower",
-  ],
+  keywords: services.flatMap((service) => [
+    service.primaryKeyword,
+    ...service.secondaryKeywords,
+  ]),
 });
 
 const iconMap: Record<string, IconName> = {
@@ -97,7 +93,7 @@ export default function ServicesPage() {
           />
 
           <div className="mx-auto mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <div
                 key={service.slug}
                 id={service.slug}
@@ -112,7 +108,7 @@ export default function ServicesPage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <span className="absolute left-4 top-4 rounded-full bg-gold px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-ink">
-                    Service 0{index + 1}
+                    {service.primaryKeyword}
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" aria-hidden="true" />
                 </div>
