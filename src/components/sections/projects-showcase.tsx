@@ -1,8 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
-import { Icon } from "@/components/icons/icon";
 import { projects } from "@/lib/data";
 
 export function ProjectsShowcase() {
@@ -14,8 +14,8 @@ export function ProjectsShowcase() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             eyebrow="Our Work in Action"
-            title="Recent Projects Delivered Worldwide"
-            description="A look at some of the structural, piping, and custom fabrication projects our team has recently completed."
+            title="Recent Jobs on the Ground"
+            description="Tankers, filling stations, roof trusses, storage tanks, truck bodies, and tower stands from recent jobs."
           />
           <Button href="/projects" variant="ghost" className="hidden sm:inline-flex">
             View All Projects
@@ -29,11 +29,13 @@ export function ProjectsShowcase() {
               href={`/projects#${project.slug}`}
               className="group relative overflow-hidden rounded-2xl border border-ink/10 bg-ink"
             >
-              <div className="relative flex aspect-[16/10] items-center justify-center">
-                <div className="absolute inset-0 bg-grid opacity-30" />
-                <Icon
-                  name="beam"
-                  className="h-16 w-16 text-gold/25 transition-transform duration-500 group-hover:scale-110"
+              <div className="relative aspect-[16/10]">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
               </div>

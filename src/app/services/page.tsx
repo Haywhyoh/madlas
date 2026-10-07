@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbJsonLd, jsonLdScriptProps, serviceJsonLd } from "@/lib/json-ld";
@@ -9,14 +10,21 @@ import { Icon, type IconName } from "@/components/icons/icon";
 import { Button } from "@/components/ui/button";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { ProjectsShowcase } from "@/components/sections/projects-showcase";
-import { services, products } from "@/lib/data";
+import { services } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Services | Steel Fabrication, Piping & Custom Manufacturing",
+  title: "Our Services | Tankers, Tanks, Structures & Filling Stations",
   description:
-    "Explore Madlas Global's full range of steel manufacturing services: structural fabrication, pipes & tubes, custom metal manufacturing, sheet metal processing, coating, and quality testing.",
+    "Madlas Global fabricates fuel tankers, storage tanks, steel structures and roof trusses, filling station canopies, truck bodies, and elevated water-tank towers.",
   path: "/services",
-  keywords: ["steel fabrication services", "steel manufacturing services", "custom steel solutions"],
+  keywords: [
+    "fuel tanker fabrication",
+    "storage tank fabrication",
+    "steel roof trusses",
+    "filling station construction",
+    "truck body building",
+    "elevated water tank tower",
+  ],
 });
 
 const iconMap: Record<string, IconName> = {
@@ -26,6 +34,9 @@ const iconMap: Record<string, IconName> = {
   layers: "layers",
   shield: "shield",
   certificate: "certificate",
+  building: "building",
+  flame: "flame",
+  truck: "truck",
 };
 
 const capabilityChecklist = [
@@ -36,8 +47,12 @@ const capabilityChecklist = [
 ];
 
 const rangeChecklist = [
-  "Wide range of grades, gauges & alloys",
-  "Export-ready with certified mill reports",
+  "New tanker trailers, ladders, chassis, and painting",
+  "Vertical and horizontal steel storage tanks",
+  "Warehouse frames, roof trusses, and building roofs",
+  "Filling station canopies, new build and renovation",
+  "Enclosed truck bodies and box vans",
+  "Elevated steel towers with cage ladders",
 ];
 
 export default function ServicesPage() {
@@ -66,8 +81,8 @@ export default function ServicesPage() {
 
       <PageHero
         eyebrow="Our Services"
-        title="Complete Steel Manufacturing Capabilities"
-        description="From structural fabrication to finished, certified components — explore the full range of services that make Madlas Global a complete manufacturing partner."
+        title="Fabrication and Construction Services"
+        description="Fuel tankers, storage tanks, steel structures, filling stations, truck bodies, and elevated water-tank towers — built in our workshop and erected on site."
         crumb="Services"
       />
 
@@ -76,8 +91,8 @@ export default function ServicesPage() {
         <Container>
           <SectionHeading
             eyebrow="Our Services"
-            title="Offering Top-Tier Solutions to Every Industry"
-            description="From raw material sourcing to finished, certified components — our integrated capabilities cover every stage of the steel value chain."
+            title="Six Lines of Fabrication and Site Work"
+            description="Each service is work we fabricate and erect: tankers and tanks in the workshop, structures and stations on site."
             align="center"
           />
 
@@ -89,17 +104,17 @@ export default function ServicesPage() {
                 className="group relative flex flex-col overflow-hidden rounded-2xl border border-ink/10 bg-ink transition-all duration-300 hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-2xl"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-ink-soft">
-                  <div className="absolute inset-0 bg-grid opacity-40" aria-hidden="true" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Icon
-                      name={iconMap[service.icon]}
-                      className="h-16 w-16 text-gold/30 transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
+                  <Image
+                    src={service.images[0].src}
+                    alt={service.images[0].alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
                   <span className="absolute left-4 top-4 rounded-full bg-gold px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-ink">
                     Service 0{index + 1}
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" aria-hidden="true" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" aria-hidden="true" />
                 </div>
 
                 <div className="flex flex-1 flex-col p-7">
@@ -109,6 +124,24 @@ export default function ServicesPage() {
                   <p className="mt-2.5 text-sm leading-relaxed text-cream/55">
                     {service.shortDescription}
                   </p>
+                  {service.images.length > 1 && (
+                    <div className="mt-5 grid grid-cols-3 gap-2">
+                      {service.images.slice(1, 4).map((image) => (
+                        <div
+                          key={image.src}
+                          className="relative aspect-[4/3] overflow-hidden rounded-lg"
+                        >
+                          <Image
+                            src={image.src}
+                            alt={image.alt}
+                            fill
+                            className="object-cover"
+                            sizes="120px"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   <Link
                     href="/contact"
                     className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold"
@@ -158,11 +191,9 @@ export default function ServicesPage() {
               </ul>
 
               <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/65">
-                We combine decades of metallurgical expertise with modern
-                automation to deliver steel products that meet exact
-                specifications — on schedule, every time. Our clients trust
-                us because we treat every order like a load-bearing
-                responsibility.
+                Tankers, tanks, frames, canopies, and truck bodies are
+                fabricated in our workshop, then erected on site. The photos
+                on this page are jobs from that work.
               </p>
 
               <div className="mt-9">
@@ -172,10 +203,13 @@ export default function ServicesPage() {
 
             <div className="relative">
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-gold/15 bg-ink-soft">
-                <div className="absolute inset-0 bg-grid opacity-40" aria-hidden="true" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Icon name="flame" className="h-24 w-24 text-gold/40" />
-                </div>
+                <Image
+                  src="/images/northwest-filling-station-completed-1.jpg"
+                  alt="Completed Northwest filling station canopy"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" aria-hidden="true" />
               </div>
 
@@ -200,23 +234,30 @@ export default function ServicesPage() {
           {/* Row B: product range */}
           <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div className="grid gap-5 sm:grid-cols-2">
-              {products.map((product) => (
-                <div
-                  key={product.slug}
-                  className="flex items-start gap-4 rounded-xl border border-gold/10 bg-ink-soft/60 p-5 transition hover:border-gold/30"
+              {services.map((service) => (
+                <Link
+                  key={service.slug}
+                  href={`#${service.slug}`}
+                  className="group overflow-hidden rounded-xl border border-gold/10 bg-ink-soft/60 transition hover:border-gold/30"
                 >
-                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg bg-gold/10 text-gold">
-                    <Icon name={iconMap[product.icon]} className="h-5 w-5" />
+                  <div className="relative aspect-[16/10]">
+                    <Image
+                      src={service.images[0].src}
+                      alt={service.images[0].alt}
+                      fill
+                      className="object-cover transition duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, 25vw"
+                    />
                   </div>
-                  <div>
+                  <div className="flex items-start gap-3 p-4">
+                    <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-gold/10 text-gold">
+                      <Icon name={iconMap[service.icon]} className="h-4 w-4" />
+                    </div>
                     <h4 className="font-display text-sm font-bold text-cream">
-                      {product.name}
+                      {service.title}
                     </h4>
-                    <p className="mt-1 text-xs leading-relaxed text-cream/50 line-clamp-2">
-                      {product.description}
-                    </p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
 
@@ -226,12 +267,11 @@ export default function ServicesPage() {
                 Our Range
               </div>
               <h2 className="text-3xl font-bold leading-tight text-cream sm:text-4xl">
-                Innovative Steel Solutions for Every Industry
+                Workshop Fabrication and Site Erection
               </h2>
               <p className="mt-5 text-base leading-relaxed text-cream/65">
-                Beams, pipes, plates, and coated coil manufactured to
-                international standards — ready to move from our plant floor
-                to your job site or port of call.
+                From a tanker still on landing legs to a finished filling
+                station canopy, the range is the work we build and install.
               </p>
 
               <ul className="mt-6 space-y-3">

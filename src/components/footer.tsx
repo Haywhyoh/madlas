@@ -64,7 +64,7 @@ export function Footer() {
             Our Services
           </h3>
           <ul className="mt-5 space-y-3 text-sm text-cream/70">
-            {services.slice(0, 5).map((service) => (
+            {services.map((service) => (
               <li key={service.slug}>
                 <Link href={`/services#${service.slug}`} className="transition hover:text-gold">
                   {service.title}

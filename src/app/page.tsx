@@ -20,9 +20,14 @@ import { CtaBanner } from "@/components/sections/cta-banner";
 export const metadata: Metadata = buildMetadata({
   title: "Madlas Global | Premium Steel Manufacturing & Fabrication Company",
   description:
-    "Madlas Global manufactures structural steel, pipes, tubes, and custom metal solutions for construction, energy, marine, and industrial clients in 25+ countries. Get a certified quote today.",
+    "Madlas Global fabricates fuel tankers, storage tanks, steel structures, filling station canopies, truck bodies, and elevated water-tank towers in Lagos and Ogun State.",
   path: "/",
-  keywords: ["steel manufacturing company", "structural steel supplier", "steel fabrication near me"],
+  keywords: [
+    "fuel tanker fabrication Nigeria",
+    "storage tank fabrication",
+    "filling station construction",
+    "steel structures Lagos",
+  ],
 });
 
 export default function HomePage() {

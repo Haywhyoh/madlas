@@ -27,10 +27,9 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/65 sm:text-lg">
-              Madlas Global engineers and manufactures structural steel, pipes, and
-              custom metal solutions trusted by builders, energy operators, and
-              manufacturers in over 25 countries — built to perform where failure
-              isn&apos;t an option.
+              Madlas Global fabricates fuel tankers, storage tanks, steel
+              structures, filling-station canopies, truck bodies, and elevated
+              water-tower stands — built in our workshop and erected on site.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">

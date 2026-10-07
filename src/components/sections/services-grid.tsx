@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -12,6 +13,9 @@ const iconMap: Record<string, IconName> = {
   layers: "layers",
   shield: "shield",
   certificate: "certificate",
+  building: "building",
+  flame: "flame",
+  truck: "truck",
 };
 
 export function ServicesGrid() {
@@ -21,8 +25,8 @@ export function ServicesGrid() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             eyebrow="What We Offer"
-            title="Complete Steel Manufacturing Solutions"
-            description="From raw material sourcing to finished, certified components — our integrated capabilities cover every stage of the steel value chain."
+            title="Fabrication and Site Construction"
+            description="Tankers, storage tanks, structural frames, filling stations, truck bodies, and elevated towers — fabricated in our workshop and installed on site."
           />
           <Button href="/services" variant="ghost" className="hidden sm:inline-flex">
             All Services
@@ -35,27 +39,38 @@ export function ServicesGrid() {
               key={service.slug}
               href={`/services#${service.slug}`}
               id={service.slug}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-ink/10 bg-white p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-xl"
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-ink/10 bg-white transition-all duration-300 hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-xl"
             >
-              <span className="absolute right-6 top-6 font-display text-4xl font-bold text-ink/5 transition group-hover:text-gold/15">
-                0{index + 1}
-              </span>
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-ink text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-ink">
-                <Icon name={iconMap[service.icon]} className="h-7 w-7" />
-              </div>
-              <h3 className="mt-6 font-display text-xl font-bold text-ink">
-                {service.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-ink/60">
-                {service.shortDescription}
-              </p>
-              <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-dark">
-                Learn More
-                <Icon
-                  name="arrow-right"
-                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+              <div className="relative aspect-[16/10] overflow-hidden bg-ink">
+                <Image
+                  src={service.images[0].src}
+                  alt={service.images[0].alt}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-              </span>
+                <span className="absolute right-4 top-4 rounded-full bg-ink/80 px-2.5 py-1 font-display text-sm font-bold text-cream">
+                  0{index + 1}
+                </span>
+              </div>
+              <div className="flex flex-1 flex-col p-8">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-ink text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-ink">
+                  <Icon name={iconMap[service.icon]} className="h-7 w-7" />
+                </div>
+                <h3 className="mt-6 font-display text-xl font-bold text-ink">
+                  {service.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                  {service.shortDescription}
+                </p>
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-dark">
+                  Learn More
+                  <Icon
+                    name="arrow-right"
+                    className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </span>
+              </div>
             </Link>
           ))}
         </div>

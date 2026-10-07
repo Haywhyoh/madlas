@@ -1,3 +1,8 @@
+export type WorkImage = {
+  src: string;
+  alt: string;
+};
+
 export type Service = {
   slug: string;
   title: string;
@@ -5,97 +10,230 @@ export type Service = {
   description: string;
   icon: string;
   points: string[];
+  images: WorkImage[];
 };
 
 export const services: Service[] = [
   {
-    slug: "structural-steel-fabrication",
-    title: "Structural Steel Fabrication",
+    slug: "fuel-tanker-fabrication",
+    title: "Fuel Tanker & Tanker Trailer Fabrication",
     shortDescription:
-      "Precision-engineered beams, columns, and frames built to exact structural specifications.",
+      "New semi-trailer tankers, with ladders, chassis, and workshop painting.",
     description:
-      "From high-rise frameworks to industrial platforms, our structural steel fabrication combines advanced CNC cutting, robotic welding, and rigorous quality control to deliver components that meet the toughest load-bearing demands.",
-    icon: "beam",
+      "We build new fuel tanker trailers in the workshop: tank shells, ladders, chassis, landing legs, and painted finishes, ready to couple to a truck head.",
+    icon: "truck",
     points: [
-      "CNC plasma & laser cutting",
-      "Robotic & manual welding",
-      "Third-party quality inspection",
-      "On-time site delivery",
+      "New semi-trailer tankers",
+      "Ladders and walkways",
+      "Chassis and landing legs",
+      "Workshop painting",
+    ],
+    images: [
+      {
+        src: "/images/tanker-trailer-red-rear-ladder.jpg",
+        alt: "Red tanker trailer, rear view with a ladder",
+      },
+      {
+        src: "/images/tanker-trailer-white-blue-stripe-chassis.jpg",
+        alt: "White tanker trailer with a blue stripe, axles not yet fitted",
+      },
+      {
+        src: "/images/tanker-trailer-red-side-landing-legs.jpg",
+        alt: "Red tanker trailer, side view with landing legs",
+      },
+      {
+        src: "/images/tanker-trailer-red-front-ladder.jpg",
+        alt: "Red tanker trailer, front view with a ladder",
+      },
+      {
+        src: "/images/tanker-trailer-truck-head-servicing.jpg",
+        alt: "White tanker trailer coupled to a blue truck head while mechanics work",
+      },
+      {
+        src: "/images/tanker-trailer-white-blue-stripe-chassis-2.jpg",
+        alt: "Second view of a white tanker trailer with a blue stripe on its chassis",
+      },
     ],
   },
   {
-    slug: "steel-pipes-and-tubes",
-    title: "Steel Pipes & Tubes",
+    slug: "storage-tank-fabrication",
+    title: "Storage Tank Fabrication",
     shortDescription:
-      "Seamless and welded pipes engineered for oil & gas, water, and structural applications.",
+      "Vertical and horizontal steel tanks fabricated and painted in the workshop.",
     description:
-      "Our pipe and tube manufacturing lines produce seamless and welded steel piping in a full range of diameters and wall thicknesses, tested to API and ASTM standards for pressure, corrosion, and structural performance.",
+      "We fabricate vertical and horizontal steel storage tanks, from shell and end fabrication through to painted tanks ready to leave the workshop.",
     icon: "pipe",
     points: [
-      "API 5L & ASTM certified",
-      "Custom diameters & coatings",
-      "Anti-corrosion treatment",
-      "Bulk export packaging",
+      "Vertical steel tanks",
+      "Horizontal steel tanks",
+      "Ladders and fittings",
+      "Workshop painting",
+    ],
+    images: [
+      {
+        src: "/images/steel-storage-tank-red-workshop.jpg",
+        alt: "Red storage tank lying on its side in the workshop, with a tyre in front",
+      },
+      {
+        src: "/images/vertical-storage-tank-red-ladder.jpg",
+        alt: "Tall red storage tank with a ladder",
+      },
+      {
+        src: "/images/steel-storage-tank-red-horizontal.jpg",
+        alt: "Red horizontal storage tank in the workshop",
+      },
+      {
+        src: "/images/steel-storage-tank-black-horizontal.jpg",
+        alt: "Black horizontal steel storage tank under a workshop roof",
+      },
+      {
+        src: "/images/steel-storage-tank-red-end-cap.jpg",
+        alt: "End view of a red steel storage tank",
+      },
     ],
   },
   {
-    slug: "custom-metal-manufacturing",
-    title: "Custom Metal Manufacturing",
+    slug: "steel-structures-and-roof-trusses",
+    title: "Steel Structures & Roof Trusses",
     shortDescription:
-      "Bespoke metal components engineered around your drawings, tolerances, and volumes.",
+      "Warehouses, portal frames, and building roofs in structural steel.",
     description:
-      "Bring us your specifications and our engineering team will design, prototype, and mass-produce custom steel and alloy components with tight tolerances for OEM and industrial clients.",
-    icon: "gear",
+      "We fabricate and erect warehouse portal frames, roof trusses, and steel roofs for halls and multi-storey buildings, from columns on a cleared site to trusses going up over a slab.",
+    icon: "beam",
     points: [
-      "In-house engineering team",
-      "Prototype to mass production",
-      "Multi-alloy capability",
-      "Flexible order volumes",
+      "Warehouse portal frames",
+      "Roof trusses",
+      "Building steel roofs",
+      "Site erection",
+    ],
+    images: [
+      {
+        src: "/images/steel-roof-trusses-two-storey-building.jpg",
+        alt: "Two-storey block building with red steel roof trusses",
+      },
+      {
+        src: "/images/steel-portal-frame-warehouse-erection.jpg",
+        alt: "Red steel portal frame standing in tall grass",
+      },
+      {
+        src: "/images/steel-truss-roof-warehouse-installation.jpg",
+        alt: "Grey steel truss roof going up, with workers on a concrete slab",
+      },
+      {
+        src: "/images/steel-columns-roof-trusses-red.jpg",
+        alt: "Red steel columns with roof trusses and a building behind",
+      },
+      {
+        src: "/images/steel-portal-frame-hall-construction.jpg",
+        alt: "Red-brown portal frame on a cleared site",
+      },
+      {
+        src: "/images/steel-portal-frame-site-erection.jpg",
+        alt: "Red steel portal frame during site erection",
+      },
+      {
+        src: "/images/steel-truss-warehouse-frame-grey.jpg",
+        alt: "Grey steel warehouse frame under construction",
+      },
+      {
+        src: "/images/steel-columns-roof-purlins-dark.jpg",
+        alt: "Steel columns and roof purlins with a building behind",
+      },
     ],
   },
   {
-    slug: "sheet-metal-processing",
-    title: "Sheet Metal Processing",
+    slug: "filling-station-construction",
+    title: "Filling Station Construction & Renovation",
     shortDescription:
-      "Roll-formed, stamped, and laser-cut sheet metal for cladding, panels, and enclosures.",
+      "Canopies and station works, from stripped forecourts to completed stations.",
     description:
-      "State-of-the-art roll forming, stamping, and laser cutting lines transform coil steel into precision panels, cladding, and enclosures for construction, automotive, and appliance manufacturers.",
+      "We build and renovate filling stations: stripping old canopies, fabricating new canopy steel, and completing forecourt stations ready for use.",
+    icon: "flame",
+    points: [
+      "Canopy fabrication",
+      "Station renovation",
+      "Forecourt steelwork",
+      "Completed station canopies",
+    ],
+    images: [
+      {
+        src: "/images/filling-station-canopy-renovation.jpg",
+        alt: "Old filling station canopy stripped for renovation",
+      },
+      {
+        src: "/images/northwest-filling-station-completed-1.jpg",
+        alt: "Completed green Northwest filling station",
+      },
+      {
+        src: "/images/northwest-filling-station-completed-2.jpg",
+        alt: "Northwest filling station from a second angle",
+      },
+      {
+        src: "/images/filling-station-canopy-renovation-2.jpg",
+        alt: "Stripped filling station canopy from the front during renovation",
+      },
+      {
+        src: "/images/filling-station-canopy-construction.jpg",
+        alt: "New steel filling station canopy under construction",
+      },
+    ],
+  },
+  {
+    slug: "truck-body-building",
+    title: "Truck Body & Box Van Building",
+    shortDescription:
+      "Enclosed cargo bodies and box vans built onto truck chassis.",
+    description:
+      "We build enclosed cargo bodies and box vans, including white box bodies with rear double doors, fitted to light truck chassis in the workshop.",
     icon: "layers",
     points: [
-      "Roll forming & stamping",
-      "Laser & CNC precision cutting",
-      "Galvanized & pre-painted coil",
-      "Rapid prototyping",
+      "Enclosed cargo bodies",
+      "Box van bodies",
+      "Rear double doors",
+      "Bodies fitted to chassis",
+    ],
+    images: [
+      {
+        src: "/images/box-truck-body-white-rear-doors.jpg",
+        alt: "White box truck, rear double doors",
+      },
+      {
+        src: "/images/box-truck-body-white-cab-front.jpg",
+        alt: "White box truck, cab front",
+      },
+      {
+        src: "/images/box-truck-body-white-side.jpg",
+        alt: "White box truck body seen from the cab side",
+      },
+      {
+        src: "/images/cargo-trailer-body-grey.jpg",
+        alt: "Grey enclosed cargo trailer body",
+      },
     ],
   },
   {
-    slug: "surface-treatment-coating",
-    title: "Surface Treatment & Coating",
+    slug: "elevated-water-tank-towers",
+    title: "Elevated Water Tank Towers & Platforms",
     shortDescription:
-      "Galvanizing, powder coating, and anti-corrosion finishing that extends product life.",
+      "Steel tower stands with cage ladders and top platforms.",
     description:
-      "Our finishing division applies hot-dip galvanizing, powder coating, and specialty anti-corrosion treatments so every product leaves the plant ready to withstand harsh environments for decades.",
-    icon: "shield",
+      "We fabricate and erect elevated steel tower stands for water tanks, with caged ladders and railed platforms at the top.",
+    icon: "building",
     points: [
-      "Hot-dip galvanizing",
-      "Electrostatic powder coating",
-      "Salt-spray tested finishes",
-      "Custom color matching",
+      "Steel tower stands",
+      "Cage ladders",
+      "Top platforms and railings",
+      "Site erection",
     ],
-  },
-  {
-    slug: "quality-assurance-testing",
-    title: "Quality Assurance & Testing",
-    shortDescription:
-      "In-house metallurgical labs and NDT testing to guarantee certified, compliant steel.",
-    description:
-      "Every batch passes through our metallurgical laboratory and non-destructive testing suite, covering tensile strength, chemical composition, ultrasonic, and radiographic inspection before it ships.",
-    icon: "certificate",
-    points: [
-      "ISO 9001:2015 certified",
-      "Ultrasonic & radiographic testing",
-      "Full material traceability",
-      "Certified mill test reports",
+    images: [
+      {
+        src: "/images/elevated-steel-tower-platform-cage-ladder-1.jpg",
+        alt: "Red steel tower with a caged ladder and top platform",
+      },
+      {
+        src: "/images/elevated-steel-tower-platform-cage-ladder-2.jpg",
+        alt: "The same red steel tower from another angle",
+      },
     ],
   },
 ];
@@ -289,62 +427,79 @@ export type Project = {
   location: string;
   year: string;
   summary: string;
+  image: string;
 };
 
 export const projects: Project[] = [
   {
-    slug: "harbor-bridge-structural-frame",
-    title: "Harbor Bridge Structural Frame",
-    category: "Structural Steel",
-    location: "Houston, TX",
-    year: "2024",
+    slug: "fuel-tanker-trailers",
+    title: "Fuel Tanker Trailers",
+    category: "Tanker Fabrication",
+    location: "Workshop, Ogun State",
+    year: "2026",
     summary:
-      "Supplied and fabricated 4,200 tons of structural steel framing for a major harbor bridge expansion.",
+      "New semi-trailer tankers with ladders, chassis, landing legs, and workshop painting.",
+    image: "/images/tanker-trailer-red-side-landing-legs.jpg",
   },
   {
-    slug: "offshore-pipeline-network",
-    title: "Offshore Pipeline Network",
-    category: "Pipes & Tubes",
-    location: "Gulf of Mexico",
-    year: "2023",
+    slug: "northwest-filling-station",
+    title: "Northwest Filling Station",
+    category: "Filling Station",
+    location: "Nigeria",
+    year: "2026",
     summary:
-      "Manufactured API 5L certified seamless pipe for a 60km offshore pipeline network installation.",
+      "Station canopy works taken from a stripped forecourt through to the completed Northwest canopy.",
+    image: "/images/northwest-filling-station-completed-1.jpg",
   },
   {
-    slug: "regional-logistics-warehouse",
-    title: "Regional Logistics Warehouse",
-    category: "Structural Steel",
-    location: "Atlanta, GA",
-    year: "2023",
+    slug: "warehouse-portal-frames",
+    title: "Warehouse Portal Frames",
+    category: "Steel Structures",
+    location: "Nigeria",
+    year: "2026",
     summary:
-      "Delivered pre-engineered steel building components for a 90,000 sq ft logistics warehouse.",
+      "Portal frames and roof trusses erected for warehouse and hall structures.",
+    image: "/images/steel-portal-frame-warehouse-erection.jpg",
   },
   {
-    slug: "wind-farm-tower-brackets",
-    title: "Wind Farm Tower Brackets",
-    category: "Custom Manufacturing",
-    location: "Amarillo, TX",
-    year: "2022",
+    slug: "two-storey-roof-trusses",
+    title: "Two-Storey Roof Trusses",
+    category: "Steel Structures",
+    location: "Nigeria",
+    year: "2026",
     summary:
-      "Engineered and produced custom mounting brackets for a 48-turbine wind energy installation.",
+      "Red steel roof trusses set over a two-storey block building.",
+    image: "/images/steel-roof-trusses-two-storey-building.jpg",
   },
   {
-    slug: "automotive-stamping-line",
-    title: "Automotive Stamping Line Supply",
-    category: "Sheet Metal",
-    location: "Detroit, MI",
-    year: "2022",
+    slug: "steel-storage-tanks",
+    title: "Steel Storage Tanks",
+    category: "Storage Tanks",
+    location: "Workshop, Ogun State",
+    year: "2026",
     summary:
-      "Ongoing supply of precision-stamped sheet metal components for a tier-one automotive supplier.",
+      "Vertical and horizontal steel storage tanks fabricated and painted in the workshop.",
+    image: "/images/steel-storage-tank-red-workshop.jpg",
   },
   {
-    slug: "coastal-desalination-plant",
-    title: "Coastal Desalination Plant Piping",
-    category: "Pipes & Tubes",
-    location: "Corpus Christi, TX",
-    year: "2021",
+    slug: "box-van-bodies",
+    title: "Box Van Bodies",
+    category: "Truck Body",
+    location: "Workshop, Ogun State",
+    year: "2026",
     summary:
-      "Provided corrosion-resistant coated piping systems for a large-scale desalination facility.",
+      "Enclosed white cargo bodies with rear double doors, built onto light truck chassis.",
+    image: "/images/box-truck-body-white-rear-doors.jpg",
+  },
+  {
+    slug: "elevated-tower-platforms",
+    title: "Elevated Tower Platforms",
+    category: "Water Tower",
+    location: "Nigeria",
+    year: "2026",
+    summary:
+      "Steel tower stands with caged ladders and top platforms.",
+    image: "/images/elevated-steel-tower-platform-cage-ladder-1.jpg",
   },
 ];
 

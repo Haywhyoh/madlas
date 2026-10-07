@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/json-ld";
 import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
-import { Icon } from "@/components/icons/icon";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { projects } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Projects | Steel Fabrication & Supply Case Studies",
+  title: "Our Projects | Tankers, Structures, Stations & Towers",
   description:
-    "Explore recent Madlas Global projects across structural steel, pipelines, custom manufacturing, and sheet metal — delivered on time and to certified specification.",
+    "Recent Madlas Global jobs: fuel tanker trailers, the Northwest filling station, warehouse frames, storage tanks, box van bodies, and elevated tower platforms.",
   path: "/projects",
-  keywords: ["steel projects", "steel fabrication case studies", "structural steel projects"],
+  keywords: ["steel fabrication projects", "filling station construction", "tanker trailer fabrication"],
 });
 
 export default function ProjectsPage() {
@@ -29,8 +29,8 @@ export default function ProjectsPage() {
 
       <PageHero
         eyebrow="Our Portfolio"
-        title="Projects Delivered Across the Globe"
-        description="From harbor bridges to offshore pipelines, see how Madlas Global steel performs on some of the world's most demanding job sites."
+        title="Recent Fabrication and Site Work"
+        description="Tankers, filling stations, roof trusses, storage tanks, truck bodies, and elevated towers from jobs we have fabricated and erected."
         crumb="Projects"
       />
 
@@ -43,13 +43,15 @@ export default function ProjectsPage() {
                 id={project.slug}
                 className="group overflow-hidden rounded-2xl border border-ink/10 bg-ink transition hover:border-gold/40"
               >
-                <div className="relative flex aspect-[4/3] items-center justify-center">
-                  <div className="absolute inset-0 bg-grid opacity-30" />
-                  <Icon
-                    name="beam"
-                    className="h-14 w-14 text-gold/25 transition-transform duration-500 group-hover:scale-110"
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
                   <span className="absolute left-4 top-4 rounded-full bg-gold px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-ink">
                     {project.category}
                   </span>
