@@ -456,11 +456,108 @@ export const services: Service[] = [
     description:
       "We build and renovate filling stations: stripping old canopies, fabricating new canopy steel, and completing forecourt stations ready for use.",
     icon: "flame",
+    primaryKeyword: "filling station construction",
+    secondaryKeywords: [
+      "filling station canopy fabrication",
+      "petrol station renovation Nigeria",
+      "forecourt steelwork contractor",
+      "filling station canopy construction",
+    ],
+    metaTitle:
+      "Filling Station Construction & Canopy Fabrication | Madlas Global",
+    metaDescription:
+      "Madlas Global builds and renovates filling stations — stripping old canopies, fabricating new canopy steel, and completing forecourt stations ready for use.",
+    overview: [
+      "We take on filling station work from a stripped forecourt through to a completed canopy. For renovations, old canopy structures are stripped back before new steelwork is fabricated and fitted. For new builds, we fabricate the full canopy frame and complete the forecourt steelwork.",
+      "Our completed stations, including the Northwest filling station, show the finished result: a painted canopy standing over a ready-to-operate forecourt. We manage the steel side of the job from site strip to final handover.",
+    ],
     points: [
       "Canopy fabrication",
       "Station renovation",
       "Forecourt steelwork",
       "Completed station canopies",
+    ],
+    features: [
+      {
+        title: "Canopy Fabrication",
+        description:
+          "New filling station canopy steel is fabricated to span the forecourt and pump islands.",
+      },
+      {
+        title: "Renovation & Strip-Out",
+        description:
+          "Old canopy structures are stripped back safely before new steelwork goes up.",
+      },
+      {
+        title: "Forecourt Steelwork",
+        description:
+          "Supporting columns, bracing, and forecourt steel structures are completed alongside the canopy.",
+      },
+      {
+        title: "Completed Station Handover",
+        description:
+          "Canopies are finished and painted, ready for the station to open for business.",
+      },
+    ],
+    applications: [
+      "New filling station canopy construction",
+      "Existing filling station renovation",
+      "Forecourt steel structure upgrades",
+      "Petroleum marketing company station builds",
+    ],
+    specifications: [
+      {
+        label: "Scope",
+        value: "New canopy construction or renovation of existing stations",
+      },
+      {
+        label: "Canopy Frame",
+        value: "Columns, rafters, and fascia steelwork fabricated to span",
+      },
+      {
+        label: "Renovation Work",
+        value: "Safe strip-out of existing canopy before new steel is fitted",
+      },
+      { label: "Finish", value: "Painted canopy steel ready for signage and fascia" },
+    ],
+    process: [
+      {
+        title: "Site Survey & Strip-Out",
+        description:
+          "For renovations, the existing canopy is assessed and stripped back safely.",
+      },
+      {
+        title: "Canopy Fabrication",
+        description:
+          "New canopy columns, rafters, and fascia steel are fabricated to the forecourt layout.",
+      },
+      {
+        title: "Site Erection",
+        description:
+          "The canopy frame is erected over the pump islands and forecourt.",
+      },
+      {
+        title: "Finishing & Handover",
+        description:
+          "The canopy is painted and finished, ready for signage and station handover.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can you renovate an existing filling station?",
+        answer:
+          "Yes, we strip back old canopy structures and fabricate new canopy steel as part of station renovation work.",
+      },
+      {
+        question: "Do you build new filling station canopies from scratch?",
+        answer:
+          "Yes, we fabricate and erect new canopy steelwork for filling stations being built from the ground up.",
+      },
+      {
+        question: "Can you show examples of completed stations?",
+        answer:
+          "Yes, our completed Northwest filling station canopy is one example of our finished station work.",
+      },
     ],
     images: [
       {
@@ -493,11 +590,99 @@ export const services: Service[] = [
     description:
       "We build enclosed cargo bodies and box vans, including white box bodies with rear double doors, fitted to light truck chassis in the workshop.",
     icon: "layers",
+    primaryKeyword: "truck body building",
+    secondaryKeywords: [
+      "box van body builder Nigeria",
+      "enclosed cargo body fabrication",
+      "box truck body manufacturer",
+      "truck body fabrication workshop",
+    ],
+    metaTitle:
+      "Truck Body & Box Van Building | Enclosed Cargo Bodies | Madlas Global",
+    metaDescription:
+      "Madlas Global builds enclosed cargo bodies and box vans, including white box bodies with rear double doors, fitted to light truck chassis in the workshop.",
+    overview: [
+      "We build enclosed cargo bodies and box van bodies in our workshop, fitted directly onto light truck chassis. Each body is framed, panelled, and finished with rear double doors for easy loading and unloading.",
+      "Whether it is a grey enclosed cargo trailer body or a white box body mounted on a cab chassis, we build to the dimensions and door configuration your fleet needs, with a workshop-painted finish on every unit.",
+    ],
     points: [
       "Enclosed cargo bodies",
       "Box van bodies",
       "Rear double doors",
       "Bodies fitted to chassis",
+    ],
+    features: [
+      {
+        title: "Enclosed Cargo Bodies",
+        description:
+          "Fully enclosed steel-framed and panelled cargo bodies built for secure goods transport.",
+      },
+      {
+        title: "Box Van Bodies",
+        description:
+          "Box van bodies fitted to light truck chassis, built to your length and height requirements.",
+      },
+      {
+        title: "Rear Double Doors",
+        description:
+          "Rear double doors are fitted for straightforward loading and unloading at depots and stores.",
+      },
+      {
+        title: "Chassis Fitting & Finishing",
+        description:
+          "Bodies are fitted directly to the chassis and finished with a full workshop paint job.",
+      },
+    ],
+    applications: [
+      "Fleet delivery & distribution vehicles",
+      "Enclosed goods haulage",
+      "Depot-to-store cargo transport",
+      "Light truck body replacement",
+    ],
+    specifications: [
+      { label: "Body Type", value: "Enclosed box van or cargo trailer body" },
+      { label: "Doors", value: "Rear double doors, fitted to order" },
+      { label: "Chassis Fit", value: "Built and fitted to light truck chassis" },
+      { label: "Finish", value: "Workshop-painted body, ready for branding" },
+    ],
+    process: [
+      {
+        title: "Frame Fabrication",
+        description:
+          "The steel body frame is built to the length and height specified for the chassis.",
+      },
+      {
+        title: "Panelling",
+        description:
+          "Sides, roof, and floor panels are fitted to form the enclosed cargo body.",
+      },
+      {
+        title: "Doors & Chassis Fitting",
+        description:
+          "Rear double doors are fitted and the body is mounted onto the truck chassis.",
+      },
+      {
+        title: "Painting & Handover",
+        description:
+          "The body is painted and finished, ready for branding and fleet handover.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can you fit a box van body to my existing truck chassis?",
+        answer:
+          "Yes, we build and fit enclosed cargo and box van bodies directly onto light truck chassis.",
+      },
+      {
+        question: "Do your box bodies come with rear double doors?",
+        answer:
+          "Yes, rear double doors are a standard fitting, built to your preferred opening width.",
+      },
+      {
+        question: "Can you paint the body to match our fleet colours?",
+        answer:
+          "Yes, every body is workshop-painted and can be finished ready for your fleet branding.",
+      },
     ],
     images: [
       {
