@@ -121,6 +121,7 @@ export function Header() {
                       </div>
                       <Link
                         href="/services"
+                        onClick={() => setServicesOpen(false)}
                         className="flex items-center justify-between border-t border-gold/10 bg-ink-soft/60 px-5 py-3.5 text-sm font-semibold uppercase tracking-wide text-gold hover:bg-gold/10"
                       >
                         View All Services
