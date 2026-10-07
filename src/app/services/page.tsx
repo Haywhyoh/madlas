@@ -142,16 +142,24 @@ export default function ServicesPage() {
                       ))}
                     </div>
                   )}
-                  <Link
-                    href="/contact"
-                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold"
-                  >
-                    Request a Quote
-                    <Icon
-                      name="arrow-right"
-                      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                    />
-                  </Link>
+                  <div className="mt-5 flex items-center gap-5">
+                    <Link
+                      href={`/services/${service.slug}`}
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-gold"
+                    >
+                      View Details
+                      <Icon
+                        name="arrow-right"
+                        className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                      />
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="text-sm font-semibold text-cream/60 hover:text-cream"
+                    >
+                      Request a Quote
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
@@ -237,7 +245,7 @@ export default function ServicesPage() {
               {services.map((service) => (
                 <Link
                   key={service.slug}
-                  href={`#${service.slug}`}
+                  href={`/services/${service.slug}`}
                   className="group overflow-hidden rounded-xl border border-gold/10 bg-ink-soft/60 transition hover:border-gold/30"
                 >
                   <div className="relative aspect-[16/10]">
