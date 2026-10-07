@@ -711,11 +711,99 @@ export const services: Service[] = [
     description:
       "We fabricate and erect elevated steel tower stands for water tanks, with caged ladders and railed platforms at the top.",
     icon: "building",
+    primaryKeyword: "elevated water tank tower",
+    secondaryKeywords: [
+      "steel tower stand fabrication",
+      "water tank tower construction Nigeria",
+      "elevated platform with cage ladder",
+      "steel tower erection",
+    ],
+    metaTitle:
+      "Elevated Water Tank Towers & Platforms | Steel Tower Stands | Madlas Global",
+    metaDescription:
+      "Madlas Global fabricates and erects elevated steel tower stands for water tanks, with caged ladders and railed platforms at the top.",
+    overview: [
+      "We fabricate elevated steel tower stands that lift water tanks above a site for gravity-fed supply. Each tower is built with a caged ladder for safe climbing and a railed platform at the top to support the tank and allow safe access for maintenance.",
+      "Towers are fabricated to the height and load your tank and site require, then erected on site with the ladder and platform already fitted, ready for the tank to be lifted into place.",
+    ],
     points: [
       "Steel tower stands",
       "Cage ladders",
       "Top platforms and railings",
       "Site erection",
+    ],
+    features: [
+      {
+        title: "Steel Tower Stands",
+        description:
+          "Elevated steel towers fabricated to lift water tanks to the height your site requires.",
+      },
+      {
+        title: "Cage Ladders",
+        description:
+          "Caged ladders are fitted for safe climbing access to the top platform.",
+      },
+      {
+        title: "Top Platforms & Railings",
+        description:
+          "Railed platforms at the top support the tank and give safe access for maintenance.",
+      },
+      {
+        title: "Site Erection",
+        description:
+          "Towers are erected on site, with ladder and platform fitted ready for the tank.",
+      },
+    ],
+    applications: [
+      "Site water supply towers",
+      "Industrial & factory water storage",
+      "Residential estate water towers",
+      "Gravity-fed water distribution",
+    ],
+    specifications: [
+      { label: "Structure", value: "Steel tower stand, built to order height" },
+      { label: "Access", value: "Caged ladder for safe climbing" },
+      { label: "Top Platform", value: "Railed platform sized to the tank" },
+      { label: "Erection", value: "Fabricated and erected on site" },
+    ],
+    process: [
+      {
+        title: "Height & Load Assessment",
+        description:
+          "We assess the tank size and required height before fabrication begins.",
+      },
+      {
+        title: "Tower Fabrication",
+        description:
+          "Steel legs, bracing, and the top platform frame are fabricated in the workshop.",
+      },
+      {
+        title: "Site Erection",
+        description:
+          "The tower is erected on site with the cage ladder and platform fitted.",
+      },
+      {
+        title: "Tank Placement",
+        description:
+          "The platform is prepared ready for the water tank to be lifted into place.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What height can your water tank towers reach?",
+        answer:
+          "We fabricate towers to the height your site and tank require, built with appropriate bracing for stability.",
+      },
+      {
+        question: "Do the towers come with a ladder for access?",
+        answer:
+          "Yes, every tower is fitted with a caged ladder for safe climbing access to the top platform.",
+      },
+      {
+        question: "Can you erect the tower on our site?",
+        answer:
+          "Yes, we erect the steel tower on site with the ladder and platform fitted, ready for the tank.",
+      },
     ],
     images: [
       {
