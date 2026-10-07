@@ -36,12 +36,6 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setOpen(false);
-    setServicesOpen(false);
-    setMobileServicesOpen(false);
-  }, [pathname]);
-
   const openServicesMenu = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setServicesOpen(true);
@@ -108,6 +102,7 @@ export function Header() {
                           <Link
                             key={service.slug}
                             href={`/services/${service.slug}`}
+                            onClick={() => setServicesOpen(false)}
                             className="group flex items-start gap-3 rounded-xl p-3 transition hover:bg-gold/10"
                           >
                             <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gold/10 text-gold transition group-hover:bg-gold group-hover:text-ink">
