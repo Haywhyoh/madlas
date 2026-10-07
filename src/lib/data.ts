@@ -313,11 +313,105 @@ export const services: Service[] = [
     description:
       "We fabricate and erect warehouse portal frames, roof trusses, and steel roofs for halls and multi-storey buildings, from columns on a cleared site to trusses going up over a slab.",
     icon: "beam",
+    primaryKeyword: "steel roof trusses",
+    secondaryKeywords: [
+      "steel structure fabrication Nigeria",
+      "warehouse portal frame construction",
+      "structural steel erection",
+      "steel building roof contractor",
+    ],
+    metaTitle:
+      "Steel Structures & Roof Trusses | Warehouse Portal Frames | Madlas Global",
+    metaDescription:
+      "Madlas Global fabricates and erects warehouse portal frames, roof trusses, and steel roofs for halls and multi-storey buildings, from columns on site to trusses over a slab.",
+    overview: [
+      "We fabricate and erect structural steel for warehouses, halls, and multi-storey buildings. Columns, portal frames, and roof trusses are built to span and load specifications, then taken to site for erection on a cleared plot or over an existing slab.",
+      "Our crews handle the full job: setting columns, running purlins, and lifting trusses into place, whether it is a single-storey warehouse portal frame or a steel roof over a two-storey block building. Each structure is built to carry the roofing sheets and loads your site requires.",
+    ],
     points: [
       "Warehouse portal frames",
       "Roof trusses",
       "Building steel roofs",
       "Site erection",
+    ],
+    features: [
+      {
+        title: "Warehouse Portal Frames",
+        description:
+          "Column and rafter portal frames fabricated and erected for warehouse and hall-span buildings.",
+      },
+      {
+        title: "Roof Truss Fabrication",
+        description:
+          "Roof trusses built to span and pitch specification, fabricated in the workshop and erected on site.",
+      },
+      {
+        title: "Purlins & Roof Steelwork",
+        description:
+          "Purlins and secondary steelwork are fitted to carry roofing sheets across the full span.",
+      },
+      {
+        title: "Site Erection Crews",
+        description:
+          "Our own erection crews set columns, lift trusses, and complete the steel frame on site.",
+      },
+    ],
+    applications: [
+      "Warehouse & industrial hall construction",
+      "Multi-storey building roofs",
+      "Factory & workshop steel frames",
+      "Agricultural & storage shed structures",
+    ],
+    specifications: [
+      {
+        label: "Frame Type",
+        value: "Portal frame columns and rafters, or roof trusses",
+      },
+      { label: "Span", value: "Built to the span and pitch your building requires" },
+      {
+        label: "Secondary Steel",
+        value: "Purlins and bracing fitted for roofing sheets",
+      },
+      { label: "Erection", value: "Fabricated in workshop, erected on site" },
+    ],
+    process: [
+      {
+        title: "Site & Load Assessment",
+        description:
+          "We assess the site, span, and roofing load before fabrication begins.",
+      },
+      {
+        title: "Column & Frame Fabrication",
+        description:
+          "Columns, rafters, and trusses are cut, welded, and prepared in the workshop.",
+      },
+      {
+        title: "Site Erection",
+        description:
+          "Columns are set, and trusses or portal frames are lifted and bolted into place on site.",
+      },
+      {
+        title: "Purlins & Handover",
+        description:
+          "Purlins and bracing are fitted ready for roofing sheets, and the structure is handed over.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you handle both fabrication and site erection?",
+        answer:
+          "Yes, we fabricate the steel in our workshop and erect it on site with our own crews.",
+      },
+      {
+        question: "Can you build a roof for an existing building?",
+        answer:
+          "Yes, we have fitted steel roof trusses over existing block buildings, including multi-storey structures.",
+      },
+      {
+        question: "What span can your portal frames cover?",
+        answer:
+          "We build portal frames and trusses to the span and pitch your building design requires.",
+      },
     ],
     images: [
       {
