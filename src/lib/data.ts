@@ -188,11 +188,99 @@ export const services: Service[] = [
     description:
       "We fabricate vertical and horizontal steel storage tanks, from shell and end fabrication through to painted tanks ready to leave the workshop.",
     icon: "pipe",
+    primaryKeyword: "storage tank fabrication",
+    secondaryKeywords: [
+      "steel storage tank manufacturer",
+      "vertical storage tank fabrication",
+      "horizontal storage tank Nigeria",
+      "industrial tank fabrication workshop",
+    ],
+    metaTitle:
+      "Storage Tank Fabrication | Vertical & Horizontal Steel Tanks | Madlas Global",
+    metaDescription:
+      "Madlas Global fabricates vertical and horizontal steel storage tanks in our workshop — shell and end fabrication, ladders and fittings, and a full painted finish.",
+    overview: [
+      "We fabricate vertical and horizontal steel storage tanks from flat plate through to a finished, painted tank ready to leave the workshop. Shells and end caps are cut, rolled, and welded in-house, with wall thickness and capacity built to the volume and product you need to store.",
+      "Every tank is fitted with the ladders, nozzles, and access points your installation requires, then painted to a workshop finish before delivery. Whether it is a tall vertical tank for a filling station or a horizontal tank for a depot or workshop yard, we build it to your layout.",
+    ],
     points: [
       "Vertical steel tanks",
       "Horizontal steel tanks",
       "Ladders and fittings",
       "Workshop painting",
+    ],
+    features: [
+      {
+        title: "Vertical Tank Fabrication",
+        description:
+          "Tall vertical steel tanks rolled and welded with ladders for fuel, water, or bulk liquid storage.",
+      },
+      {
+        title: "Horizontal Tank Fabrication",
+        description:
+          "Horizontal cylindrical tanks with end caps fabricated for depot, workshop, and yard storage.",
+      },
+      {
+        title: "Ladders & Fittings",
+        description:
+          "Access ladders, nozzles, and fittings are welded on to match your installation and piping layout.",
+      },
+      {
+        title: "Workshop Painting",
+        description:
+          "Every tank is degreased, primed, and painted to a full workshop finish before it leaves our yard.",
+      },
+    ],
+    applications: [
+      "Fuel storage at filling stations",
+      "Depot and bulk liquid storage",
+      "Water storage for industrial sites",
+      "Workshop and yard holding tanks",
+    ],
+    specifications: [
+      { label: "Orientation", value: "Vertical or horizontal, built to order" },
+      { label: "Shell & Ends", value: "Rolled plate shell with welded end caps" },
+      { label: "Access", value: "Ladders and fittings to your layout" },
+      { label: "Finish", value: "Degreased, primed, and workshop-painted" },
+    ],
+    process: [
+      {
+        title: "Shell & End Fabrication",
+        description:
+          "Steel plate is cut and rolled into the tank shell, with end caps formed and fitted.",
+      },
+      {
+        title: "Welding & Pressure Check",
+        description:
+          "Shell seams and end caps are welded and checked before fittings are added.",
+      },
+      {
+        title: "Ladders & Nozzle Fitting",
+        description:
+          "Access ladders, nozzles, and fittings are welded on to match your piping and access needs.",
+      },
+      {
+        title: "Painting & Dispatch",
+        description:
+          "The tank is degreased, primed, painted, and prepared for delivery to site.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can you fabricate a tank to a specific capacity?",
+        answer:
+          "Yes. We size the shell diameter and length to the capacity you need, for both vertical and horizontal tanks.",
+      },
+      {
+        question: "Do you fit ladders and fittings before delivery?",
+        answer:
+          "Yes, ladders, nozzles, and fittings are welded on in the workshop so the tank arrives ready to install.",
+      },
+      {
+        question: "Can you build tanks for a filling station forecourt?",
+        answer:
+          "Yes, we fabricate the vertical and horizontal tanks used in our filling station construction and renovation work.",
+      },
     ],
     images: [
       {
