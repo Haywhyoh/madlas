@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/container";
 import { Icon } from "@/components/icons/icon";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/lib/data";
+import { whatsappUrl } from "@/lib/site-config";
 
 type Params = { slug: string };
 
@@ -153,7 +154,7 @@ export default async function BlogPostPage({
             </p>
 
             <div className="mt-8">
-              <Button href="/contact">Contact Our Team</Button>
+              <Button href={whatsappUrl()}>Contact Our Team</Button>
             </div>
           </div>
 

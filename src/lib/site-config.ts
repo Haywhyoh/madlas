@@ -26,6 +26,9 @@ export const siteConfig = {
   /** Mobile line, per company letterhead. */
   phone: "+234 802 320 1933",
   phoneHref: "+2348023201933",
+  /** WhatsApp line for quotes and inquiries. */
+  whatsapp: "+234 810 479 1139",
+  whatsappHref: "2348104791139",
   /** Office landline, per company letterhead. */
   phoneSecondary: "+234 702 504 3686",
   phoneSecondaryHref: "+2347025043686",
@@ -87,6 +90,16 @@ export function mapsSearchUrl(query: string) {
 
 export function mapsEmbedUrl(query: string) {
   return `https://maps.google.com/maps?q=${encodeURIComponent(query)}&z=15&output=embed`;
+}
+
+export const quoteWhatsappMessage =
+  "Hello Madlas Global, I would like to request a quote.";
+
+/** Opens a WhatsApp chat. Pass a message to prefill the composer. */
+export function whatsappUrl(message: string = quoteWhatsappMessage) {
+  const base = `https://wa.me/${siteConfig.whatsappHref}`;
+  if (!message) return base;
+  return `${base}?text=${encodeURIComponent(message)}`;
 }
 
 export const navLinks = [

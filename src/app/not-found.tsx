@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/icons/icon";
+import { whatsappUrl } from "@/lib/site-config";
 
 export default function NotFound() {
   return (
@@ -20,7 +21,7 @@ export default function NotFound() {
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button href="/">Back to Homepage</Button>
-          <Button href="/contact" variant="secondary">
+          <Button href={whatsappUrl()} variant="secondary">
             Contact Us
           </Button>
         </div>

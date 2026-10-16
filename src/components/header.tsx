@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Logo } from "@/components/logo";
 import { Icon, type IconName } from "@/components/icons/icon";
 import { Container } from "@/components/ui/container";
-import { navLinks, siteConfig } from "@/lib/site-config";
+import { navLinks, siteConfig, whatsappUrl } from "@/lib/site-config";
 import { services } from "@/lib/data";
 
 const iconMap: Record<string, IconName> = {
@@ -158,12 +158,14 @@ export function Header() {
             <Icon name="phone" className="h-4 w-4 text-gold" />
             {siteConfig.phone}
           </a>
-          <Link
-            href="/contact"
+          <a
+            href={whatsappUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-gold px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-ink transition hover:bg-gold-light"
           >
             Get a Quote
-          </Link>
+          </a>
         </div>
 
         <button
@@ -249,13 +251,15 @@ export function Header() {
                 </Link>
               );
             })}
-            <Link
-              href="/contact"
+            <a
+              href={whatsappUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="mt-3 rounded-full bg-gold px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-ink"
             >
               Get a Quote
-            </Link>
+            </a>
           </Container>
         </div>
       )}

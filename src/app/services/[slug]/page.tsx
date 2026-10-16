@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { services } from "@/lib/data";
+import { whatsappUrl } from "@/lib/site-config";
 
 type Params = { slug: string };
 
@@ -135,7 +136,7 @@ export default async function ServiceDetailPage({
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <Button href="/contact">Request a Quote</Button>
+            <Button href={whatsappUrl()}>Request a Quote</Button>
             <Button href="/services" variant="secondary">
               View All Services
             </Button>
@@ -176,7 +177,7 @@ export default async function ServiceDetailPage({
             ))}
 
             <div className="mt-9">
-              <Button href="/contact" variant="ghost">
+              <Button href={whatsappUrl()} variant="ghost">
                 Discuss Your Project
               </Button>
             </div>
@@ -378,7 +379,7 @@ export default async function ServiceDetailPage({
               have a question? Get in touch.
             </p>
             <div className="mt-7">
-              <Button href="/contact" variant="ghost">
+              <Button href={whatsappUrl()} variant="ghost">
                 Ask Our Team
               </Button>
             </div>

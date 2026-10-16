@@ -3,13 +3,36 @@
 import { useState, type FormEvent } from "react";
 import { Icon } from "@/components/icons/icon";
 import { services } from "@/lib/data";
+import { siteConfig, whatsappUrl } from "@/lib/site-config";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitted">("idle");
+  const [chatUrl, setChatUrl] = useState("");
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const company = String(data.get("company") || "").trim();
+    const phone = String(data.get("phone") || "").trim();
+    const message = [
+      "Hello Madlas Global, I would like to request a quote.",
+      "",
+      `Name: ${data.get("name")}`,
+      company ? `Company: ${company}` : "",
+      `Email: ${data.get("email")}`,
+      phone ? `Phone: ${phone}` : "",
+      `Service: ${data.get("service") || "General inquiry"}`,
+      "",
+      "Project details:",
+      String(data.get("message") || ""),
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const url = whatsappUrl(message);
+    setChatUrl(url);
     setStatus("submitted");
+    window.open(url, "_blank", "noopener,noreferrer");
   }
 
   if (status === "submitted") {
@@ -19,12 +42,21 @@ export function ContactForm() {
           <Icon name="check" className="h-7 w-7" strokeWidth={2.5} />
         </span>
         <h3 className="mt-5 font-display text-xl font-bold text-ink">
-          Thank You — Message Received
+          Your Quote Is Ready in WhatsApp
         </h3>
         <p className="mt-2 max-w-sm text-sm text-ink/60">
-          A member of the Madlas Global team will get back to you within
-          one business day.
+          WhatsApp should have opened with your details for {siteConfig.whatsapp}.
+          Send the message to finish the request.
         </p>
+        <a
+          href={chatUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition hover:bg-gold-light"
+        >
+          Open WhatsApp
+          <Icon name="arrow-right" className="h-4 w-4" />
+        </a>
       </div>
     );
   }
@@ -124,7 +156,8 @@ export function ContactForm() {
         <Icon name="arrow-right" className="h-4 w-4" />
       </button>
       <p className="mt-3 text-xs text-ink/45">
-        This is a demo form for design purposes and does not send data.
+        Sending opens WhatsApp ({siteConfig.whatsapp}) with your details so you
+        can message us directly.
       </p>
     </form>
   );

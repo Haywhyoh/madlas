@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
+import { whatsappUrl } from "@/lib/site-config";
 
 export function Hero() {
   return (
@@ -47,7 +48,7 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <Button href="/contact">Get a Free Quote</Button>
+            <Button href={whatsappUrl()}>Get a Free Quote</Button>
             <Button href="/services" variant="secondary">
               Explore Our Services
             </Button>

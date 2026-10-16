@@ -26,12 +26,9 @@ export function Button({
   className?: string;
   icon?: boolean;
 } & React.AnchorHTMLAttributes<HTMLAnchorElement>) {
-  return (
-    <Link
-      href={href}
-      className={`group inline-flex items-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-all duration-300 ${variants[variant]} ${className}`}
-      {...rest}
-    >
+  const classes = `group inline-flex items-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-all duration-300 ${variants[variant]} ${className}`;
+  const content = (
+    <>
       {children}
       {icon && (
         <Icon
@@ -39,6 +36,26 @@ export function Button({
           className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
         />
       )}
+    </>
+  );
+
+  if (href.startsWith("http")) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes}
+        {...rest}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} className={classes} {...rest}>
+      {content}
     </Link>
   );
 }

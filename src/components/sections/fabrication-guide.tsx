@@ -76,7 +76,8 @@ const columns = [
 
 export function FabricationGuide() {
   const officeQuery = placeQuery(siteConfig.address);
-  const published = new Date(siteConfig.contentUpdated).toLocaleDateString("en-NG", {
+  const [year, month, day] = siteConfig.contentUpdated.split("-").map(Number);
+  const published = new Date(year, month - 1, day).toLocaleDateString("en-NG", {
     day: "numeric",
     month: "long",
     year: "numeric",

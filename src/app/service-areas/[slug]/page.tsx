@@ -8,7 +8,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
 import { MapEmbed } from "@/components/map-embed";
 import { Button } from "@/components/ui/button";
-import { mapsSearchUrl } from "@/lib/site-config";
+import { mapsSearchUrl, whatsappUrl } from "@/lib/site-config";
 
 type Params = { slug: string };
 
@@ -93,7 +93,7 @@ export default async function ServiceAreaPage({
             </ul>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="/contact">Request a quote</Button>
+              <Button href={whatsappUrl()}>Request a quote</Button>
               <Button href="/services" variant="ghost">
                 View fabrication services
               </Button>

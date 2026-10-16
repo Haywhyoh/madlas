@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { ProjectsShowcase } from "@/components/sections/projects-showcase";
 import { services } from "@/lib/data";
+import { whatsappUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
   title: "Steel Fabrication Services in Nigeria",
@@ -149,12 +150,14 @@ export default function ServicesPage() {
                         className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                       />
                     </Link>
-                    <Link
-                      href="/contact"
+                    <a
+                      href={whatsappUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-sm font-semibold text-cream/60 hover:text-cream"
                     >
                       Request a Quote
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -201,7 +204,7 @@ export default function ServicesPage() {
               </p>
 
               <div className="mt-9">
-                <Button href="/contact">Request a Quote</Button>
+                <Button href={whatsappUrl()}>Request a Quote</Button>
               </div>
             </div>
 
@@ -290,7 +293,7 @@ export default function ServicesPage() {
               </ul>
 
               <div className="mt-8">
-                <Button href="/contact" variant="secondary">
+                <Button href={whatsappUrl()} variant="secondary">
                   Request a Quote
                 </Button>
               </div>

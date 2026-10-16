@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/logo";
 import { Icon, type IconName } from "@/components/icons/icon";
 import { Container } from "@/components/ui/container";
-import { mapsSearchUrl, navLinks, placeQuery, siteConfig } from "@/lib/site-config";
+import { mapsSearchUrl, navLinks, placeQuery, siteConfig, whatsappUrl } from "@/lib/site-config";
 import { services } from "@/lib/data";
 
 const socialLinks: { name: string; href: string; icon: IconName }[] = [
@@ -114,6 +114,14 @@ export function Footer() {
                 </a>
                 <a href={`tel:${siteConfig.phoneSecondaryHref}`} className="transition hover:text-gold">
                   {siteConfig.phoneSecondary}
+                </a>
+                <a
+                  href={whatsappUrl("")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-gold"
+                >
+                  WhatsApp {siteConfig.whatsapp}
                 </a>
               </span>
             </li>

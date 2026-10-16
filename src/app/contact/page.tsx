@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/container";
 import { Icon } from "@/components/icons/icon";
 import { ContactForm } from "@/components/contact-form";
 import { MapEmbed } from "@/components/map-embed";
-import { placeQuery, siteConfig } from "@/lib/site-config";
+import { placeQuery, siteConfig, whatsappUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
   title: "Request a Quote",
@@ -27,6 +27,13 @@ const contactCards = [
     title: "Call Us",
     value: siteConfig.phone,
     href: `tel:${siteConfig.phoneHref}`,
+  },
+  {
+    icon: "phone" as const,
+    title: "WhatsApp",
+    value: siteConfig.whatsapp,
+    href: whatsappUrl(""),
+    external: true,
   },
   {
     icon: "mail" as const,
@@ -75,11 +82,14 @@ export default function ContactPage() {
 
       <section className="bg-cream py-14">
         <Container>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {contactCards.map((card) => (
               <a
                 key={card.title}
                 href={card.href}
+                {...("external" in card
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
                 className="rounded-2xl border border-ink/10 bg-white p-6 transition hover:border-gold/40 hover:shadow-lg"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink text-gold">

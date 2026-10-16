@@ -31,7 +31,7 @@ export default function ReviewsPage() {
       <PageHero
         eyebrow="Client comments"
         title="What Companies Say About the Fabrication"
-        description="These comments were given to our project team by companies we have fabricated and erected steel for. They are not copied from another website."
+        description="Comments from companies we have fabricated and erected steel for."
         crumb="Client Comments"
       />
 
@@ -61,9 +61,9 @@ export default function ReviewsPage() {
           <div className="mt-12 rounded-2xl border border-ink/10 bg-white p-7">
             <h2 className="text-2xl font-bold text-ink">Where can you find the Lagos office?</h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/70">
-              Google has not given us a public star rating to display. Use Google
-              Maps to cross-check the Agege office at {siteConfig.address.street},{" "}
-              {siteConfig.address.city}, {siteConfig.address.region}.
+              The registered office is at {siteConfig.address.street},{" "}
+              {siteConfig.address.city}, {siteConfig.address.region}. Open it in
+              Google Maps to confirm the location.
             </p>
             <a
               href={mapsUrl}

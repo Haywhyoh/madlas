@@ -1,10 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Container as ContainerIcon,
+  Cylinder,
+  Fuel,
+  TowerControl,
+  Truck,
+  Warehouse,
+  type LucideIcon,
+} from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Icon } from "@/components/icons/icon";
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/data";
+
+const iconMap: Record<string, LucideIcon> = {
+  truck: Truck,
+  pipe: Cylinder,
+  beam: Warehouse,
+  flame: Fuel,
+  layers: ContainerIcon,
+  building: TowerControl,
+};
 
 export function ServicesGrid() {
   return (
@@ -22,7 +40,9 @@ export function ServicesGrid() {
         </div>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
+          {services.map((service, index) => {
+            const ServiceIcon = iconMap[service.icon] ?? Warehouse;
+            return (
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
@@ -41,14 +61,8 @@ export function ServicesGrid() {
                 </span>
               </div>
               <div className="flex flex-1 flex-col p-8">
-                <div className="relative h-14 w-14 overflow-hidden rounded-xl ring-1 ring-ink/10 transition duration-300 group-hover:ring-gold">
-                  <Image
-                    src={(service.images[1] ?? service.images[0]).src}
-                    alt=""
-                    fill
-                    className="object-cover"
-                    sizes="56px"
-                  />
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-ink text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-ink">
+                  <ServiceIcon className="h-7 w-7" strokeWidth={1.75} aria-hidden="true" />
                 </div>
                 <h3 className="mt-6 font-display text-xl font-bold text-ink">
                   {service.title}
@@ -65,7 +79,8 @@ export function ServicesGrid() {
                 </span>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-10 sm:hidden">

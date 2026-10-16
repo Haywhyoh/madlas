@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/icons/icon";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, whatsappUrl } from "@/lib/site-config";
 
 export function CtaBanner() {
   return (
@@ -18,7 +18,7 @@ export function CtaBanner() {
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Button href="/contact" variant="primary" className="!bg-ink !text-cream hover:!bg-ink-soft">
+          <Button href={whatsappUrl()} variant="primary" className="!bg-ink !text-cream hover:!bg-ink-soft">
             Request a Quote
           </Button>
           <a
