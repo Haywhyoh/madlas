@@ -123,7 +123,7 @@ export default function ContactPage() {
             </div>
             <div>
               <h2 className="font-display text-lg font-bold text-ink">Ogun workshop</h2>
-              <p className="mt-1 text-sm text-ink/60">{siteConfig.workshopMapQuery}</p>
+              <p className="mt-1 text-sm text-ink/60">{siteConfig.workshopMapLabel}</p>
               <MapEmbed
                 title="Map of the Madlas Global workshop in Ilepa, Ogun State"
                 query={siteConfig.workshopMapQuery}

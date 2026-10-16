@@ -85,7 +85,7 @@ export function FabricationGuide() {
 
   return (
     <section className="relative bg-cream py-20 sm:py-28" id="fabrication-guide">
-      <div className="crawl-only" aria-hidden="true">
+      <div className="crawl-only" inert={true}>
         <article>
           <div className="rounded-2xl border border-gold/30 bg-ink p-7 text-cream sm:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">
@@ -202,7 +202,7 @@ export function FabricationGuide() {
       <Container>
         <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-ink">Workshop in Ilepa</h2>
-          <p className="mt-3 text-sm text-ink/65">{mapQuery}</p>
+          <p className="mt-3 text-sm text-ink/65">{siteConfig.workshopMapLabel}</p>
           <MapEmbed
             title="Map of the Madlas Global workshop at Ilepa, Ogun State"
             query={mapQuery}
