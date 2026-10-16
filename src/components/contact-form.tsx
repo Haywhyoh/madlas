@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { Icon } from "@/components/icons/icon";
+import { services } from "@/lib/data";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitted">("idle");
@@ -21,7 +22,7 @@ export function ContactForm() {
           Thank You — Message Received
         </h3>
         <p className="mt-2 max-w-sm text-sm text-ink/60">
-          A member of our sales engineering team will get back to you within
+          A member of the Madlas Global team will get back to you within
           one business day.
         </p>
       </div>
@@ -77,7 +78,7 @@ export function ContactForm() {
             id="phone"
             name="phone"
             type="tel"
-            placeholder="+1 (800) 000-0000"
+            placeholder="+234 802 000 0000"
             className="mt-2 w-full rounded-lg border border-ink/15 bg-cream px-4 py-3 text-sm text-ink outline-none transition focus:border-gold"
           />
         </div>
@@ -92,13 +93,11 @@ export function ContactForm() {
             defaultValue=""
           >
             <option value="" disabled>
-              Select a service
+              Select a fabrication service
             </option>
-            <option>Structural Steel Fabrication</option>
-            <option>Steel Pipes &amp; Tubes</option>
-            <option>Custom Metal Manufacturing</option>
-            <option>Sheet Metal Processing</option>
-            <option>Surface Treatment &amp; Coating</option>
+            {services.map((service) => (
+              <option key={service.slug}>{service.title}</option>
+            ))}
             <option>Other / General Inquiry</option>
           </select>
         </div>
@@ -111,7 +110,7 @@ export function ContactForm() {
             name="message"
             required
             rows={5}
-            placeholder="Tell us about your project, specifications, and timeline..."
+            placeholder="Tell us the steelwork, the site, and when you need it erected..."
             className="mt-2 w-full rounded-lg border border-ink/15 bg-cream px-4 py-3 text-sm text-ink outline-none transition focus:border-gold"
           />
         </div>

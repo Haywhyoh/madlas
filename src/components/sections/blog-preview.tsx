@@ -22,7 +22,7 @@ export function BlogPreview() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             eyebrow="Insights & News"
-            title="Steel Industry Tips, Trends & Insights"
+            title="From the Madlas Global Workshop"
             description="Notes from Madlas Global on fabrication, site erection, and working with companies across Nigeria."
           />
           <Button href="/blog" variant="ghost" className="hidden sm:inline-flex">
