@@ -992,14 +992,14 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "We needed a filling station canopy replaced, not a supply of steel. Madlas stripped the old structure and put up the new one. That is the kind of fabricator we keep calling.",
+      "Madlas stripped our old filling station canopy and put up the new one. That is the fabricator we keep calling.",
     name: "Amina Bello",
     role: "Station development, petroleum marketer",
     initials: "AB",
   },
   {
     quote:
-      "Our tanker trailers were built in their Ogun workshop — shells, chassis, ladders, and paint — and they were ready to couple. Straightforward fabrication, not a product catalogue.",
+      "Our tanker trailers were built in their Ogun workshop — shells, chassis, ladders, and paint — and they were ready to couple.",
     name: "Tunde Adeyemi",
     role: "Fleet manager, haulage company",
     initials: "TA",
@@ -1124,7 +1124,7 @@ export const blogPosts: BlogPost[] = [
     slug: "future-of-sustainable-steel-manufacturing",
     title: "Steel Fabrication for Companies Across 20+ Nigerian States",
     excerpt:
-      "Madlas Global Investment Company is not a mill selling coil and pipe. We fabricate steelwork and erect it for companies from our Lagos office and Ogun State workshop.",
+      "Madlas Global Investment Company fabricates steelwork and erects it for companies from our Lagos office and Ogun State workshop.",
     category: "Company",
     date: "2026-05-27",
     readTime: "5 min read",
@@ -1152,9 +1152,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "top-5-signs-you-need-a-new-steel-supplier",
-    title: "When a Project Needs a Fabricator, Not a Steel Supplier",
+    title: "The Steelwork Madlas Global Fabricates and Erects",
     excerpt:
-      "If the job is a canopy, a tanker, a roof truss, or a water tower, you need a company that builds and erects it. That is the work Madlas Global does.",
+      "Canopies, tankers, roof trusses, and water towers are the jobs Madlas Global fabricates in the workshop and erects on site.",
     category: "Company",
     date: "2026-01-20",
     readTime: "4 min read",
@@ -1174,9 +1174,9 @@ export const faqs: Faq[] = [
       "Madlas Global is the trading name of Madlas Global Investment Company Limited, a steel fabrication company in Nigeria. We fabricate steel in our workshop and erect it on site for companies across the country.",
   },
   {
-    question: "Is Madlas Global Investment Company a product manufacturer?",
+    question: "Who is Madlas Global Investment Company?",
     answer:
-      "No. We do not sell mill products such as coil, pipe, or rebar. Madlas Global Investment Company fabricates finished steelwork — fuel tankers, storage tanks, structures, filling station canopies, truck bodies, and elevated water-tank towers.",
+      "Madlas Global Investment Company Limited is a steel fabrication company in Nigeria. We fabricate fuel tankers, storage tanks, structures, filling station canopies, truck bodies, and elevated water-tank towers, then erect them on site.",
   },
   {
     question: "Where in Nigeria have you worked?",

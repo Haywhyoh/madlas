@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { blogPosts, projects, services } from "@/lib/data";
+import { serviceAreas } from "@/lib/service-areas";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -13,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteConfig.url}/projects`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${siteConfig.url}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${siteConfig.url}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.6 },
+    { url: `${siteConfig.url}/service-areas`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${siteConfig.url}/reviews`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${siteConfig.url}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
     { url: `${siteConfig.url}/terms-of-service`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
   ];
@@ -31,6 +34,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const areaRoutes: MetadataRoute.Sitemap = serviceAreas.map((area) => ({
+    url: `${siteConfig.url}/service-areas/${area.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
   const projectRoutes: MetadataRoute.Sitemap = projects.map((project) => ({
     url: `${siteConfig.url}/projects#${project.slug}`,
     lastModified: now,
@@ -38,5 +48,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...blogRoutes, ...projectRoutes];
+  return [...staticRoutes, ...serviceRoutes, ...areaRoutes, ...blogRoutes, ...projectRoutes];
 }

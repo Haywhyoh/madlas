@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/json-ld";
 import { PageHero } from "@/components/sections/page-hero";
@@ -25,7 +26,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const storyHighlights = [
-  "Steel fabrication company, not a mill or product supplier",
+  "A steel fabrication company working across Nigeria",
   "Workshop in Ifo, Ogun State, and office in Lagos",
   "Work with companies across more than 20 states",
 ];
@@ -65,15 +66,15 @@ const values = [
   },
   {
     icon: "spark" as const,
-    title: "A Company, Not a Catalogue",
-    description: "Clients hire Madlas Global to build steelwork, not to buy coil, pipe, or rebar.",
+    title: "Built for the Job",
+    description: "Companies hire Madlas Global to fabricate steelwork and erect it on their sites.",
   },
 ];
 
 const timeline = [
   { year: "1994", title: "Founded in Lagos", description: "Madlas Global Investment Company Limited is established in Lagos, Nigeria." },
-  { year: "Workshop", title: "Fabrication Plant in Ogun State", description: "Steel is fabricated at Km 30, Abeokuta/Lagos Expressway, Ilepa, Ifo." },
-  { year: "Nigeria", title: "Companies in 20+ States", description: "Fabrication and site erection for companies across more than 20 states." },
+  { year: "Ogun", title: "Workshop in Ifo", description: "Steel is fabricated at Km 30, Abeokuta/Lagos Expressway, Ilepa, Ifo." },
+  { year: "20+", title: "States Across Nigeria", description: "Fabrication and site erection for companies across more than 20 states." },
 ];
 
 const gallery: { icon: IconName; title: string; caption: string }[] = [
@@ -107,11 +108,14 @@ export default function AboutPage() {
         <Container className="grid gap-14 lg:grid-cols-2 lg:items-center">
           <div className="relative">
             <div className="relative aspect-[5/4] overflow-hidden rounded-2xl bg-ink">
-              <div className="absolute inset-0 bg-grid opacity-40" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Icon name="beam" className="h-24 w-24 text-gold/40" />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
+              <Image
+                src="/images/CEO_madlasglobal.jpeg"
+                alt="Alhaji A.O. Shorunke, CEO of Madlas Global"
+                fill
+                className="object-cover object-[center_22%]"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
             </div>
 
             <div className="absolute -bottom-6 -right-4 flex w-48 max-w-[calc(100%-1rem)] items-center gap-3 rounded-2xl border border-gold/20 bg-ink p-4 shadow-2xl sm:-bottom-8 sm:-right-6 sm:w-56 sm:gap-4 sm:p-5 lg:-right-8">
@@ -141,8 +145,7 @@ export default function AboutPage() {
             </p>
             <p className="mt-4 text-base leading-relaxed text-ink/65">
               Companies across more than 20 states hire us to fabricate that
-              steel and erect it. We are not a mill, and we do not sell a
-              product range of beams, pipe, and coil.
+              steel and erect it on their sites.
             </p>
 
             <ul className="mt-7 space-y-3">

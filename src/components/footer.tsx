@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/logo";
 import { Icon, type IconName } from "@/components/icons/icon";
 import { Container } from "@/components/ui/container";
-import { navLinks, siteConfig } from "@/lib/site-config";
+import { mapsSearchUrl, navLinks, placeQuery, siteConfig } from "@/lib/site-config";
 import { services } from "@/lib/data";
 
 const socialLinks: { name: string; href: string; icon: IconName }[] = [
@@ -56,6 +56,26 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href="/service-areas" className="transition hover:text-gold">
+                Service Areas
+              </Link>
+            </li>
+            <li>
+              <Link href="/reviews" className="transition hover:text-gold">
+                Client Comments
+              </Link>
+            </li>
+            <li>
+              <a
+                href={mapsSearchUrl(placeQuery(siteConfig.address))}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-gold"
+              >
+                Google Maps
+              </a>
+            </li>
           </ul>
         </nav>
 

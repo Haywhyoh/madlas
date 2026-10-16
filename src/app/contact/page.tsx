@@ -5,12 +5,13 @@ import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
 import { Icon } from "@/components/icons/icon";
 import { ContactForm } from "@/components/contact-form";
-import { siteConfig } from "@/lib/site-config";
+import { MapEmbed } from "@/components/map-embed";
+import { placeQuery, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Madlas Global",
+  title: "Request a Quote",
   description:
-    "Contact Madlas Global Investment Company for steel fabrication in Nigeria. Call, email, or send drawings for tankers, tanks, structures, canopies, and site erection.",
+    "Request a steel fabrication or metal construction quote. Office in Agege, Lagos. Workshop in Ifo, Ogun State.",
   path: "/contact",
   keywords: [
     "contact Madlas",

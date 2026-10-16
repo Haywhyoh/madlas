@@ -1,11 +1,11 @@
-import { siteConfig } from "./site-config";
+import { mapsSearchUrl, placeQuery, siteConfig } from "./site-config";
 import { absoluteUrl } from "./seo";
 
 /** Organization structured data used site-wide. */
 export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": ["Organization", "LocalBusiness"],
+    "@type": "Organization",
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     legalName: siteConfig.legalName,
@@ -93,6 +93,9 @@ export function organizationJsonLd() {
     },
     knowsAbout: [
       "Steel fabrication",
+      "Metal fabrication",
+      "Steel construction",
+      "Metal construction",
       "Fuel tanker fabrication",
       "Storage tank fabrication",
       "Steel structures and roof trusses",
@@ -100,6 +103,102 @@ export function organizationJsonLd() {
       "Truck body building",
       "Elevated water tank towers",
     ],
+  };
+}
+
+/** Standalone LocalBusiness node so location parsers do not miss it inside Organization. */
+export function localBusinessJsonLd() {
+  const officeQuery = placeQuery(siteConfig.address);
+  const workshopQuery = placeQuery(siteConfig.factoryAddress);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${siteConfig.url}/#localbusiness`,
+    name: siteConfig.legalName,
+    alternateName: siteConfig.name,
+    image: [absoluteUrl(siteConfig.ogImage), absoluteUrl(siteConfig.logo)],
+    url: siteConfig.url,
+    telephone: siteConfig.phone,
+    email: siteConfig.email,
+    description: siteConfig.description,
+    parentOrganization: { "@id": `${siteConfig.url}/#organization` },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.address.street,
+      addressLocality: siteConfig.address.city,
+      addressRegion: siteConfig.address.region,
+      postalCode: siteConfig.address.postalCode,
+      addressCountry: siteConfig.address.country,
+    },
+    hasMap: mapsSearchUrl(officeQuery),
+    areaServed: [
+      { "@type": "City", name: "Lagos" },
+      { "@type": "AdministrativeArea", name: "Ogun State" },
+      { "@type": "Country", name: "Nigeria" },
+    ],
+    location: [
+      {
+        "@type": "Place",
+        name: "Madlas Global office",
+        hasMap: mapsSearchUrl(officeQuery),
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: siteConfig.address.street,
+          addressLocality: siteConfig.address.city,
+          addressRegion: siteConfig.address.region,
+          postalCode: siteConfig.address.postalCode,
+          addressCountry: siteConfig.address.country,
+        },
+      },
+      {
+        "@type": "Place",
+        name: "Madlas Global workshop",
+        hasMap: mapsSearchUrl(workshopQuery),
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: siteConfig.factoryAddress.street,
+          addressLocality: siteConfig.factoryAddress.city,
+          addressRegion: siteConfig.factoryAddress.region,
+          addressCountry: siteConfig.factoryAddress.country,
+        },
+      },
+    ],
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "08:00",
+      closes: "18:00",
+    },
+  };
+}
+
+export function webPageJsonLd(page: {
+  title: string;
+  description: string;
+  path: string;
+  dateModified: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${absoluteUrl(page.path)}#webpage`,
+    url: absoluteUrl(page.path),
+    name: page.title,
+    description: page.description,
+    inLanguage: "en",
+    dateModified: page.dateModified,
+    isPartOf: { "@id": `${siteConfig.url}/#website` },
+    about: { "@id": `${siteConfig.url}/#localbusiness` },
+    primaryImageOfPage: absoluteUrl(siteConfig.ogImage),
+    publisher: { "@id": `${siteConfig.url}/#organization` },
   };
 }
 
@@ -154,6 +253,7 @@ export function articleJsonLd(article: {
   datePublished: string;
   dateModified?: string;
   author?: string;
+  authorUrl?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -166,6 +266,7 @@ export function articleJsonLd(article: {
     author: {
       "@type": "Person",
       name: article.author ?? siteConfig.name,
+      ...(article.authorUrl ? { url: absoluteUrl(article.authorUrl) } : {}),
     },
     publisher: { "@id": `${siteConfig.url}/#organization` },
     mainEntityOfPage: absoluteUrl(article.path),

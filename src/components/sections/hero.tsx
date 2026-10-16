@@ -32,18 +32,18 @@ export function Hero() {
             Madlas Global Investment Company
           </p>
           <h1 className="text-4xl font-bold leading-[1.08] text-cream sm:text-5xl md:text-6xl">
-            Madlas Global
+            Steel Fabrication in Lagos
             <span className="mt-2 block gold-gradient-text">
-              Steel Fabrication Across Nigeria
+              Metal Fabrication &amp; Steel Construction
             </span>
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/75 sm:text-lg">
-            Madlas Global Investment Company is a steel fabrication company.
-            We have worked with companies across more than 20 states in
-            Nigeria — fuel tankers, storage tanks, steel structures, filling
-            station canopies, truck bodies, and elevated water-tank towers,
-            fabricated in our Ogun State workshop and erected on site.
+            Madlas Global is a steel fabrication company in Lagos. From the
+            Agege office and the Ifo workshop we handle metal fabrication,
+            steel construction, and metal construction — tankers, tanks,
+            frames, canopies, truck bodies, and towers — for companies across
+            more than 20 states.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">

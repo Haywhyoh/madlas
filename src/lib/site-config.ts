@@ -6,9 +6,14 @@ export const siteConfig = {
   registrationNumber: "RC 630568",
   /** Parent/affiliate company, per company letterhead. */
   affiliateOf: "Adelak Sho. Ent.",
-  tagline: "Steel Fabrication Across Nigeria",
+  tagline: "Steel Fabrication in Lagos",
+  /** Homepage <title>. Kept under 60 characters so it is not cut off in search results. */
+  title: "Steel Fabrication & Construction in Lagos | Madlas Global",
+  /** Meta description. Kept under 155 characters so it is not cut off in search results. */
   description:
-    "Madlas Global Investment Company Limited (RC 630568) is a Nigerian steel fabrication company. From our Lagos office and Ogun State workshop, we fabricate and erect steelwork for companies across more than 20 states.",
+    "Madlas Global is a Lagos company for steel fabrication, metal fabrication, steel construction, and metal construction. Office in Agege, workshop in Ogun.",
+  /** Visible on the fabrication guide and in Article schema. */
+  contentUpdated: "2026-10-16",
   url: "https://www.madlasglobal.com",
   /** Primary brand mark (header, footer, schema.org logo). */
   logo: "/images/mgil_logo.jpeg",
@@ -53,12 +58,36 @@ export const siteConfig = {
     "Madlas Global",
     "Madlas Global Investment Company",
     "Madlas Global Investment Company Limited",
+    "steel fabrication",
+    "metal fabrication",
+    "steel construction",
+    "metal construction",
+    "steel fabrication Lagos",
+    "metal fabrication Lagos",
+    "steel construction Nigeria",
+    "metal construction Nigeria",
     "steel fabrication company Nigeria",
     "steel fabricators Nigeria",
-    "steel fabrication Lagos",
-    "steel fabrication Ogun State",
   ],
 } as const;
+
+export function placeQuery(place: {
+  street: string;
+  city: string;
+  region: string;
+  country: string;
+}) {
+  return `${place.street}, ${place.city}, ${place.region}, ${place.country}`;
+}
+
+/** Opens a Google Maps search for a published address. */
+export function mapsSearchUrl(query: string) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
+
+export function mapsEmbedUrl(query: string) {
+  return `https://maps.google.com/maps?q=${encodeURIComponent(query)}&z=15&output=embed`;
+}
 
 export const navLinks = [
   { label: "Home", href: "/" },

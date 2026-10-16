@@ -7,7 +7,7 @@ const features = [
     icon: "certificate" as const,
     title: "A Fabrication Company",
     description:
-      "Madlas Global builds the steelwork. We are not a supplier of mill products.",
+      "Madlas Global fabricates the steelwork and erects it on site.",
   },
   {
     icon: "gear" as const,
@@ -44,7 +44,7 @@ export function WhyChooseUs() {
             Why Choose Madlas
           </div>
           <h2 className="max-w-lg text-3xl font-bold leading-tight text-cream sm:text-4xl">
-            Committed to Customized Steel Fabrication &amp; Unmatched Quality
+            Why choose Madlas for steel construction?
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-cream/65">
             Madlas Global Investment Company fabricates steel for companies

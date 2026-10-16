@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
-import { faqJsonLd, jsonLdScriptProps } from "@/lib/json-ld";
+import { articleJsonLd, breadcrumbJsonLd, faqJsonLd, jsonLdScriptProps, webPageJsonLd } from "@/lib/json-ld";
 import { faqs } from "@/lib/data";
+import { fabricationArticle, FabricationGuide } from "@/components/sections/fabrication-guide";
 import { Hero } from "@/components/sections/hero";
+import { siteConfig } from "@/lib/site-config";
 import { TrustTicker } from "@/components/sections/trust-ticker";
 import { IntroAbout } from "@/components/sections/intro-about";
 import { StatsBar } from "@/components/sections/stats-bar";
@@ -18,16 +20,17 @@ import { FaqSection } from "@/components/sections/faq-section";
 import { CtaBanner } from "@/components/sections/cta-banner";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Madlas Global | Steel Fabrication Company in Nigeria",
-  description:
-    "Madlas Global Investment Company is a steel fabrication company in Nigeria. We have worked with companies across 20+ states — tankers, tanks, structures, canopies, and site erection.",
+  title: siteConfig.title,
+  description: siteConfig.description,
   path: "/",
   absolute: true,
   keywords: [
-    "steel fabrication company Nigeria",
-    "steel fabricators in Nigeria",
-    "fuel tanker fabrication Nigeria",
-    "filling station construction Nigeria",
+    "steel fabrication",
+    "metal fabrication",
+    "steel construction",
+    "metal construction",
+    "steel fabrication Lagos",
+    "metal fabrication Lagos",
   ],
 });
 
@@ -35,9 +38,39 @@ export default function HomePage() {
   return (
     <>
       <script {...jsonLdScriptProps(faqJsonLd(faqs))} />
+      <script
+        {...jsonLdScriptProps(
+          breadcrumbJsonLd([{ name: "Home", path: "/" }])
+        )}
+      />
+      <script
+        {...jsonLdScriptProps(
+          webPageJsonLd({
+            title: siteConfig.title,
+            description: siteConfig.description,
+            path: "/",
+            dateModified: siteConfig.contentUpdated,
+          })
+        )}
+      />
+      <script
+        {...jsonLdScriptProps(
+          articleJsonLd({
+            title: fabricationArticle.title,
+            description: fabricationArticle.description,
+            path: "/",
+            image: siteConfig.ogImage,
+            datePublished: siteConfig.contentUpdated,
+            dateModified: siteConfig.contentUpdated,
+            author: fabricationArticle.author,
+            authorUrl: fabricationArticle.authorPath,
+          })
+        )}
+      />
       <Hero />
       <TrustTicker />
       <IntroAbout />
+      <FabricationGuide />
       <StatsBar />
       <ServicesGrid />
       <WhyChooseUs />

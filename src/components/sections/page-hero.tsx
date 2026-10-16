@@ -7,11 +7,13 @@ export function PageHero({
   title,
   description,
   crumb,
+  parents = [],
 }: {
   eyebrow: string;
   title: string;
   description?: string;
   crumb: string;
+  parents?: { label: string; href: string }[];
 }) {
   return (
     <section className="relative overflow-hidden bg-ink pt-32 pb-16 sm:pt-40 sm:pb-20">
@@ -21,10 +23,18 @@ export function PageHero({
         aria-hidden="true"
       />
       <Container className="relative">
-        <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs font-medium uppercase tracking-wide text-cream/50">
+        <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-wide text-cream/50">
           <Link href="/" className="hover:text-gold">
             Home
           </Link>
+          {parents.map((parent) => (
+            <span key={parent.href} className="flex items-center gap-2">
+              <Icon name="arrow-right" className="h-3 w-3" />
+              <Link href={parent.href} className="hover:text-gold">
+                {parent.label}
+              </Link>
+            </span>
+          ))}
           <Icon name="arrow-right" className="h-3 w-3" />
           <span className="text-gold">{crumb}</span>
         </nav>

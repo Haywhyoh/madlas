@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Icon } from "@/components/icons/icon";
@@ -44,6 +45,12 @@ export function Testimonials() {
             </figure>
           ))}
         </div>
+
+        <p className="mt-10 text-center text-sm text-cream/60">
+          <Link href="/reviews" className="font-semibold text-gold hover:text-gold-light">
+            Read the client comments
+          </Link>
+        </p>
       </Container>
     </section>
   );

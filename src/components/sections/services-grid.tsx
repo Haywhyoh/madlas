@@ -2,21 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { Icon, type IconName } from "@/components/icons/icon";
+import { Icon } from "@/components/icons/icon";
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/data";
-
-const iconMap: Record<string, IconName> = {
-  beam: "beam",
-  pipe: "pipe",
-  gear: "gear",
-  layers: "layers",
-  shield: "shield",
-  certificate: "certificate",
-  building: "building",
-  flame: "flame",
-  truck: "truck",
-};
 
 export function ServicesGrid() {
   return (
@@ -25,7 +13,7 @@ export function ServicesGrid() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             eyebrow="What We Offer"
-            title="Fabrication and Site Construction"
+            title="What do we fabricate and erect?"
             description="Tankers, storage tanks, structural frames, filling stations, truck bodies, and elevated towers — fabricated in Ogun State and erected for companies across Nigeria."
           />
           <Button href="/services" variant="ghost" className="hidden sm:inline-flex">
@@ -53,8 +41,14 @@ export function ServicesGrid() {
                 </span>
               </div>
               <div className="flex flex-1 flex-col p-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-ink text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-ink">
-                  <Icon name={iconMap[service.icon]} className="h-7 w-7" />
+                <div className="relative h-14 w-14 overflow-hidden rounded-xl ring-1 ring-ink/10 transition duration-300 group-hover:ring-gold">
+                  <Image
+                    src={(service.images[1] ?? service.images[0]).src}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="56px"
+                  />
                 </div>
                 <h3 className="mt-6 font-display text-xl font-bold text-ink">
                   {service.title}

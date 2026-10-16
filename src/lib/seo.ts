@@ -33,6 +33,10 @@ export function buildMetadata({
     keywords: [...siteConfig.keywords, ...keywords],
     alternates: {
       canonical: url,
+      languages: {
+        en: url,
+        "x-default": url,
+      },
     },
     openGraph: {
       title,

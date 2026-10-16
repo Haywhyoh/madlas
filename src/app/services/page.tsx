@@ -36,10 +36,10 @@ const iconMap: Record<string, IconName> = {
 };
 
 const capabilityChecklist = [
-  "Certified inputs & raw materials",
-  "Innovative fabrication solutions",
-  "Customer-first engineering support",
-  "Rigorous quality assurance",
+  "Workshop fabrication in Ogun State",
+  "Site erection across Nigeria",
+  "Work with companies in 20+ states",
+  "One company from drawing to handover",
 ];
 
 const rangeChecklist = [

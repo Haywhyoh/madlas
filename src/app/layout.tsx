@@ -4,7 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { siteConfig } from "@/lib/site-config";
-import { organizationJsonLd, websiteJsonLd, jsonLdScriptProps } from "@/lib/json-ld";
+import { organizationJsonLd, localBusinessJsonLd, websiteJsonLd, jsonLdScriptProps } from "@/lib/json-ld";
 
 const oswald = Oswald({
   variable: "--font-oswald",
@@ -28,7 +28,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Steel Fabrication Company in Nigeria`,
+    default: siteConfig.title,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -41,13 +41,17 @@ export const metadata: Metadata = {
   formatDetection: { telephone: true, email: true, address: true },
   alternates: {
     canonical: "/",
+    languages: {
+      en: "/",
+      "x-default": "/",
+    },
   },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.legalName,
-    title: `${siteConfig.name} | Steel Fabrication Company in Nigeria`,
+    title: siteConfig.title,
     description: siteConfig.description,
     images: [
       {
@@ -62,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@madlasglobal",
     creator: "@madlasglobal",
-    title: `${siteConfig.name} | Steel Fabrication Company in Nigeria`,
+    title: siteConfig.title,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
   },
@@ -98,6 +102,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-cream text-ink">
         <script {...jsonLdScriptProps(organizationJsonLd())} />
+        <script {...jsonLdScriptProps(localBusinessJsonLd())} />
         <script {...jsonLdScriptProps(websiteJsonLd())} />
         <a
           href="#main-content"

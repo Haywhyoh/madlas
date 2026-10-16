@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/icons/icon";
@@ -16,11 +17,14 @@ export function IntroAbout() {
         <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
           <div className="relative">
             <div className="relative aspect-[5/4] overflow-hidden rounded-2xl bg-ink">
-              <div className="absolute inset-0 bg-grid opacity-40" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Icon name="beam" className="h-24 w-24 text-gold/40" />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
+              <Image
+                src="/images/CEO_madlasglobal.jpeg"
+                alt="Alhaji A.O. Shorunke, CEO of Madlas Global"
+                fill
+                className="object-cover object-[center_22%]"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
             </div>
 
             <div className="absolute -bottom-6 -right-4 flex w-48 max-w-[calc(100%-1rem)] items-center gap-3 rounded-2xl border border-gold/20 bg-ink p-4 shadow-2xl sm:-bottom-8 sm:-right-6 sm:w-56 sm:gap-4 sm:p-5 lg:-right-8">
@@ -42,15 +46,14 @@ export function IntroAbout() {
               Who We Are
             </div>
             <h2 className="max-w-lg text-3xl font-bold leading-tight text-ink sm:text-4xl">
-              Steel Fabrication for Companies Across Nigeria
+              What is Madlas Global?
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-ink/65">
-              Madlas — Madlas Global Investment Company Limited — fabricates
-              steel for companies that need the work built and put up, not a
-              catalogue of mill products. Since {siteConfig.founded}, we have
-              taken tanker, tank, structure, canopy, and tower jobs from our
-              Lagos office and Ogun State workshop to sites in more than 20
-              states.
+              Madlas Global is a steel fabrication company in Lagos. Since{" "}
+              {siteConfig.founded}, Madlas Global Investment Company Limited
+              has built tanker, tank, structure, canopy, and tower jobs from
+              the Agege office and the Ogun State workshop, and erected them
+              for companies in more than 20 states.
             </p>
 
             <ul className="mt-7 space-y-3">
