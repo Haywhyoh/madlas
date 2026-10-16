@@ -23,11 +23,11 @@ export function Hero() {
         aria-hidden="true"
       />
       <div
-        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink to-transparent"
+        className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-ink to-transparent"
         aria-hidden="true"
       />
 
-      <Container className="relative flex min-h-[100svh] items-center pt-32 pb-24 sm:pt-36">
+      <Container className="relative flex min-h-[90svh] items-center pt-8 pb-8 sm:pt-20">
         <div className="max-w-3xl animate-fade-up">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gold">
             Madlas Global Investment Company
@@ -39,7 +39,7 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/75 sm:text-lg">
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-cream/75 sm:text-lg">
             Madlas Global is a steel fabrication and construction company in Lagos. We handle metal fabrication,
             steel and metal construction for companies across more than 20 states.
           </p>
@@ -51,7 +51,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-gold/20 pt-8">
+          <div className="mt-8 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-gold/20 pt-8">
             {[
               { label: "Years Fabricating", value: "30+" },
               { label: "States in Nigeria", value: "20+" },

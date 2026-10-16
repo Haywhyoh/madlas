@@ -18,16 +18,14 @@ export function ContactForm() {
       "Hello Madlas Global, I would like to request a quote.",
       "",
       `Name: ${data.get("name")}`,
-      company ? `Company: ${company}` : "",
+      ...(company ? [`Company: ${company}`] : []),
       `Email: ${data.get("email")}`,
-      phone ? `Phone: ${phone}` : "",
+      ...(phone ? [`Phone: ${phone}`] : []),
       `Service: ${data.get("service") || "General inquiry"}`,
       "",
       "Project details:",
       String(data.get("message") || ""),
-    ]
-      .filter(Boolean)
-      .join("\n");
+    ].join("\n");
 
     const url = whatsappUrl(message);
     setChatUrl(url);
