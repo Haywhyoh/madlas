@@ -14,7 +14,7 @@ export const siteConfig = {
     "Madlas Global is a Lagos company for steel fabrication, metal fabrication, steel construction, and metal construction. Office and workshop in Ilepa, Ifo.",
   /** Visible on the fabrication guide and in Article schema. */
   contentUpdated: "2026-10-16",
-  url: "https://www.madlasglobal.com",
+  url: "https://www.madlas.com",
   /** Primary brand mark (header, footer, schema.org logo). */
   logo: "/images/mgil_logo.jpeg",
   /** Square padded mark for PWA / apple touch / schema fallbacks. */
