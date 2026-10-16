@@ -48,12 +48,9 @@ export const siteConfig = {
     region: "Ogun State",
     country: "Nigeria",
   },
-  /** Shown beside the workshop map. */
-  workshopMapLabel:
-    "Klm 30 Lagos-Abeokuta Expy, Way, Ilepa 112104, Ogun State",
-  /** Embed query. The label's "Way" segment was pinning the map in Alimosho. */
+  /** Workshop map pin and the address shown beside it. */
   workshopMapQuery:
-    "Klm 30 Lagos-Abeokuta Expressway, Ilepa, Ifo 112104, Ogun State, Nigeria",
+    "Klm 30 Lagos-Abeokuta Expy, Way, Ilepa 112104, Ogun State",
   founded: "1994",
   social: {
     facebook: "https://facebook.com/madlasglobal",

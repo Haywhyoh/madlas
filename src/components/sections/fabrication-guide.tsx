@@ -202,7 +202,7 @@ export function FabricationGuide() {
       <Container>
         <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-ink">Workshop in Ilepa</h2>
-          <p className="mt-3 text-sm text-ink/65">{siteConfig.workshopMapLabel}</p>
+          <p className="mt-3 text-sm text-ink/65">{mapQuery}</p>
           <MapEmbed
             title="Map of the Madlas Global workshop at Ilepa, Ogun State"
             query={mapQuery}
