@@ -23,7 +23,7 @@ export function BlogPreview() {
           <SectionHeading
             eyebrow="Insights & News"
             title="Steel Industry Tips, Trends & Insights"
-            description="Practical guidance from our engineers on materials, quality, and manufacturing best practices."
+            description="Notes from Madlas Global on fabrication, site erection, and working with companies across Nigeria."
           />
           <Button href="/blog" variant="ghost" className="hidden sm:inline-flex">
             Visit The Blog

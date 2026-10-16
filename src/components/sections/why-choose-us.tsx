@@ -5,23 +5,27 @@ import { Icon } from "@/components/icons/icon";
 const features = [
   {
     icon: "certificate" as const,
-    title: "Certified Quality Standards",
-    description: "ISO 9001:2015, API 5L, and ASTM certifications on every product line.",
+    title: "A Fabrication Company",
+    description:
+      "Madlas Global builds the steelwork. We are not a supplier of mill products.",
   },
   {
     icon: "gear" as const,
-    title: "Advanced Manufacturing Tech",
-    description: "CNC, robotic welding, and automated rolling for consistent precision.",
+    title: "Workshop in Ogun State",
+    description:
+      "Tankers, tanks, frames, bodies, and towers are cut, welded, and painted in Ifo.",
   },
   {
     icon: "truck" as const,
-    title: "Reliable Global Logistics",
-    description: "On-time delivery to 25+ countries with full shipment tracking.",
+    title: "20+ States in Nigeria",
+    description:
+      "We have worked with companies across more than 20 states, from fabrication to site erection.",
   },
   {
     icon: "shield" as const,
-    title: "Engineering-Led Support",
-    description: "In-house engineers collaborate on custom specs and tolerances.",
+    title: "One Team, Site to Handover",
+    description:
+      "Design, workshop, and erection sit with Madlas Global Investment Company.",
   },
 ];
 
@@ -43,10 +47,10 @@ export function WhyChooseUs() {
             Committed to Customized Steel Fabrication &amp; Unmatched Quality
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-cream/65">
-            We combine decades of metallurgical expertise with modern
-            automation to deliver steel products that meet exact
-            specifications — on schedule, every time. Our clients trust us
-            because we treat every order like a load-bearing responsibility.
+            Madlas Global Investment Company fabricates steel for companies
+            that need the job built and erected. From our Lagos office and
+            Ogun State workshop, that work has reached sites in more than 20
+            states.
           </p>
           <div className="mt-9">
             <Button href="/about">Discover Our Story</Button>

@@ -10,7 +10,7 @@ export function Testimonials() {
       <Container className="relative">
         <SectionHeading
           eyebrow="Client Feedback"
-          title="See What Our Clients Have to Say"
+          title="What Companies Say About the Fabrication"
           align="center"
           dark
         />

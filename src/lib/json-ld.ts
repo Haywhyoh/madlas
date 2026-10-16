@@ -1,15 +1,20 @@
 import { siteConfig } from "./site-config";
 import { absoluteUrl } from "./seo";
 
-/** Organization + Manufacturer structured data used site-wide. */
+/** Organization structured data used site-wide. */
 export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": ["Organization", "Corporation"],
+    "@type": ["Organization", "LocalBusiness"],
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     legalName: siteConfig.legalName,
-    alternateName: siteConfig.shortName,
+    alternateName: [
+      siteConfig.shortName,
+      "Madlas Global Investment Company",
+      siteConfig.legalName,
+    ],
+    slogan: siteConfig.tagline,
     identifier: siteConfig.registrationNumber,
     parentOrganization: {
       "@type": "Organization",
@@ -40,7 +45,10 @@ export function organizationJsonLd() {
         telephone: siteConfig.phone,
         contactType: "sales",
         email: siteConfig.email,
-        areaServed: "Worldwide",
+        areaServed: {
+          "@type": "Country",
+          name: "Nigeria",
+        },
         availableLanguage: ["English"],
       },
       {
@@ -48,14 +56,54 @@ export function organizationJsonLd() {
         telephone: siteConfig.phoneSecondary,
         contactType: "customer service",
         email: siteConfig.email,
-        areaServed: "Worldwide",
+        areaServed: {
+          "@type": "Country",
+          name: "Nigeria",
+        },
         availableLanguage: ["English"],
       },
+    ],
+    areaServed: {
+      "@type": "Country",
+      name: "Nigeria",
+    },
+    location: {
+      "@type": "Place",
+      name: "Madlas Global Workshop",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: siteConfig.factoryAddress.street,
+        addressLocality: siteConfig.factoryAddress.city,
+        addressRegion: siteConfig.factoryAddress.region,
+        addressCountry: siteConfig.factoryAddress.country,
+      },
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "08:00",
+      closes: "18:00",
+    },
+    knowsAbout: [
+      "Steel fabrication",
+      "Fuel tanker fabrication",
+      "Storage tank fabrication",
+      "Steel structures and roof trusses",
+      "Filling station construction",
+      "Truck body building",
+      "Elevated water tank towers",
     ],
   };
 }
 
-/** WebSite schema with SearchAction to enable sitelinks search box. */
+/** WebSite schema linking the site to the organization. */
 export function websiteJsonLd() {
   return {
     "@context": "https://schema.org",
@@ -65,14 +113,6 @@ export function websiteJsonLd() {
     name: siteConfig.name,
     description: siteConfig.description,
     publisher: { "@id": `${siteConfig.url}/#organization` },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${siteConfig.url}/blog?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -144,7 +184,10 @@ export function serviceJsonLd(service: {
     name: service.name,
     description: service.description,
     provider: { "@id": `${siteConfig.url}/#organization` },
-    areaServed: "Worldwide",
+    areaServed: {
+      "@type": "Country",
+      name: "Nigeria",
+    },
     url: absoluteUrl(service.path),
   };
 }

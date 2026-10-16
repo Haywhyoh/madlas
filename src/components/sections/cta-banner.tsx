@@ -10,11 +10,11 @@ export function CtaBanner() {
       <Container className="relative flex flex-col items-center justify-between gap-8 text-center lg:flex-row lg:text-left">
         <div>
           <h2 className="font-display text-2xl font-bold text-ink sm:text-3xl">
-            Ready to Build with Steel You Can Trust?
+            Need Steel Fabricated and Erected in Nigeria?
           </h2>
           <p className="mt-2 max-w-xl text-sm text-ink/70 sm:text-base">
-            Talk to our engineering team about your project specifications and
-            get a certified quote within 24 hours.
+            Talk to Madlas Global about a tanker, tank, structure, canopy, or
+            tower. We will quote the fabrication and the site work.
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">

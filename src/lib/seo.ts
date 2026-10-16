@@ -8,6 +8,8 @@ type BuildMetadataArgs = {
   keywords?: string[];
   image?: string;
   noIndex?: boolean;
+  /** Skip the root title template so the brand is not appended twice. */
+  absolute?: boolean;
 };
 
 /**
@@ -21,11 +23,12 @@ export function buildMetadata({
   keywords = [],
   image = siteConfig.ogImage,
   noIndex = false,
+  absolute = false,
 }: BuildMetadataArgs): Metadata {
   const url = new URL(path, siteConfig.url).toString();
 
   return {
-    title,
+    title: absolute ? { absolute: title } : title,
     description,
     keywords: [...siteConfig.keywords, ...keywords],
     alternates: {

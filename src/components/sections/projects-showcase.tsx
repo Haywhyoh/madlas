@@ -15,7 +15,7 @@ export function ProjectsShowcase() {
           <SectionHeading
             eyebrow="Our Work in Action"
             title="Recent Jobs on the Ground"
-            description="Tankers, filling stations, roof trusses, storage tanks, truck bodies, and tower stands from recent jobs."
+            description="Tankers, filling stations, roof trusses, storage tanks, truck bodies, and towers fabricated and erected for companies in Nigeria."
           />
           <Button href="/projects" variant="ghost" className="hidden sm:inline-flex">
             View All Projects

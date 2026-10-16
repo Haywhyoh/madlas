@@ -8,11 +8,11 @@ import { Icon } from "@/components/icons/icon";
 import { blogPosts } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Blog | Steel Industry Insights, Tips & Company News",
+  title: "Steel Fabrication Notes",
   description:
-    "Read the latest insights from Madlas Global on steel grades, quality certification, sustainable manufacturing, and global logistics from our engineering team.",
+    "Notes from Madlas Global Investment Company on steel fabrication, site erection, and working with companies across more than 20 Nigerian states.",
   path: "/blog",
-  keywords: ["steel industry blog", "steel manufacturing insights", "steel news"],
+  keywords: ["Madlas Global", "steel fabrication Nigeria", "site erection Nigeria"],
 });
 
 function formatDate(date: string) {
@@ -37,8 +37,8 @@ export default function BlogPage() {
 
       <PageHero
         eyebrow="Insights & News"
-        title="Steel Industry Tips, Trends & Company News"
-        description="Practical guidance and industry insight from the engineers and operators who run Madlas Global's plants every day."
+        title="Notes on Steel Fabrication in Nigeria"
+        description="How Madlas Global Investment Company fabricates steel in Ogun State and erects it for companies across the country."
         crumb="Blog"
       />
 

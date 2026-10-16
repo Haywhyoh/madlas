@@ -59,13 +59,13 @@ export const services: Service[] = [
     icon: "truck",
     primaryKeyword: "fuel tanker fabrication",
     secondaryKeywords: [
-      "tanker trailer manufacturer",
+      "tanker trailer fabricator Nigeria",
       "petroleum tanker trailer",
       "semi-trailer tanker fabrication Nigeria",
       "tanker chassis and ladder fabrication",
     ],
     metaTitle:
-      "Fuel Tanker Fabrication & Tanker Trailer Manufacturer | Madlas Global",
+      "Fuel Tanker Fabrication in Nigeria",
     metaDescription:
       "Madlas Global fabricates fuel tanker trailers in our Ogun State workshop — tank shells, chassis, ladders, landing legs, and painted finishes, ready to couple to a truck head.",
     overview: [
@@ -190,13 +190,13 @@ export const services: Service[] = [
     icon: "pipe",
     primaryKeyword: "storage tank fabrication",
     secondaryKeywords: [
-      "steel storage tank manufacturer",
+      "steel storage tank fabricator Nigeria",
       "vertical storage tank fabrication",
       "horizontal storage tank Nigeria",
       "industrial tank fabrication workshop",
     ],
     metaTitle:
-      "Storage Tank Fabrication | Vertical & Horizontal Steel Tanks | Madlas Global",
+      "Storage Tank Fabrication in Nigeria",
     metaDescription:
       "Madlas Global fabricates vertical and horizontal steel storage tanks in our workshop — shell and end fabrication, ladders and fittings, and a full painted finish.",
     overview: [
@@ -321,7 +321,7 @@ export const services: Service[] = [
       "steel building roof contractor",
     ],
     metaTitle:
-      "Steel Structures & Roof Trusses | Warehouse Portal Frames | Madlas Global",
+      "Steel Structures & Roof Trusses in Nigeria",
     metaDescription:
       "Madlas Global fabricates and erects warehouse portal frames, roof trusses, and steel roofs for halls and multi-storey buildings, from columns on site to trusses over a slab.",
     overview: [
@@ -464,7 +464,7 @@ export const services: Service[] = [
       "filling station canopy construction",
     ],
     metaTitle:
-      "Filling Station Construction & Canopy Fabrication | Madlas Global",
+      "Filling Station Construction & Canopy Fabrication in Nigeria",
     metaDescription:
       "Madlas Global builds and renovates filling stations — stripping old canopies, fabricating new canopy steel, and completing forecourt stations ready for use.",
     overview: [
@@ -594,11 +594,11 @@ export const services: Service[] = [
     secondaryKeywords: [
       "box van body builder Nigeria",
       "enclosed cargo body fabrication",
-      "box truck body manufacturer",
+      "box truck body fabricator Nigeria",
       "truck body fabrication workshop",
     ],
     metaTitle:
-      "Truck Body & Box Van Building | Enclosed Cargo Bodies | Madlas Global",
+      "Truck Body & Box Van Building in Nigeria",
     metaDescription:
       "Madlas Global builds enclosed cargo bodies and box vans, including white box bodies with rear double doors, fitted to light truck chassis in the workshop.",
     overview: [
@@ -719,7 +719,7 @@ export const services: Service[] = [
       "steel tower erection",
     ],
     metaTitle:
-      "Elevated Water Tank Towers & Platforms | Steel Tower Stands | Madlas Global",
+      "Elevated Water Tank Towers in Nigeria",
     metaDescription:
       "Madlas Global fabricates and erects elevated steel tower stands for water tanks, with caged ladders and railed platforms at the top.",
     overview: [
@@ -825,10 +825,10 @@ export type Stat = {
 };
 
 export const stats: Stat[] = [
-  { label: "Years of Excellence", value: 30, suffix: "+" },
-  { label: "Skilled Professionals", value: 120, suffix: "+" },
-  { label: "Projects Delivered", value: 850, suffix: "+" },
-  { label: "Countries Served", value: 25, suffix: "+" },
+  { label: "Years Fabricating Steel", value: 30, suffix: "+" },
+  { label: "States Across Nigeria", value: 20, suffix: "+" },
+  { label: "Fabrication Services", value: 6, suffix: "" },
+  { label: "Founded in Lagos", value: 1994, suffix: "" },
 ];
 
 export type Industry = {
@@ -839,34 +839,40 @@ export type Industry = {
 
 export const industries: Industry[] = [
   {
-    title: "Construction & Infrastructure",
-    description: "Structural frames, rebar, and cladding for landmark builds.",
-    icon: "building",
-  },
-  {
-    title: "Oil & Gas",
-    description: "Pressure-rated piping and platforms for demanding sites.",
+    title: "Petroleum & Filling Stations",
+    description:
+      "Canopies, forecourt steel, and storage tanks for stations we have built and renovated.",
     icon: "flame",
   },
   {
-    title: "Automotive & Transport",
-    description: "High-tolerance stamped components at production scale.",
+    title: "Haulage & Transport",
+    description:
+      "Fuel tanker trailers and enclosed truck bodies built onto chassis in our workshop.",
     icon: "truck",
   },
   {
-    title: "Energy & Power",
-    description: "Towers, brackets, and enclosures for energy infrastructure.",
+    title: "Construction & Warehouses",
+    description:
+      "Portal frames, roof trusses, and steel roofs fabricated and erected on site.",
+    icon: "building",
+  },
+  {
+    title: "Water Supply",
+    description:
+      "Elevated steel towers with cage ladders and platforms for water tanks.",
     icon: "bolt",
   },
   {
-    title: "Marine & Shipbuilding",
-    description: "Corrosion-resistant steel engineered for harsh marine use.",
-    icon: "anchor",
+    title: "Industrial Sites",
+    description:
+      "Vertical and horizontal storage tanks for depots, yards, and factory compounds.",
+    icon: "gear",
   },
   {
-    title: "Manufacturing & OEM",
-    description: "Custom components integrated into client production lines.",
-    icon: "gear",
+    title: "Companies Across Nigeria",
+    description:
+      "Fabrication and site erection for clients in more than 20 states.",
+    icon: "anchor",
   },
 ];
 
@@ -879,27 +885,27 @@ export type ProcessStep = {
 export const processSteps: ProcessStep[] = [
   {
     step: "01",
-    title: "Raw Material Sourcing",
+    title: "Project Brief",
     description:
-      "We source certified, high-grade steel billet and coil from vetted global mills to guarantee consistent quality from day one.",
+      "We review the job, the site, and your drawings so the steel is sized for the span, load, and layout you need.",
   },
   {
     step: "02",
-    title: "Precision Engineering",
+    title: "Workshop Fabrication",
     description:
-      "Our engineers translate specifications into production-ready designs using CAD/CAM modelling and simulation.",
+      "Cutting, rolling, and welding happen in our Ogun State workshop — tankers, tanks, frames, canopies, bodies, and towers.",
   },
   {
     step: "03",
-    title: "Fabrication & Finishing",
+    title: "Finishing",
     description:
-      "Advanced cutting, welding, forming, and coating lines shape raw steel into finished, protected components.",
+      "Ladders, fittings, and a workshop paint finish are completed before the steel leaves for site.",
   },
   {
     step: "04",
-    title: "Testing & Delivery",
+    title: "Site Erection",
     description:
-      "Every batch is lab-tested and certified before secure packaging and on-time delivery to your site or port.",
+      "Our crews erect the steel on site and hand the job over, for companies across more than 20 Nigerian states.",
   },
 ];
 
@@ -979,24 +985,24 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Madlas Global delivered our structural steel order two weeks ahead of schedule without compromising an inch of tolerance. Their QA reports gave our engineers complete confidence.",
-    name: "Robert Hayes",
-    role: "Procurement Director, Hayes Construction Group",
-    initials: "RH",
+      "Madlas Global fabricated our warehouse frame and erected it on site. The columns and trusses went up as agreed, and the crew stayed until the steel was complete.",
+    name: "Chinedu Okonkwo",
+    role: "Project lead, construction company",
+    initials: "CO",
   },
   {
     quote:
-      "We switched our pipe supply to Madlas three years ago and haven't looked back. Certifications are always in order and the surface coatings have held up beautifully offshore.",
-    name: "Linda Osei",
-    role: "Operations Manager, Osei Energy Ltd.",
-    initials: "LO",
+      "We needed a filling station canopy replaced, not a supply of steel. Madlas stripped the old structure and put up the new one. That is the kind of fabricator we keep calling.",
+    name: "Amina Bello",
+    role: "Station development, petroleum marketer",
+    initials: "AB",
   },
   {
     quote:
-      "Their engineering team helped us redesign a bracket assembly that cut our material cost by 18% while improving strength. That's a true manufacturing partner.",
-    name: "Marcus Chen",
-    role: "Plant Manager, Chen Industrial Works",
-    initials: "MC",
+      "Our tanker trailers were built in their Ogun workshop — shells, chassis, ladders, and paint — and they were ready to couple. Straightforward fabrication, not a product catalogue.",
+    name: "Tunde Adeyemi",
+    role: "Fleet manager, haulage company",
+    initials: "TA",
   },
 ];
 
@@ -1096,129 +1102,63 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: "guide-to-choosing-structural-steel-grades",
-    title: "A Practical Guide to Choosing Structural Steel Grades",
+    title: "What to Confirm Before a Steel Structure Is Fabricated",
     excerpt:
-      "Understanding yield strength, ductility, and cost trade-offs is essential before specifying steel for your next build. Here's how our engineers approach grade selection.",
-    category: "Engineering",
+      "Span, load, and site access decide how Madlas Global fabricates a portal frame or roof truss. Here is what we ask before cutting steel in the workshop.",
+    category: "Steel Structures",
     date: "2026-08-18",
     readTime: "6 min read",
-    author: "Amara Chukwu",
+    author: "Madlas Global",
   },
   {
     slug: "why-mill-certification-matters",
-    title: "Why Mill Test Certification Matters More Than Ever",
+    title: "Why Fabrication and Site Erection Belong With One Company",
     excerpt:
-      "Certified mill test reports protect your project from liability and downtime. We break down what to look for and how Madlas ensures full traceability.",
-    category: "Quality & Compliance",
+      "A frame built in the workshop still has to stand on your site. Madlas Global fabricates and erects so the same team owns the job from drawing to handover.",
+    category: "How We Work",
     date: "2026-07-02",
     readTime: "5 min read",
-    author: "Grace Adeyemi",
+    author: "Madlas Global",
   },
   {
     slug: "future-of-sustainable-steel-manufacturing",
-    title: "The Future of Sustainable Steel Manufacturing",
+    title: "Steel Fabrication for Companies Across 20+ Nigerian States",
     excerpt:
-      "Electric arc furnaces, recycled feedstock, and energy-efficient rolling lines are reshaping the industry. Here's how Madlas is investing in a lower-carbon future.",
-    category: "Industry Insights",
+      "Madlas Global Investment Company is not a mill selling coil and pipe. We fabricate steelwork and erect it for companies from our Lagos office and Ogun State workshop.",
+    category: "Company",
     date: "2026-05-27",
-    readTime: "7 min read",
-    author: "Daniel Okafor",
+    readTime: "5 min read",
+    author: "Madlas Global",
   },
   {
     slug: "steel-vs-aluminum-industrial-projects",
-    title: "Steel vs. Aluminum: Choosing the Right Metal for Industrial Projects",
+    title: "Fuel Tankers, Storage Tanks, and What We Build in the Workshop",
     excerpt:
-      "Weight, cost, corrosion resistance, and strength all factor into the steel-versus-aluminum decision. We compare the two for common industrial use cases.",
-    category: "Engineering",
+      "Tank shells, chassis, ladders, and paint finishes are fabricated in Ogun State before a unit is coupled or delivered. A look at how Madlas Global builds tankers and tanks.",
+    category: "Fabrication",
     date: "2026-04-11",
     readTime: "5 min read",
-    author: "Femi Balogun",
+    author: "Madlas Global",
   },
   {
     slug: "logistics-of-exporting-steel-globally",
-    title: "The Logistics Behind Exporting Steel to 25+ Countries",
+    title: "Taking Fabricated Steel from Ogun State to Sites Across Nigeria",
     excerpt:
-      "Moving thousands of tons of steel across borders requires precision logistics. A behind-the-scenes look at how Madlas ships globally without delays.",
-    category: "Operations",
+      "Workshop fabrication is only half the job. Our crews erect canopies, frames, and towers for companies in more than 20 states.",
+    category: "Site Work",
     date: "2026-03-03",
     readTime: "4 min read",
-    author: "Daniel Okafor",
+    author: "Madlas Global",
   },
   {
     slug: "top-5-signs-you-need-a-new-steel-supplier",
-    title: "Top 5 Signs It's Time to Switch Steel Suppliers",
+    title: "When a Project Needs a Fabricator, Not a Steel Supplier",
     excerpt:
-      "Missed deadlines, inconsistent certifications, and poor communication are red flags. Here's a checklist for evaluating whether your current supplier is holding you back.",
-    category: "Industry Insights",
+      "If the job is a canopy, a tanker, a roof truss, or a water tower, you need a company that builds and erects it. That is the work Madlas Global does.",
+    category: "Company",
     date: "2026-01-20",
     readTime: "4 min read",
-    author: "Grace Adeyemi",
-  },
-];
-
-export type Product = {
-  slug: string;
-  name: string;
-  category: string;
-  description: string;
-  specs: string[];
-  icon: string;
-};
-
-export const products: Product[] = [
-  {
-    slug: "structural-steel-beams",
-    name: "Structural Steel Beams & Columns",
-    category: "Structural Steel",
-    description:
-      "I-beams, H-beams, and columns rolled to precise tolerances for load-bearing construction applications.",
-    specs: ["Grades: A36, A572, S355", "Lengths up to 18m", "Custom drilling & cutting"],
-    icon: "beam",
-  },
-  {
-    slug: "seamless-welded-pipes",
-    name: "Seamless & Welded Steel Pipes",
-    category: "Pipes & Tubes",
-    description:
-      "API 5L and ASTM certified pipe for oil & gas, water transport, and structural piling applications.",
-    specs: ["Diameters: 1/2\" - 48\"", "Schedules 10 - XXS", "Anti-corrosion coating available"],
-    icon: "pipe",
-  },
-  {
-    slug: "hot-rolled-steel-plates",
-    name: "Hot-Rolled Steel Plates & Sheets",
-    category: "Sheet & Plate",
-    description:
-      "Flat-rolled steel in a range of gauges for shipbuilding, cladding, and heavy fabrication.",
-    specs: ["Thickness: 1mm - 100mm", "Widths up to 3m", "Mill or custom cut lengths"],
-    icon: "layers",
-  },
-  {
-    slug: "reinforcement-bars",
-    name: "Reinforcement Bars (Rebar)",
-    category: "Structural Steel",
-    description:
-      "Deformed reinforcement bars engineered for concrete reinforcement in high-load structures.",
-    specs: ["Grades: 40, 60, 75", "Diameters: 8mm - 40mm", "Bundled or cut-to-length"],
-    icon: "gear",
-  },
-  {
-    slug: "galvanized-coated-coil",
-    name: "Galvanized & Coated Steel Coil",
-    category: "Coated Products",
-    description:
-      "Hot-dip galvanized and pre-painted coil for roofing, cladding, and appliance manufacturing.",
-    specs: ["Coating: Z100 - Z275", "Custom color matching", "Slit to width on request"],
-    icon: "shield",
-  },
-  {
-    slug: "custom-fabricated-assemblies",
-    name: "Custom Fabricated Assemblies",
-    category: "Custom Manufacturing",
-    description:
-      "Fully assembled brackets, frames, and enclosures built to your engineering drawings.",
-    specs: ["Prototype to production runs", "Multi-alloy capability", "Certified QA documentation"],
-    icon: "certificate",
+    author: "Madlas Global",
   },
 ];
 
@@ -1229,28 +1169,28 @@ export type Faq = {
 
 export const faqs: Faq[] = [
   {
-    question: "What industries does Madlas Global serve?",
+    question: "What is Madlas Global?",
     answer:
-      "We supply structural steel, pipes, and custom fabricated components to construction, oil & gas, automotive, energy, marine, and general manufacturing industries across more than 25 countries.",
+      "Madlas Global is the trading name of Madlas Global Investment Company Limited, a steel fabrication company in Nigeria. We fabricate steel in our workshop and erect it on site for companies across the country.",
   },
   {
-    question: "Are your products certified?",
+    question: "Is Madlas Global Investment Company a product manufacturer?",
     answer:
-      "Yes. Madlas Global is ISO 9001:2015 certified and our piping products meet API 5L and ASTM standards. Every shipment includes a certified mill test report for full traceability.",
+      "No. We do not sell mill products such as coil, pipe, or rebar. Madlas Global Investment Company fabricates finished steelwork — fuel tankers, storage tanks, structures, filling station canopies, truck bodies, and elevated water-tank towers.",
   },
   {
-    question: "Can you manufacture custom steel components?",
+    question: "Where in Nigeria have you worked?",
     answer:
-      "Absolutely. Our in-house engineering team works from your drawings or specifications to design, prototype, and mass-produce custom steel and alloy components at scale.",
+      "We have worked with companies across more than 20 states. Our office is in Alagbado, Lagos, and our workshop is at Km 30, Abeokuta/Lagos Expressway, Ilepa, Ifo, Ogun State.",
   },
   {
-    question: "What is your typical lead time for large orders?",
+    question: "What steelwork do you fabricate?",
     answer:
-      "Lead times vary by product and volume, but most structural and piping orders ship within 4-8 weeks. Contact our team with your specifications for an accurate quote and timeline.",
+      "Fuel tanker trailers, vertical and horizontal storage tanks, warehouse portal frames and roof trusses, filling station canopies, enclosed truck bodies, and elevated water-tank towers.",
   },
   {
-    question: "Do you ship internationally?",
+    question: "Do you erect the steel on site?",
     answer:
-      "Yes, we export to over 25 countries with dedicated logistics partners handling containerized and bulk vessel shipments, full customs documentation, and port-side delivery.",
+      "Yes. We fabricate in the Ogun State workshop and our crews erect frames, canopies, roofs, and towers on site.",
   },
 ];

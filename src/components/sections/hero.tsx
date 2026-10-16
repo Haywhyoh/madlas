@@ -1,95 +1,71 @@
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
-import { Icon } from "@/components/icons/icon";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-ink pt-32 pb-24 sm:pt-40 sm:pb-32">
-      <div className="absolute inset-0 bg-grid opacity-60" aria-hidden="true" />
+    <section className="relative isolate min-h-[100svh] overflow-hidden bg-ink">
+      <video
+        className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      >
+        <source src="/heroVid.mp4" type="video/mp4" />
+      </video>
+
+      <div className="absolute inset-0 bg-ink/45" aria-hidden="true" />
       <div
-        className="absolute -top-32 right-0 h-[520px] w-[520px] rounded-full bg-gold/20 blur-[140px]"
+        className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/20"
         aria-hidden="true"
       />
       <div
-        className="absolute inset-0 bg-diagonal opacity-40"
+        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink to-transparent"
         aria-hidden="true"
       />
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink to-transparent" aria-hidden="true" />
 
-      <Container className="relative">
-        <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-          <div className="animate-fade-up">
-            
+      <Container className="relative flex min-h-[100svh] items-center pt-32 pb-24 sm:pt-36">
+        <div className="max-w-2xl animate-fade-up">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gold">
+            Madlas Global Investment Company
+          </p>
+          <h1 className="text-4xl font-bold leading-[1.08] text-cream sm:text-5xl md:text-6xl">
+            Madlas Global
+            <span className="mt-2 block gold-gradient-text">
+              Steel Fabrication Across Nigeria
+            </span>
+          </h1>
 
-            <h1 className="max-w-2xl text-4xl font-bold leading-[1.08] text-cream sm:text-5xl md:text-6xl">
-              The Material of{" "}
-              <span className="gold-gradient-text">Choice for Toughness</span> &amp; Reliability
-            </h1>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/75 sm:text-lg">
+            Madlas Global Investment Company is a steel fabrication company.
+            We have worked with companies across more than 20 states in
+            Nigeria — fuel tankers, storage tanks, steel structures, filling
+            station canopies, truck bodies, and elevated water-tank towers,
+            fabricated in our Ogun State workshop and erected on site.
+          </p>
 
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/65 sm:text-lg">
-              Madlas Global fabricates fuel tankers, storage tanks, steel
-              structures, filling-station canopies, truck bodies, and elevated
-              water-tower stands — built in our workshop and erected on site.
-            </p>
-
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Button href="/contact">Get a Free Quote</Button>
-              <Button href="/services" variant="secondary">
-                Explore Our Services
-              </Button>
-            </div>
-
-            <div className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-gold/10 pt-8">
-              {[
-                { label: "Years of Excellence", value: "30+" },
-                { label: "Tons Produced Yearly", value: "120K+" },
-                { label: "Countries Served", value: "25+" },
-              ].map((item) => (
-                <div key={item.label}>
-                  <p className="font-display text-2xl font-bold text-gold">{item.value}</p>
-                  <p className="text-xs uppercase tracking-wide text-cream/50">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
+          <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <Button href="/contact">Get a Free Quote</Button>
+            <Button href="/services" variant="secondary">
+              Explore Our Services
+            </Button>
           </div>
 
-          <div className="relative animate-fade-up [animation-delay:150ms]">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-gold/20 bg-gradient-to-br from-charcoal via-ink-soft to-ink shadow-2xl">
-              <div className="absolute inset-0 bg-grid opacity-30" aria-hidden="true" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 p-10 text-center">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full border border-gold/40 bg-ink/60 text-gold">
-                  <Icon name="beam" className="h-9 w-9" />
-                </div>
-                <p className="font-display text-xl font-bold text-cream">
-                  Precision Steel, <br /> Engineered to Last
-                </p>
-                <p className="max-w-xs text-sm text-cream/55">
-                  From raw billet to certified finished product — every ton is
-                  tested, tracked, and trusted.
+          <div className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-gold/20 pt-8">
+            {[
+              { label: "Years Fabricating", value: "30+" },
+              { label: "States in Nigeria", value: "20+" },
+              { label: "Founded in Lagos", value: "1994" },
+            ].map((item) => (
+              <div key={item.label}>
+                <p className="font-display text-2xl font-bold text-gold">{item.value}</p>
+                <p className="text-xs uppercase tracking-wide text-cream/60">
+                  {item.label}
                 </p>
               </div>
-              <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between rounded-xl border border-gold/25 bg-ink/80 px-5 py-4 backdrop-blur">
-                <div>
-                  <p className="font-display text-lg font-bold text-gold">99.8%</p>
-                  <p className="text-[0.65rem] uppercase tracking-wide text-cream/50">
-                    On-Time Delivery
-                  </p>
-                </div>
-                <div className="h-8 w-px bg-gold/20" />
-                <div>
-                  <p className="font-display text-lg font-bold text-gold">850+</p>
-                  <p className="text-[0.65rem] uppercase tracking-wide text-cream/50">
-                    Projects Delivered
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="absolute -left-6 -top-6 hidden h-24 w-24 items-center justify-center rounded-full border border-gold/30 bg-ink/90 text-center shadow-xl sm:flex">
-              <Icon name="certificate" className="h-10 w-10 text-gold" />
-            </div>
+            ))}
           </div>
         </div>
       </Container>

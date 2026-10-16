@@ -119,13 +119,11 @@ export default async function BlogPostPage({
             <p className="text-lg leading-relaxed text-ink/75">{post.excerpt}</p>
 
             <p className="mt-6 leading-relaxed text-ink/70">
-              At Madlas Global, every recommendation we make is grounded in
-              decades of hands-on manufacturing experience. Our engineering
-              and quality assurance teams work directly with clients to
-              translate project requirements into certified, deliverable
-              specifications — whether that means selecting the right steel
-              grade, validating a mill test report, or planning logistics
-              for a multi-country shipment.
+              Madlas Global Investment Company is a steel fabrication company
+              in Nigeria. The notes on this page come from workshop and site
+              work: tankers, tanks, structures, filling station canopies,
+              truck bodies, and elevated towers, built in Ogun State and
+              erected for companies in more than 20 states.
             </p>
 
             <h2 className="mt-10 font-display text-2xl font-bold text-ink">
@@ -140,18 +138,18 @@ export default async function BlogPostPage({
             </p>
 
             <blockquote className="mt-8 border-l-4 border-gold bg-white p-6 text-base italic text-ink/70">
-              &ldquo;Quality steel isn&apos;t just about the material —
-              it&apos;s about the process, the testing, and the people
-              behind it.&rdquo; — {post.author}, Madlas Global
+              &ldquo;We fabricate the steel and we erect it. That is the work
+              Madlas Global Investment Company does for companies across
+              Nigeria.&rdquo; — {post.author}
             </blockquote>
 
             <h2 className="mt-10 font-display text-2xl font-bold text-ink">
               Talk to Our Engineering Team
             </h2>
             <p className="mt-4 leading-relaxed text-ink/70">
-              Have a project you&apos;d like to discuss? Our team can help
-              you select the right materials, grades, and finishing for your
-              application.
+              Have a fabrication job to discuss? Send the drawings and the
+              site, and Madlas Global will quote the workshop work and the
+              erection.
             </p>
 
             <div className="mt-8">

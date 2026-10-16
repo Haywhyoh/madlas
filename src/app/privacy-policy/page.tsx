@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
         <h2>How We Use Your Information</h2>
         <ul>
           <li>To respond to quote requests and general inquiries</li>
-          <li>To provide updates about products and services</li>
+          <li>To provide updates about our fabrication services</li>
           <li>To improve our website and customer experience</li>
         </ul>
         <h2>Contact Us</h2>

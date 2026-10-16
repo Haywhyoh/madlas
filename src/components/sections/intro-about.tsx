@@ -1,11 +1,12 @@
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/icons/icon";
+import { siteConfig } from "@/lib/site-config";
 
 const highlights = [
-  "State-of-the-art rolling & fabrication plant",
-  "In-house metallurgical testing laboratory",
-  "Dedicated export & logistics division",
+  "Workshop fabrication in Ifo, Ogun State",
+  "Site erection for companies across Nigeria",
+  "Steelwork delivered in more than 20 states",
 ];
 
 export function IntroAbout() {
@@ -29,7 +30,7 @@ export function IntroAbout() {
               <div>
                 <p className="font-display text-base font-bold text-cream sm:text-lg">30+ Years</p>
                 <p className="text-xs uppercase tracking-wide text-cream/55">
-                  Manufacturing Excellence
+                  Steel Fabrication
                 </p>
               </div>
             </div>
@@ -41,14 +42,15 @@ export function IntroAbout() {
               Who We Are
             </div>
             <h2 className="max-w-lg text-3xl font-bold leading-tight text-ink sm:text-4xl">
-              Forging Reliable Steel Solutions for Global Industry
+              Steel Fabrication for Companies Across Nigeria
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-ink/65">
-              Since {new Date().getFullYear() - 30}, Madlas Global has grown from
-              a single rolling mill into an integrated steel manufacturing group
-              serving construction, energy, marine, and manufacturing clients
-              worldwide. Every product that leaves our plant is engineered,
-              tested, and certified to perform under pressure.
+              Madlas — Madlas Global Investment Company Limited — fabricates
+              steel for companies that need the work built and put up, not a
+              catalogue of mill products. Since {siteConfig.founded}, we have
+              taken tanker, tank, structure, canopy, and tower jobs from our
+              Lagos office and Ogun State workshop to sites in more than 20
+              states.
             </p>
 
             <ul className="mt-7 space-y-3">

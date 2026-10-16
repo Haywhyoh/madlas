@@ -18,15 +18,16 @@ import { FaqSection } from "@/components/sections/faq-section";
 import { CtaBanner } from "@/components/sections/cta-banner";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Madlas Global | Premium Steel Manufacturing & Fabrication Company",
+  title: "Madlas Global | Steel Fabrication Company in Nigeria",
   description:
-    "Madlas Global fabricates fuel tankers, storage tanks, steel structures, filling station canopies, truck bodies, and elevated water-tank towers in Lagos and Ogun State.",
+    "Madlas Global Investment Company is a steel fabrication company in Nigeria. We have worked with companies across 20+ states — tankers, tanks, structures, canopies, and site erection.",
   path: "/",
+  absolute: true,
   keywords: [
+    "steel fabrication company Nigeria",
+    "steel fabricators in Nigeria",
     "fuel tanker fabrication Nigeria",
-    "storage tank fabrication",
-    "filling station construction",
-    "steel structures Lagos",
+    "filling station construction Nigeria",
   ],
 });
 

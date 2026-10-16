@@ -6,9 +6,9 @@ export const siteConfig = {
   registrationNumber: "RC 630568",
   /** Parent/affiliate company, per company letterhead. */
   affiliateOf: "Adelak Sho. Ent.",
-  tagline: "The Material of Choice for Toughness & Reliability",
+  tagline: "Steel Fabrication Across Nigeria",
   description:
-    "Madlas Global Investment Company Limited (RC 630568), an affiliate of Adelak Sho. Ent., is a Nigerian steel structural fabrication, tanks & trucks, and construction engineering company operating from Lagos and Ogun State.",
+    "Madlas Global Investment Company Limited (RC 630568) is a Nigerian steel fabrication company. From our Lagos office and Ogun State workshop, we fabricate and erect steelwork for companies across more than 20 states.",
   url: "https://www.madlasglobal.com",
   /** Primary brand mark (header, footer, schema.org logo). */
   logo: "/images/mgil_logo.jpeg",
@@ -49,14 +49,14 @@ export const siteConfig = {
     youtube: "https://youtube.com/@madlasglobal",
   },
   keywords: [
-    "steel structural fabricators",
-    "tanks and trucks",
-    "construction engineers",
-    "structural steel Nigeria",
-    "steel fabrication company Lagos",
-    "steel plant Ogun State",
+    "Madlas",
     "Madlas Global",
+    "Madlas Global Investment Company",
     "Madlas Global Investment Company Limited",
+    "steel fabrication company Nigeria",
+    "steel fabricators Nigeria",
+    "steel fabrication Lagos",
+    "steel fabrication Ogun State",
   ],
 } as const;
 

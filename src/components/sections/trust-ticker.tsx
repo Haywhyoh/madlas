@@ -1,12 +1,12 @@
 const items = [
-  "ISO 9001:2015 Certified",
-  "API 5L Compliant Piping",
-  "ASTM Certified Materials",
-  "30+ Years Manufacturing",
-  "Exporting to 25+ Countries",
-  "In-House Metallurgical Lab",
-  "850+ Projects Delivered",
-  "24/7 Production Capacity",
+  "Madlas Global Investment Company",
+  "Steel Fabrication Company",
+  "Workshop in Ogun State",
+  "Office in Lagos",
+  "20+ States Across Nigeria",
+  "Fuel Tankers & Storage Tanks",
+  "Filling Station Canopies",
+  "Site Erection Crews",
 ];
 
 export function TrustTicker() {

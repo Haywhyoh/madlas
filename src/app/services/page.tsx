@@ -13,9 +13,9 @@ import { ProjectsShowcase } from "@/components/sections/projects-showcase";
 import { services } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Services | Tankers, Tanks, Structures & Filling Stations",
+  title: "Steel Fabrication Services in Nigeria",
   description:
-    "Madlas Global fabricates fuel tankers, storage tanks, steel structures and roof trusses, filling station canopies, truck bodies, and elevated water-tank towers.",
+    "Madlas Global Investment Company fabricates fuel tankers, storage tanks, steel structures, filling station canopies, truck bodies, and water-tank towers for companies across Nigeria.",
   path: "/services",
   keywords: services.flatMap((service) => [
     service.primaryKeyword,
@@ -77,8 +77,8 @@ export default function ServicesPage() {
 
       <PageHero
         eyebrow="Our Services"
-        title="Fabrication and Construction Services"
-        description="Fuel tankers, storage tanks, steel structures, filling stations, truck bodies, and elevated water-tank towers — built in our workshop and erected on site."
+        title="Steel Fabrication Services Across Nigeria"
+        description="Madlas Global fabricates fuel tankers, storage tanks, steel structures, filling stations, truck bodies, and elevated water-tank towers, then erects them for companies in 20+ states."
         crumb="Services"
       />
 
@@ -180,7 +180,7 @@ export default function ServicesPage() {
                 Why Choose Madlas
               </div>
               <h2 className="max-w-lg text-3xl font-bold leading-tight text-cream sm:text-4xl">
-                Experience the Pinnacle of Steel Manufacturing
+                Fabricated in Ogun State, Erected Across Nigeria
               </h2>
 
               <ul className="mt-7 space-y-3">
@@ -223,10 +223,10 @@ export default function ServicesPage() {
                 </div>
                 <div>
                   <p className="font-display text-base font-bold text-cream sm:text-lg">
-                    ISO 9001:2015
+                    20+ States
                   </p>
                   <p className="text-xs uppercase tracking-wide text-cream/55">
-                    Certified Manufacturing
+                    Across Nigeria
                   </p>
                 </div>
               </div>

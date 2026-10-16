@@ -8,9 +8,9 @@ import { CtaBanner } from "@/components/sections/cta-banner";
 import { projects } from "@/lib/data";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Projects | Tankers, Structures, Stations & Towers",
+  title: "Steel Fabrication Projects in Nigeria",
   description:
-    "Recent Madlas Global jobs: fuel tanker trailers, the Northwest filling station, warehouse frames, storage tanks, box van bodies, and elevated tower platforms.",
+    "Madlas Global fabrication jobs in Nigeria: fuel tanker trailers, the Northwest filling station, warehouse frames, storage tanks, box van bodies, and elevated towers.",
   path: "/projects",
   keywords: ["steel fabrication projects", "filling station construction", "tanker trailer fabrication"],
 });
@@ -29,8 +29,8 @@ export default function ProjectsPage() {
 
       <PageHero
         eyebrow="Our Portfolio"
-        title="Recent Fabrication and Site Work"
-        description="Tankers, filling stations, roof trusses, storage tanks, truck bodies, and elevated towers from jobs we have fabricated and erected."
+        title="Fabrication Jobs Across Nigeria"
+        description="Tankers, filling stations, roof trusses, storage tanks, truck bodies, and elevated towers Madlas Global has fabricated and erected."
         crumb="Projects"
       />
 

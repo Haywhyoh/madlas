@@ -8,7 +8,7 @@ export function Team({
   members = featuredTeam,
   eyebrow = "Our Leadership",
   title = "Meet the Team Behind Madlas Global",
-  description = "Decades of combined engineering, metallurgy, and operations expertise guide every decision we make.",
+  description = "The people who run fabrication, design, procurement, and site work for Madlas Global Investment Company.",
   showViewAll = false,
 }: {
   members?: TeamMember[];

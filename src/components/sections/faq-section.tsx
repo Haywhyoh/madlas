@@ -10,7 +10,7 @@ export function FaqSection() {
         <SectionHeading
           eyebrow="FAQs"
           title="Frequently Asked Questions"
-          description="Answers to the questions we hear most from builders, engineers, and procurement teams."
+          description="Who Madlas is, what we fabricate, and where in Nigeria we have worked."
         />
         <Accordion items={faqs} />
       </Container>

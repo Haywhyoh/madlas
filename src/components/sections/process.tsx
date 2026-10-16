@@ -9,8 +9,8 @@ export function Process() {
       <Container className="relative">
         <SectionHeading
           eyebrow="Our Process"
-          title="Experience the Pinnacle of Steel Manufacturing"
-          description="A disciplined four-stage process ensures every product meets Madlas Global's exacting standards before it reaches you."
+          title="How Madlas Global Fabricates and Erects Steel"
+          description="From the brief to site handover, the work stays with one fabrication company — workshop in Ogun State, erection across Nigeria."
           align="center"
           dark
         />

@@ -18,8 +18,8 @@ export function Industries() {
       <Container>
         <SectionHeading
           eyebrow="Industries We Serve"
-          title="Innovative Steel Strength for Every Industry"
-          description="Wherever performance and durability matter most, Madlas Global steel is engineered to hold the line."
+          title="Steelwork for the Companies We Build For"
+          description="Madlas Global fabricates and erects steel for petroleum, haulage, construction, and water projects across Nigeria."
           align="center"
         />
 

@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${siteConfig.name} — Premium Steel Manufacturing`,
+    name: `${siteConfig.legalName} — Steel Fabrication in Nigeria`,
     short_name: siteConfig.shortName,
     description: siteConfig.description,
     start_url: "/",

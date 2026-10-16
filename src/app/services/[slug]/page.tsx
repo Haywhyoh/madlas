@@ -197,10 +197,10 @@ export default async function ServiceDetailPage({
               </div>
               <div>
                 <p className="font-display text-base font-bold text-cream sm:text-lg">
-                  ISO 9001:2015
+                  20+ States
                 </p>
                 <p className="text-xs uppercase tracking-wide text-cream/55">
-                  Certified Workshop
+                  Fabrication in Nigeria
                 </p>
               </div>
             </div>

@@ -12,72 +12,75 @@ import { CtaBanner } from "@/components/sections/cta-banner";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Madlas Global | 30+ Years of Steel Manufacturing Excellence",
+  title: "About Madlas Global Investment Company",
   description:
-    "Learn how Madlas Global grew from a single rolling mill into a global steel manufacturing group serving 25+ countries with certified structural steel, pipes, and custom fabrication.",
+    "Madlas Global Investment Company Limited is a Nigerian steel fabrication company. Since 1994 we have fabricated and erected steelwork for companies across more than 20 states.",
   path: "/about",
-  keywords: ["about Madlas Global", "steel company history", "steel manufacturer mission"],
+  keywords: [
+    "about Madlas",
+    "about Madlas Global",
+    "Madlas Global Investment Company",
+    "steel fabrication company Nigeria",
+  ],
 });
 
 const storyHighlights = [
-  "Family-founded, engineering-led leadership team",
-  "Vertically integrated rolling, fabrication & testing",
-  "Full material traceability on every shipment",
+  "Steel fabrication company, not a mill or product supplier",
+  "Workshop in Ifo, Ogun State, and office in Lagos",
+  "Work with companies across more than 20 states",
 ];
 
 const missionVision = [
   {
     icon: "shield" as const,
     eyebrow: "Our Mission",
-    title: "Steel Engineers & Builders Can Trust Without Question",
+    title: "Fabricate the Steel and Put It Up",
     description:
-      "We manufacture certified steel products by investing in disciplined processes, skilled people, and modern equipment — so every beam, pipe, and panel performs exactly as specified, in any climate, on any site, for decades.",
+      "Madlas Global Investment Company exists to build steelwork companies can use — tankers, tanks, frames, canopies, truck bodies, and towers — then erect it on their sites.",
   },
   {
     icon: "spark" as const,
     eyebrow: "Our Vision",
-    title: "The Most Reliable Steel Partner for Industries That Can't Fail",
+    title: "The Fabricator Companies Across Nigeria Call First",
     description:
-      "To be the go-to steel manufacturing partner for construction, energy, marine, and heavy manufacturing clients across every market we serve — where performance is never negotiable.",
+      "To be the steel fabrication company known in every state we work: Madlas, Madlas Global, the team that builds the job and stands it up.",
   },
 ];
 
 const values = [
   {
     icon: "shield" as const,
-    title: "Integrity in Every Ton",
-    description: "We never compromise on certification, testing, or transparency with our clients.",
+    title: "The Job We Quoted",
+    description: "We fabricate what was agreed and erect it where it was agreed.",
   },
   {
     icon: "gear" as const,
-    title: "Engineering Excellence",
-    description: "Continuous investment in technology, training, and process improvement.",
+    title: "Workshop Discipline",
+    description: "Cutting, welding, fittings, and paint happen in our Ogun State workshop before steel goes to site.",
   },
   {
     icon: "truck" as const,
-    title: "Reliability at Scale",
-    description: "On-time, every time — from single orders to multi-thousand-ton contracts.",
+    title: "We Go to the Site",
+    description: "Erection crews work with companies across more than 20 Nigerian states.",
   },
   {
     icon: "spark" as const,
-    title: "Sustainable Growth",
-    description: "Investing in energy-efficient production and responsible sourcing.",
+    title: "A Company, Not a Catalogue",
+    description: "Clients hire Madlas Global to build steelwork, not to buy coil, pipe, or rebar.",
   },
 ];
 
 const timeline = [
-  { year: "1994", title: "Founded in Lagos, Nigeria", description: "Madlas Global opens its first rolling mill with a team of 12." },
-  { year: "2003", title: "First Export Contract", description: "Shipped our first international order of structural steel to Latin America." },
-  { year: "2011", title: "ISO 9001 Certification", description: "Achieved ISO 9001 certification and opened our metallurgical testing lab." },
-  { year: "2018", title: "Pipe & Tube Division Launch", description: "Expanded capacity with a dedicated seamless pipe manufacturing line." },
-  { year: "2026", title: "25+ Countries Served", description: "Now exporting certified steel products to more than 25 countries worldwide." },
+  { year: "1994", title: "Founded in Lagos", description: "Madlas Global Investment Company Limited is established in Lagos, Nigeria." },
+  { year: "Workshop", title: "Fabrication Plant in Ogun State", description: "Steel is fabricated at Km 30, Abeokuta/Lagos Expressway, Ilepa, Ifo." },
+  { year: "Nigeria", title: "Companies in 20+ States", description: "Fabrication and site erection for companies across more than 20 states." },
 ];
 
 const gallery: { icon: IconName; title: string; caption: string }[] = [
-  { icon: "beam", title: "Rolling Mill Floor", caption: "Structural sections rolled to exact tolerance." },
-  { icon: "certificate", title: "Metallurgical Lab", caption: "Every batch tested before it leaves the plant." },
-  { icon: "gear", title: "Fabrication Bay", caption: "CNC cutting and robotic welding in motion." },
-  { icon: "truck", title: "Export Yard", caption: "Certified shipments loading for 25+ countries." },
+  { icon: "beam", title: "Structural Steel", caption: "Portal frames and roof trusses for warehouses and buildings." },
+  { icon: "truck", title: "Tankers & Bodies", caption: "Fuel tanker trailers and enclosed truck bodies built in the workshop." },
+  { icon: "gear", title: "Workshop", caption: "Cutting, welding, and painting in Ifo, Ogun State." },
+  { icon: "building", title: "Site Erection", caption: "Canopies, frames, and towers erected for companies across Nigeria." },
 ];
 
 export default function AboutPage() {
@@ -94,8 +97,8 @@ export default function AboutPage() {
 
       <PageHero
         eyebrow="About Madlas Global"
-        title="Engineering Steel Strength Since 1994"
-        description="From a single rolling mill to a global manufacturing group — this is the story of how Madlas Global became a trusted name in steel."
+        title="Madlas Global, Steel Fabricators in Nigeria"
+        description="Madlas Global Investment Company Limited has fabricated and erected steel for companies across more than 20 states since 1994."
         crumb="About"
       />
 
@@ -127,20 +130,19 @@ export default function AboutPage() {
           <div>
             <SectionHeading
               eyebrow="Who We Are"
-              title="Forged From a Single Rolling Mill Into a Global Steel Group"
+              title="A Fabrication Company Built for Nigerian Sites"
             />
             <p className="mt-5 text-base leading-relaxed text-ink/65">
-              Madlas Global began in {siteConfig.founded} with a single rolling
-              mill and a team of twelve people who believed steel should
-              never be a weak link. Three decades later, we&apos;re an
-              integrated manufacturing group producing structural steel,
-              pipes, and custom fabrication for clients who can&apos;t afford
-              to guess about quality.
+              {siteConfig.legalName} — Madlas, or Madlas Global — is a steel
+              fabrication company. We opened in {siteConfig.founded} in Lagos.
+              The workshop is in Ifo, Ogun State. The work is tankers, storage
+              tanks, steel structures, filling station canopies, truck bodies,
+              and elevated water-tank towers.
             </p>
             <p className="mt-4 text-base leading-relaxed text-ink/65">
-              Every product that leaves our plant is engineered, tested, and
-              certified — backed by full material traceability and a team
-              that treats every order like a load-bearing responsibility.
+              Companies across more than 20 states hire us to fabricate that
+              steel and erect it. We are not a mill, and we do not sell a
+              product range of beams, pipe, and coil.
             </p>
 
             <ul className="mt-7 space-y-3">
@@ -170,7 +172,7 @@ export default function AboutPage() {
         <Container>
           <SectionHeading
             eyebrow="Our Mission &amp; Vision"
-            title="Building the Backbone of Global Industry"
+            title="What Madlas Global Is Here to Do"
             align="center"
           />
 
@@ -262,7 +264,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Behind the Scenes"
             title="Inside Our Operations"
-            description="A glimpse at the plant floor, testing lab, and logistics teams that keep every certified shipment on schedule."
+            description="The workshop, the steelwork, and the site crews behind Madlas Global Investment Company."
             align="center"
           />
 
@@ -292,12 +294,12 @@ export default function AboutPage() {
       <section className="bg-cream py-16">
         <Container className="rounded-2xl border border-gold/20 bg-ink p-10 text-center sm:p-14">
           <h2 className="font-display text-2xl font-bold text-cream sm:text-3xl">
-            Certified, Accountable, and Built on Trust
+            Fabricated in Ogun. Erected Across Nigeria.
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm text-cream/60 sm:text-base">
-            {siteConfig.name} is proud to hold ISO 9001:2015 certification
-            across all manufacturing facilities, with full material
-            traceability on every shipment.
+            {siteConfig.legalName} ({siteConfig.registrationNumber}) fabricates
+            steel at {siteConfig.factoryAddress.street}, {siteConfig.factoryAddress.city},
+            and erects it for companies in more than 20 states.
           </p>
         </Container>
       </section>

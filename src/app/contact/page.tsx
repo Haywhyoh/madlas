@@ -8,11 +8,16 @@ import { ContactForm } from "@/components/contact-form";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Us | Request a Steel Manufacturing Quote",
+  title: "Contact Madlas Global",
   description:
-    "Get in touch with Madlas Global's sales engineering team for structural steel, pipe, and custom manufacturing quotes. Call, email, or send us your project specifications.",
+    "Contact Madlas Global Investment Company for steel fabrication in Nigeria. Call, email, or send drawings for tankers, tanks, structures, canopies, and site erection.",
   path: "/contact",
-  keywords: ["contact steel manufacturer", "request steel quote", "Madlas Global contact"],
+  keywords: [
+    "contact Madlas",
+    "contact Madlas Global",
+    "Madlas Global Investment Company contact",
+    "steel fabrication quote Nigeria",
+  ],
 });
 
 const contactCards = [
@@ -62,8 +67,8 @@ export default function ContactPage() {
 
       <PageHero
         eyebrow="Contact Madlas Global"
-        title="Let's Talk About Your Next Steel Project"
-        description="Whether it's a structural steel order, custom fabrication, or bulk piping request, our sales engineering team is ready to help."
+        title="Talk to Madlas Global About Fabrication"
+        description="Send the drawings for a tanker, tank, structure, canopy, truck body, or tower. We fabricate in Ogun State and erect across Nigeria."
         crumb="Contact"
       />
 

@@ -28,8 +28,8 @@ export default function TeamPage() {
 
       <PageHero
         eyebrow="Our Team"
-        title="The People Behind Every Project"
-        description="From leadership and design to procurement, workshop, and administration — meet the full Madlas Global team."
+        title="The Madlas Global Fabrication Team"
+        description="Leadership, design, procurement, workshop, and administration at Madlas Global Investment Company."
         crumb="Team"
       />
 

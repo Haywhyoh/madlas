@@ -28,7 +28,7 @@ export default function TermsOfServicePage() {
         <h2>Use of Website</h2>
         <p>
           Content on this site is provided for general informational
-          purposes about {siteConfig.name} and its products and services. It
+          purposes about {siteConfig.legalName} and its steel fabrication services. It
           should not be relied upon as a substitute for formal engineering
           specifications or contractual documentation.
         </p>

@@ -28,7 +28,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Premium Steel Manufacturing & Fabrication`,
+    default: `${siteConfig.name} | Steel Fabrication Company in Nigeria`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
-  category: "Manufacturing",
+  category: "Steel Fabrication",
   formatDetection: { telephone: true, email: true, address: true },
   alternates: {
     canonical: "/",
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: siteConfig.locale,
     url: siteConfig.url,
-    siteName: siteConfig.name,
-    title: `${siteConfig.name} | Premium Steel Manufacturing & Fabrication`,
+    siteName: siteConfig.legalName,
+    title: `${siteConfig.name} | Steel Fabrication Company in Nigeria`,
     description: siteConfig.description,
     images: [
       {
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@madlasglobal",
     creator: "@madlasglobal",
-    title: `${siteConfig.name} | Premium Steel Manufacturing & Fabrication`,
+    title: `${siteConfig.name} | Steel Fabrication Company in Nigeria`,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
   },
@@ -86,9 +86,6 @@ export const metadata: Metadata = {
     apple: [{ url: "/images/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/manifest.webmanifest",
-  verification: {
-    google: "google-site-verification-code",
-  },
 };
 
 export default function RootLayout({
