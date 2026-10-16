@@ -31,7 +31,7 @@ export function ServicesGrid() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             eyebrow="What We Offer"
-            title="What do we fabricate and erect?"
+            title="Fabrication and Site Construction"
             description="Tankers, storage tanks, structural frames, filling stations, truck bodies, and elevated towers — fabricated in Ogun State and erected for companies across Nigeria."
           />
           <Button href="/services" variant="ghost" className="hidden sm:inline-flex">

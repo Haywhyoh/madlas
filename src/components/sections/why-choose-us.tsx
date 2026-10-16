@@ -44,7 +44,7 @@ export function WhyChooseUs() {
             Why Choose Madlas
           </div>
           <h2 className="max-w-lg text-3xl font-bold leading-tight text-cream sm:text-4xl">
-            Why choose Madlas for steel construction?
+            Committed to Customized Steel Fabrication &amp; Unmatched Quality
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-cream/65">
             Madlas Global Investment Company fabricates steel for companies

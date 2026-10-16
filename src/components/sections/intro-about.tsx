@@ -46,14 +46,14 @@ export function IntroAbout() {
               Who We Are
             </div>
             <h2 className="max-w-lg text-3xl font-bold leading-tight text-ink sm:text-4xl">
-              What is Madlas Global?
+              Steel Fabrication for Companies Across Nigeria
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-ink/65">
-              Madlas Global is a steel fabrication company in Lagos. Since{" "}
-              {siteConfig.founded}, Madlas Global Investment Company Limited
-              has built tanker, tank, structure, canopy, and tower jobs from
-              the Agege office and the Ogun State workshop, and erected them
-              for companies in more than 20 states.
+              Madlas — Madlas Global Investment Company Limited — is a steel
+              fabrication company. Since {siteConfig.founded}, we have built
+              tanker, tank, structure, canopy, and tower jobs in our Lagos
+              office and Ogun State workshop, and erected them for companies
+              in more than 20 states.
             </p>
 
             <ul className="mt-7 space-y-3">

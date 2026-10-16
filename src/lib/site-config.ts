@@ -48,6 +48,9 @@ export const siteConfig = {
     region: "Ogun State",
     country: "Nigeria",
   },
+  /** Exact query for the workshop map pin. */
+  workshopMapQuery:
+    "Klm 30 Lagos-Abeokuta Expy, Way, Ilepa 112104, Ogun State",
   founded: "1994",
   social: {
     facebook: "https://facebook.com/madlasglobal",

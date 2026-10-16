@@ -109,7 +109,7 @@ export function organizationJsonLd() {
 /** Standalone LocalBusiness node so location parsers do not miss it inside Organization. */
 export function localBusinessJsonLd() {
   const officeQuery = placeQuery(siteConfig.address);
-  const workshopQuery = placeQuery(siteConfig.factoryAddress);
+  const workshopQuery = siteConfig.workshopMapQuery;
 
   return {
     "@context": "https://schema.org",

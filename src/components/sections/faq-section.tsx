@@ -9,7 +9,7 @@ export function FaqSection() {
       <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
         <SectionHeading
           eyebrow="FAQs"
-          title="What do companies ask before hiring us?"
+          title="Frequently Asked Questions"
           description="Who Madlas is, what we fabricate, and where in Nigeria we have worked."
         />
         <Accordion items={faqs} />

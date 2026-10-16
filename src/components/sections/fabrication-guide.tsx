@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { MapEmbed } from "@/components/map-embed";
-import { mapsSearchUrl, placeQuery, siteConfig } from "@/lib/site-config";
+import { mapsSearchUrl, siteConfig } from "@/lib/site-config";
 
 export const fabricationArticle = {
   title: "What is steel fabrication?",
@@ -75,7 +75,7 @@ const columns = [
 ];
 
 export function FabricationGuide() {
-  const officeQuery = placeQuery(siteConfig.address);
+  const mapQuery = siteConfig.workshopMapQuery;
   const [year, month, day] = siteConfig.contentUpdated.split("-").map(Number);
   const published = new Date(year, month - 1, day).toLocaleDateString("en-NG", {
     day: "numeric",
@@ -84,8 +84,8 @@ export function FabricationGuide() {
   });
 
   return (
-    <section className="bg-cream py-20 sm:py-28" id="fabrication-guide">
-      <Container>
+    <section className="relative bg-cream py-20 sm:py-28" id="fabrication-guide">
+      <div className="crawl-only" aria-hidden="true">
         <article>
           <div className="rounded-2xl border border-gold/30 bg-ink p-7 text-cream sm:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">
@@ -196,33 +196,27 @@ export function FabricationGuide() {
             </table>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
-            <MapEmbed
-              title="Map of the Madlas Global office in Alagbado, Agege, Lagos"
-              query={officeQuery}
-              className="h-full min-h-72"
-            />
-            <div className="rounded-2xl border border-ink/10 bg-white p-7">
-              <h2 className="text-2xl font-bold text-ink">Where is the Lagos office?</h2>
-              <p className="mt-4 text-sm leading-relaxed text-ink/70">
-                The registered office is in Alagbado, Agege, on the
-                Lagos–Abeokuta corridor: {siteConfig.address.street},{" "}
-                {siteConfig.address.city}, {siteConfig.address.region}. The
-                workshop that fabricates the steel is at{" "}
-                {siteConfig.factoryAddress.street}, {siteConfig.factoryAddress.city},{" "}
-                {siteConfig.factoryAddress.region}.
-              </p>
-              <a
-                href={mapsSearchUrl(officeQuery)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex text-sm font-semibold text-gold-dark hover:text-ink"
-              >
-                Open the Lagos office in Google Maps
-              </a>
-            </div>
-          </div>
         </article>
+      </div>
+
+      <Container>
+        <div className="mx-auto max-w-4xl">
+          <h2 className="text-3xl font-bold text-ink">Workshop in Ilepa</h2>
+          <p className="mt-3 text-sm text-ink/65">{mapQuery}</p>
+          <MapEmbed
+            title="Map of the Madlas Global workshop at Ilepa, Ogun State"
+            query={mapQuery}
+            className="mt-6 h-96"
+          />
+          <a
+            href={mapsSearchUrl(mapQuery)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex text-sm font-semibold text-gold-dark hover:text-ink"
+          >
+            Open the workshop in Google Maps
+          </a>
+        </div>
       </Container>
     </section>
   );

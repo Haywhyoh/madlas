@@ -70,7 +70,7 @@ export const serviceAreas: ServiceArea[] = [
       "Ladders, fittings, and paint are finished before the steel moves.",
       "Crews erect the steel on site and stay through handover.",
     ],
-    mapQuery: placeQuery(siteConfig.factoryAddress),
+    mapQuery: siteConfig.workshopMapQuery,
     mapTitle: "Map of the Madlas Global workshop in Ilepa, Ifo, Ogun State",
   },
 ];
