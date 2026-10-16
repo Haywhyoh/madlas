@@ -99,33 +99,28 @@ export default function ContactPage() {
         <Container className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <ContactForm />
 
-          <div className="overflow-hidden rounded-2xl border border-ink/10 bg-ink">
-            <div className="relative flex aspect-[4/3] items-center justify-center">
-              <div className="absolute inset-0 bg-grid opacity-40" />
-              <div className="relative flex flex-col items-center gap-4 px-8 text-center">
-                <Icon name="map-pin" className="h-10 w-10 text-gold" />
-                <div>
-                  <p className="font-display text-lg font-bold text-cream">
-                    Registered Office
-                  </p>
-                  <p className="mt-1 text-sm text-cream/60">
-                    {siteConfig.address.street}
-                    <br />
-                    {siteConfig.address.city}, {siteConfig.address.region}{" "}
-                    {siteConfig.address.postalCode}
-                  </p>
-                </div>
-                <div>
-                  <p className="font-display text-lg font-bold text-cream">
-                    Factory
-                  </p>
-                  <p className="mt-1 text-sm text-cream/60">
-                    {siteConfig.factoryAddress.street}
-                    <br />
-                    {siteConfig.factoryAddress.city}, {siteConfig.factoryAddress.region}
-                  </p>
-                </div>
-              </div>
+          <div className="flex flex-col gap-6">
+            <div>
+              <h2 className="font-display text-lg font-bold text-ink">Lagos office</h2>
+              <p className="mt-1 text-sm text-ink/60">
+                {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.region}
+              </p>
+              <MapEmbed
+                title="Map of the Madlas Global office in Alagbado, Agege, Lagos"
+                query={placeQuery(siteConfig.address)}
+                className="mt-3"
+              />
+            </div>
+            <div>
+              <h2 className="font-display text-lg font-bold text-ink">Ogun workshop</h2>
+              <p className="mt-1 text-sm text-ink/60">
+                {siteConfig.factoryAddress.street}, {siteConfig.factoryAddress.city}, {siteConfig.factoryAddress.region}
+              </p>
+              <MapEmbed
+                title="Map of the Madlas Global workshop in Ilepa, Ifo, Ogun State"
+                query={placeQuery(siteConfig.factoryAddress)}
+                className="mt-3"
+              />
             </div>
           </div>
         </Container>
