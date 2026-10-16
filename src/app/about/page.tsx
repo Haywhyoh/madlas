@@ -172,7 +172,7 @@ export default function AboutPage() {
       <StatsBar />
 
       {/* Mission & Vision */}
-      <section className="bg-cream py-20 sm:py-28">
+      <section className="bg-cream py-12 sm:py-16">
         <Container>
           <SectionHeading
             eyebrow="Our Mission &amp; Vision"

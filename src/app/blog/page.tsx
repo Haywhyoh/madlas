@@ -42,7 +42,7 @@ export default function BlogPage() {
         crumb="Blog"
       />
 
-      <section className="bg-cream py-20 sm:py-28">
+      <section className="bg-cream py-8 sm:py-12">
         <Container>
           <div className="grid gap-6 lg:grid-cols-3">
             {blogPosts.map((post) => (

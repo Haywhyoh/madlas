@@ -915,6 +915,8 @@ export type TeamMember = {
   initials: string;
   /** Optional headshot path under /public (e.g. "/team/afeez.jpg"). Falls back to initials. */
   image?: string;
+  /** CSS object-position for tall portraits that would otherwise crop the face. */
+  imagePosition?: string;
   /** Shown in the homepage leadership strip. */
   featured?: boolean;
 };
@@ -970,6 +972,8 @@ export const team: TeamMember[] = [
     name: "Alao Cyprian",
     role: "Workshop Coordinator",
     initials: "AC",
+    image: "/images/alao_cyprian.jpeg",
+    imagePosition: "center 18%",
   },
 ];
 

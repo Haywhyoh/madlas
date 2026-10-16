@@ -4,7 +4,7 @@ import { whatsappUrl } from "@/lib/site-config";
 
 export function Hero() {
   return (
-    <section className="relative isolate min-h-[100svh] overflow-hidden bg-ink">
+    <section className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden bg-ink">
       <video
         className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
         autoPlay
@@ -27,31 +27,31 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <Container className="relative flex min-h-[90svh] items-center pt-8 pb-8 sm:pt-20">
+      <Container className="relative flex min-h-[calc(100svh-4rem)] items-center pt-20 pb-3 sm:pt-16 sm:pb-6">
         <div className="max-w-3xl animate-fade-up">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gold">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-gold sm:mb-4">
             Madlas Global Investment Company
           </p>
-          <h1 className="text-4xl font-bold leading-[1.08] text-cream sm:text-5xl md:text-6xl">
+          <h1 className="text-3xl font-bold leading-[1.08] text-cream sm:text-5xl md:text-6xl">
             Steel Fabrication 
             <span className="mt-2 block gold-gradient-text">
             and Construction in Nigeria
             </span>
           </h1>
 
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-cream/75 sm:text-lg">
+          <p className="mt-3 max-w-xl text-base leading-snug text-cream/75 sm:mt-4 sm:text-lg sm:leading-relaxed">
             Madlas Global is a steel fabrication and construction company in Lagos. We handle metal fabrication,
             steel and metal construction for companies across more than 20 states.
           </p>
 
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="mt-5 flex flex-col gap-3 sm:mt-6 sm:flex-row sm:items-center sm:gap-4">
             <Button href={whatsappUrl()}>Get a Free Quote</Button>
             <Button href="/services" variant="secondary">
               Explore Our Services
             </Button>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-gold/20 pt-8">
+          <div className="mt-5 grid grid-cols-3 gap-3 border-t border-gold/20 pt-4 sm:mt-6 sm:flex sm:gap-x-10 sm:pt-5">
             {[
               { label: "Years Fabricating", value: "30+" },
               { label: "States in Nigeria", value: "20+" },

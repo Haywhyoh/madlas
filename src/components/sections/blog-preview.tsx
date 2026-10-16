@@ -17,7 +17,7 @@ export function BlogPreview() {
   const featured = blogPosts.slice(0, 3);
 
   return (
-    <section className="bg-cream py-20 sm:py-28">
+    <section className="bg-cream py-8 sm:py-12">
       <Container>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading

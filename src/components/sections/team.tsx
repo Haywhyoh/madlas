@@ -40,6 +40,7 @@ export function Team({
                     alt={member.name}
                     fill
                     className="object-cover transition duration-500 group-hover:scale-105"
+                    style={member.imagePosition ? { objectPosition: member.imagePosition } : undefined}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 ) : (
