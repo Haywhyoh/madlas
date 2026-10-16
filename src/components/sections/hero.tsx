@@ -28,23 +28,20 @@ export function Hero() {
       />
 
       <Container className="relative flex min-h-[100svh] items-center pt-32 pb-24 sm:pt-36">
-        <div className="max-w-2xl animate-fade-up">
+        <div className="max-w-3xl animate-fade-up">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gold">
             Madlas Global Investment Company
           </p>
           <h1 className="text-4xl font-bold leading-[1.08] text-cream sm:text-5xl md:text-6xl">
-            Steel Fabrication in Lagos
+            Steel Fabrication 
             <span className="mt-2 block gold-gradient-text">
-              Metal Fabrication &amp; Steel Construction
+            and Construction in Nigeria
             </span>
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/75 sm:text-lg">
-            Madlas Global is a steel fabrication company in Lagos. From the
-            Agege office and the Ifo workshop we handle metal fabrication,
-            steel construction, and metal construction — tankers, tanks,
-            frames, canopies, truck bodies, and towers — for companies across
-            more than 20 states.
+            Madlas Global is a steel fabrication and construction company in Lagos. We handle metal fabrication,
+            steel and metal construction for companies across more than 20 states.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">

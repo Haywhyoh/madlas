@@ -70,7 +70,6 @@ export default function HomePage() {
       <Hero />
       <TrustTicker />
       <IntroAbout />
-      <FabricationGuide />
       <StatsBar />
       <ServicesGrid />
       <WhyChooseUs />
@@ -82,6 +81,7 @@ export default function HomePage() {
       <BlogPreview />
       <FaqSection />
       <CtaBanner />
+      <FabricationGuide />
     </>
   );
 }

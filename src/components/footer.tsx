@@ -76,6 +76,16 @@ export function Footer() {
                 Google Maps
               </a>
             </li>
+            <li>
+              <a
+                href={siteConfig.googleListing}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-gold"
+              >
+                Google listing
+              </a>
+            </li>
           </ul>
         </nav>
 
@@ -102,8 +112,8 @@ export function Footer() {
             <li className="flex gap-3">
               <Icon name="map-pin" className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold" />
               <span>
-                {siteConfig.address.street}, {siteConfig.address.city}{" "}
-                {siteConfig.address.region}, {siteConfig.address.postalCode}
+                {siteConfig.address.street}, {siteConfig.address.city},{" "}
+                {siteConfig.address.region}
               </span>
             </li>
             <li className="flex gap-3">

@@ -27,7 +27,7 @@ export const metadata: Metadata = buildMetadata({
 
 const storyHighlights = [
   "A steel fabrication company working across Nigeria",
-  "Workshop in Ifo, Ogun State, and office in Lagos",
+  "Office and workshop in Ilepa, Ifo, Ogun State",
   "Work with companies across more than 20 states",
 ];
 
@@ -139,7 +139,8 @@ export default function AboutPage() {
             <p className="mt-5 text-base leading-relaxed text-ink/65">
               {siteConfig.legalName} — Madlas, or Madlas Global — is a steel
               fabrication company. We opened in {siteConfig.founded} in Lagos.
-              The workshop is in Ifo, Ogun State. The work is tankers, storage
+              The office and workshop are in Ilepa, Ifo, Ogun State. The work is
+              tankers, storage
               tanks, steel structures, filling station canopies, truck bodies,
               and elevated water-tank towers.
             </p>
@@ -204,14 +205,14 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="bg-cream py-20 sm:py-28">
+      <section className="bg-cream py-8 sm:py-16">
         <Container>
           <SectionHeading
             eyebrow="What Drives Us"
             title="Our Core Values"
             align="center"
           />
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value) => (
               <div
                 key={value.title}

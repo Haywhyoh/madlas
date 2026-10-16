@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { MapEmbed } from "@/components/map-embed";
-import { mapsSearchUrl, siteConfig } from "@/lib/site-config";
+import { siteConfig } from "@/lib/site-config";
 
 export const fabricationArticle = {
   title: "What is steel fabrication?",
@@ -36,7 +36,7 @@ const definitions = [
 
 const steps = [
   "Send the drawings, the site, and what you need built: a tanker, tank, frame, canopy, truck body, or tower.",
-  "The Lagos office confirms span, load, access, and the finish the job needs.",
+  "The office at the workshop confirms span, load, access, and the finish the job needs.",
   "The workshop in Ilepa, Ifo cuts, welds, and paints the steel.",
   "Crews erect the steel on your site.",
   "You take handover of the finished fabrication, not a load of mill products.",
@@ -84,7 +84,7 @@ export function FabricationGuide() {
   });
 
   return (
-    <section className="relative bg-cream py-20 sm:py-28" id="fabrication-guide">
+    <section className="relative bg-cream pt-16 pb-10 sm:pt-20" id="workshop-map">
       <div className="crawl-only" inert={true}>
         <article>
           <div className="rounded-2xl border border-gold/30 bg-ink p-7 text-cream sm:p-10">
@@ -144,7 +144,7 @@ export function FabricationGuide() {
               <p className="mt-4 text-sm leading-relaxed text-ink/70">
                 Steel fabrication is a workshop trade. Steel construction is
                 the same steel put up on site. Madlas Global does both, from
-                the Agege office and the Ifo workshop.
+                the office and workshop in Ilepa, Ifo.
               </p>
               <p className="mt-4 text-sm text-ink/70">
                 <Link href="/service-areas" className="font-semibold text-gold-dark hover:text-ink">
@@ -201,20 +201,20 @@ export function FabricationGuide() {
 
       <Container>
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-ink">Workshop in Ilepa</h2>
+          <h2 className="text-3xl font-bold text-ink">Office and workshop in Ilepa</h2>
           <p className="mt-3 text-sm text-ink/65">{mapQuery}</p>
           <MapEmbed
             title="Map of the Madlas Global workshop at Ilepa, Ogun State"
-            query={mapQuery}
+            src={siteConfig.workshopMapEmbed}
             className="mt-6 h-96"
           />
           <a
-            href={mapsSearchUrl(mapQuery)}
+            href={siteConfig.googleListing}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-flex text-sm font-semibold text-gold-dark hover:text-ink"
           >
-            Open the workshop in Google Maps
+            Open the office and workshop on Google
           </a>
         </div>
       </Container>

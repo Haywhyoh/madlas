@@ -1124,7 +1124,7 @@ export const blogPosts: BlogPost[] = [
     slug: "future-of-sustainable-steel-manufacturing",
     title: "Steel Fabrication for Companies Across 20+ Nigerian States",
     excerpt:
-      "Madlas Global Investment Company fabricates steelwork and erects it for companies from our Lagos office and Ogun State workshop.",
+      "Madlas Global Investment Company fabricates steelwork and erects it for companies from the office and workshop in Ilepa, Ifo, Ogun State.",
     category: "Company",
     date: "2026-05-27",
     readTime: "5 min read",
@@ -1181,7 +1181,7 @@ export const faqs: Faq[] = [
   {
     question: "Where in Nigeria have you worked?",
     answer:
-      "We have worked with companies across more than 20 states. Our office is in Alagbado, Lagos, and our workshop is at Km 30, Abeokuta/Lagos Expressway, Ilepa, Ifo, Ogun State.",
+      "We have worked with companies across more than 20 states. The office and workshop are at Km 30, Abeokuta/Lagos Expressway, Ilepa, Ifo, Ogun State.",
   },
   {
     question: "What steelwork do you fabricate?",

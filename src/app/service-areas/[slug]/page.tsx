@@ -8,7 +8,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
 import { MapEmbed } from "@/components/map-embed";
 import { Button } from "@/components/ui/button";
-import { mapsSearchUrl, whatsappUrl } from "@/lib/site-config";
+import { mapsSearchUrl, siteConfig, whatsappUrl } from "@/lib/site-config";
 
 type Params = { slug: string };
 
@@ -101,15 +101,22 @@ export default async function ServiceAreaPage({
           </div>
 
           <div>
-            <MapEmbed title={area.mapTitle} query={area.mapQuery} className="h-80" />
-            <a
-              href={mapsSearchUrl(area.mapQuery)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex text-sm font-semibold text-gold-dark hover:text-ink"
-            >
-              Open this location in Google Maps
-            </a>
+            <MapEmbed
+              title={area.mapTitle}
+              query={area.mapEmbed ? undefined : area.mapQuery}
+              src={area.mapEmbed}
+              className="h-80"
+            />
+            <div className="mt-4 flex flex-col gap-3">
+              <a
+                href={area.mapEmbed ? siteConfig.googleListing : mapsSearchUrl(area.mapQuery)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex text-sm font-semibold text-gold-dark hover:text-ink"
+              >
+                Open this location in Google Maps
+              </a>
+            </div>
             {others.map((other) => (
               <p key={other.slug} className="mt-6 text-sm text-ink/70">
                 Related:{" "}

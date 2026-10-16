@@ -6,12 +6,12 @@ import { Container } from "@/components/ui/container";
 import { Icon } from "@/components/icons/icon";
 import { ContactForm } from "@/components/contact-form";
 import { MapEmbed } from "@/components/map-embed";
-import { placeQuery, siteConfig, whatsappUrl } from "@/lib/site-config";
+import { siteConfig, whatsappUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
   title: "Request a Quote",
   description:
-    "Request a steel fabrication or metal construction quote. Office in Agege, Lagos. Workshop in Ifo, Ogun State.",
+    "Request a steel fabrication or metal construction quote. Office and workshop in Ilepa, Ifo, Ogun State.",
   path: "/contact",
   keywords: [
     "contact Madlas",
@@ -43,14 +43,8 @@ const contactCards = [
   },
   {
     icon: "map-pin" as const,
-    title: "Visit Us",
+    title: "Office & Workshop",
     value: `${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.region}`,
-    href: "#location",
-  },
-  {
-    icon: "beam" as const,
-    title: "Our Factory",
-    value: `${siteConfig.factoryAddress.street}, ${siteConfig.factoryAddress.city}, ${siteConfig.factoryAddress.region}`,
     href: "#location",
   },
   {
@@ -111,24 +105,23 @@ export default function ContactPage() {
 
           <div className="flex flex-col gap-6">
             <div>
-              <h2 className="font-display text-lg font-bold text-ink">Lagos office</h2>
+              <h2 className="font-display text-lg font-bold text-ink">Office and workshop</h2>
               <p className="mt-1 text-sm text-ink/60">
                 {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.region}
               </p>
               <MapEmbed
-                title="Map of the Madlas Global office in Alagbado, Agege, Lagos"
-                query={placeQuery(siteConfig.address)}
+                title="Map of the Madlas Global office and workshop in Ilepa, Ifo, Ogun State"
+                src={siteConfig.workshopMapEmbed}
                 className="mt-3"
               />
-            </div>
-            <div>
-              <h2 className="font-display text-lg font-bold text-ink">Ogun workshop</h2>
-              <p className="mt-1 text-sm text-ink/60">{siteConfig.workshopMapQuery}</p>
-              <MapEmbed
-                title="Map of the Madlas Global workshop in Ilepa, Ogun State"
-                query={siteConfig.workshopMapQuery}
-                className="mt-3"
-              />
+              <a
+                href={siteConfig.googleListing}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex text-sm font-semibold text-gold-dark hover:text-ink"
+              >
+                Open the office and workshop on Google
+              </a>
             </div>
           </div>
         </Container>

@@ -51,8 +51,8 @@ export function IntroAbout() {
             <p className="mt-5 max-w-xl text-base leading-relaxed text-ink/65">
               Madlas — Madlas Global Investment Company Limited — is a steel
               fabrication company. Since {siteConfig.founded}, we have built
-              tanker, tank, structure, canopy, and tower jobs in our Lagos
-              office and Ogun State workshop, and erected them for companies
+              tanker, tank, structure, canopy, and tower jobs at our office
+              and workshop in Ilepa, Ifo, and erected them for companies
               in more than 20 states.
             </p>
 

@@ -11,7 +11,7 @@ export const siteConfig = {
   title: "Steel Fabrication & Construction in Lagos | Madlas Global",
   /** Meta description. Kept under 155 characters so it is not cut off in search results. */
   description:
-    "Madlas Global is a Lagos company for steel fabrication, metal fabrication, steel construction, and metal construction. Office in Agege, workshop in Ogun.",
+    "Madlas Global is a Lagos company for steel fabrication, metal fabrication, steel construction, and metal construction. Office and workshop in Ilepa, Ifo.",
   /** Visible on the fabrication guide and in Article schema. */
   contentUpdated: "2026-10-16",
   url: "https://www.madlasglobal.com",
@@ -33,12 +33,11 @@ export const siteConfig = {
   phoneSecondary: "+234 702 504 3686",
   phoneSecondaryHref: "+2347025043686",
   email: "madlasglobal@yahoo.com",
-  /** Registered office address, per company letterhead. */
+  /** Office is on the workshop yard in Ilepa. */
   address: {
-    street: "6 Ifelodun Street, Off Yusuff Drive, Kollington, Alagbado",
-    city: "Agege",
-    region: "Lagos",
-    postalCode: "P.O. Box 4547",
+    street: "Km. 30, Abeokuta / Lagos Expressway, Ilepa",
+    city: "Ifo",
+    region: "Ogun State",
     country: "Nigeria",
   },
   /** Factory / plant address, per company letterhead. */
@@ -51,6 +50,11 @@ export const siteConfig = {
   /** Workshop map pin and the address shown beside it. */
   workshopMapQuery:
     "Klm 30 Lagos-Abeokuta Expy, Way, Ilepa 112104, Ogun State",
+  /** Pin for the Ilepa workshop Google listing (6.7833134, 3.2042945). */
+  workshopMapEmbed:
+    "https://maps.google.com/maps?q=6.7833134,3.2042945&z=16&output=embed",
+  /** Google Business listing for the Ilepa workshop. */
+  googleListing: "https://share.google/JebDl8IjelE05v1cz",
   founded: "1994",
   social: {
     facebook: "https://facebook.com/madlasglobal",

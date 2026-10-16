@@ -1,4 +1,4 @@
-import { mapsSearchUrl, placeQuery, siteConfig } from "./site-config";
+import { siteConfig } from "./site-config";
 import { absoluteUrl } from "./seo";
 
 /** Organization structured data used site-wide. */
@@ -35,10 +35,9 @@ export function organizationJsonLd() {
       streetAddress: siteConfig.address.street,
       addressLocality: siteConfig.address.city,
       addressRegion: siteConfig.address.region,
-      postalCode: siteConfig.address.postalCode,
       addressCountry: siteConfig.address.country,
     },
-    sameAs: Object.values(siteConfig.social),
+    sameAs: [...Object.values(siteConfig.social), siteConfig.googleListing],
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -69,7 +68,7 @@ export function organizationJsonLd() {
     },
     location: {
       "@type": "Place",
-      name: "Madlas Global Workshop",
+      name: "Madlas Global office and workshop",
       address: {
         "@type": "PostalAddress",
         streetAddress: siteConfig.factoryAddress.street,
@@ -108,9 +107,6 @@ export function organizationJsonLd() {
 
 /** Standalone LocalBusiness node so location parsers do not miss it inside Organization. */
 export function localBusinessJsonLd() {
-  const officeQuery = placeQuery(siteConfig.address);
-  const workshopQuery = siteConfig.workshopMapQuery;
-
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -123,47 +119,32 @@ export function localBusinessJsonLd() {
     email: siteConfig.email,
     description: siteConfig.description,
     parentOrganization: { "@id": `${siteConfig.url}/#organization` },
+    sameAs: [siteConfig.googleListing],
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,
       addressLocality: siteConfig.address.city,
       addressRegion: siteConfig.address.region,
-      postalCode: siteConfig.address.postalCode,
       addressCountry: siteConfig.address.country,
     },
-    hasMap: mapsSearchUrl(officeQuery),
+    hasMap: siteConfig.googleListing,
     areaServed: [
       { "@type": "City", name: "Lagos" },
       { "@type": "AdministrativeArea", name: "Ogun State" },
       { "@type": "Country", name: "Nigeria" },
     ],
-    location: [
-      {
-        "@type": "Place",
-        name: "Madlas Global office",
-        hasMap: mapsSearchUrl(officeQuery),
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: siteConfig.address.street,
-          addressLocality: siteConfig.address.city,
-          addressRegion: siteConfig.address.region,
-          postalCode: siteConfig.address.postalCode,
-          addressCountry: siteConfig.address.country,
-        },
+    location: {
+      "@type": "Place",
+      name: "Madlas Global office and workshop",
+      hasMap: siteConfig.googleListing,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: siteConfig.address.street,
+        addressLocality: siteConfig.address.city,
+        addressRegion: siteConfig.address.region,
+        addressCountry: siteConfig.address.country,
       },
-      {
-        "@type": "Place",
-        name: "Madlas Global workshop",
-        hasMap: mapsSearchUrl(workshopQuery),
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: siteConfig.factoryAddress.street,
-          addressLocality: siteConfig.factoryAddress.city,
-          addressRegion: siteConfig.factoryAddress.region,
-          addressCountry: siteConfig.factoryAddress.country,
-        },
-      },
-    ],
+    },
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [

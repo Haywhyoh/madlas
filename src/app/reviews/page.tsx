@@ -4,7 +4,7 @@ import { breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/json-ld";
 import { testimonials } from "@/lib/data";
 import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
-import { mapsSearchUrl, placeQuery, siteConfig } from "@/lib/site-config";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
   title: "Client Comments",
@@ -15,8 +15,6 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function ReviewsPage() {
-  const mapsUrl = mapsSearchUrl(placeQuery(siteConfig.address));
-
   return (
     <>
       <script
@@ -59,20 +57,22 @@ export default function ReviewsPage() {
           </div>
 
           <div className="mt-12 rounded-2xl border border-ink/10 bg-white p-7">
-            <h2 className="text-2xl font-bold text-ink">Where can you find the Lagos office?</h2>
+            <h2 className="text-2xl font-bold text-ink">Where is the office?</h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/70">
-              The registered office is at {siteConfig.address.street},{" "}
+              The office is at the workshop: {siteConfig.address.street},{" "}
               {siteConfig.address.city}, {siteConfig.address.region}. Open it in
               Google Maps to confirm the location.
             </p>
-            <a
-              href={mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-flex text-sm font-semibold text-gold-dark hover:text-ink"
-            >
-              Open the Lagos office in Google Maps
-            </a>
+            <div className="mt-5 flex flex-col gap-3">
+              <a
+                href={siteConfig.googleListing}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex text-sm font-semibold text-gold-dark hover:text-ink"
+              >
+                Open the office and workshop on Google
+              </a>
+            </div>
           </div>
         </Container>
       </section>

@@ -48,8 +48,8 @@ export function WhyChooseUs() {
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-cream/65">
             Madlas Global Investment Company fabricates steel for companies
-            that need the job built and erected. From our Lagos office and
-            Ogun State workshop, that work has reached sites in more than 20
+            that need the job built and erected. From our office and
+            workshop in Ilepa, Ifo, that work has reached sites in more than 20
             states.
           </p>
           <div className="mt-9">

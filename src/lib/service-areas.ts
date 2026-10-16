@@ -1,4 +1,4 @@
-import { placeQuery, siteConfig } from "./site-config";
+import { siteConfig } from "./site-config";
 
 export type ServiceArea = {
   slug: string;
@@ -13,6 +13,7 @@ export type ServiceArea = {
   points: string[];
   steps: string[];
   mapQuery: string;
+  mapEmbed?: string;
   mapTitle: string;
 };
 
@@ -22,28 +23,29 @@ export const serviceAreas: ServiceArea[] = [
     name: "Lagos",
     metaTitle: "Steel Fabrication in Lagos",
     metaDescription:
-      "Steel fabrication, metal fabrication, and steel construction for companies in Lagos. Madlas Global's office is in Alagbado, Agege.",
-    eyebrow: "Lagos office",
+      "Steel fabrication, metal fabrication, and steel construction for companies in Lagos. The office and workshop are in Ilepa, Ifo.",
+    eyebrow: "Lagos clients",
     h1: "Steel Fabrication in Lagos",
     lede:
-      "Madlas Global is a steel fabrication company with its registered office in Alagbado, Agege. Lagos clients use that office to start tanker, tank, frame, canopy, and tower jobs.",
+      "Madlas Global fabricates steel for companies in Lagos from the office and workshop in Ilepa, Ifo. Lagos clients start tanker, tank, frame, canopy, and tower jobs there.",
     definition:
-      "Steel fabrication in Lagos is a workshop-and-site service: the steel is built at our Ifo workshop in Ogun State, and steel construction is erected on sites for companies based in Lagos.",
+      "Steel fabrication for Lagos is a workshop-and-site service: the steel is built at the Ilepa office and workshop, and steel construction is erected on sites for companies based in Lagos.",
     neighborhoods:
-      "Alagbado sits on the Lagos–Abeokuta Expressway, north of Agege and beside the Ogun boundary. Kollington and Ifelodun Street are the immediate streets around the office. Companies in Agege, Alagbado, Abule Egba, and the wider Lagos corridor use this office when the job has to be fabricated and put up, not when they want mill products.",
+      "The yard is at Km 30 on the Abeokuta–Lagos Expressway, Ilepa, Ifo, on the Ogun side of the Lagos boundary. Companies in Agege, Alagbado, Abule Egba, and the wider Lagos corridor use this office when the job has to be fabricated and put up.",
     points: [
-      "Office at 6 Ifelodun Street, Off Yusuff Drive, Kollington, Alagbado, Agege",
-      "Steel fabrication and metal fabrication are booked here and built in Ifo",
-      "Steel construction and metal construction crews erect frames, canopies, and towers on Lagos sites",
+      "Office and workshop at Km 30, Abeokuta / Lagos Expressway, Ilepa, Ifo",
+      "Steel fabrication and metal fabrication for Lagos companies are booked and built here",
+      "Steel construction crews erect frames, canopies, and towers on Lagos sites",
     ],
     steps: [
-      "Call or visit the Agege office with drawings and the site address.",
+      "Call or visit the Ilepa office with drawings and the site address.",
       "We confirm the steel, the span, and how the crew will reach the site.",
-      "Fabrication happens at the Ilepa workshop on the Abeokuta–Lagos Expressway.",
+      "Fabrication happens in the workshop on the same yard.",
       "The same company erects the steel and hands the job over.",
     ],
-    mapQuery: placeQuery(siteConfig.address),
-    mapTitle: "Map of the Madlas Global office in Alagbado, Agege, Lagos",
+    mapQuery: siteConfig.workshopMapQuery,
+    mapEmbed: siteConfig.workshopMapEmbed,
+    mapTitle: "Map of the Madlas Global office and workshop in Ilepa, Ifo",
   },
   {
     slug: "ogun",
@@ -54,24 +56,25 @@ export const serviceAreas: ServiceArea[] = [
     eyebrow: "Ogun workshop",
     h1: "Steel Fabrication in Ogun State",
     lede:
-      "The Madlas Global workshop is at Km 30 on the Abeokuta–Lagos Expressway, Ilepa, Ifo. This is where tankers, tanks, frames, bodies, and tower steel are cut, welded, and painted.",
+      "The Madlas Global office and workshop are at Km 30 on the Abeokuta–Lagos Expressway, Ilepa, Ifo. This is where tankers, tanks, frames, bodies, and tower steel are cut, welded, and painted.",
     definition:
       "Metal fabrication in Ogun is a workshop process at Ilepa, Ifo. Steel construction is what happens after that steel leaves the workshop and is erected on a site.",
     neighborhoods:
       "Ifo is an Ogun town on the expressway between Lagos and Abeokuta. Ilepa is the stretch where the workshop sits, about 30 kilometres along that road. Haulage from this yard reaches Lagos quickly and continues to sites in other states where we have erected steel.",
     points: [
-      "Workshop at Km 30, Abeokuta / Lagos Expressway, Ilepa, Ifo",
+      "Office and workshop at Km 30, Abeokuta / Lagos Expressway, Ilepa, Ifo",
       "Fuel tanker shells, storage tanks, and truck bodies are fabricated here",
       "Finished steel leaves this yard for erection across Nigeria",
     ],
     steps: [
-      "The Lagos office agrees the job and the drawings.",
+      "The office at the workshop agrees the job and the drawings.",
       "Plate, sections, and sheet are cut and welded in the Ifo workshop.",
       "Ladders, fittings, and paint are finished before the steel moves.",
       "Crews erect the steel on site and stay through handover.",
     ],
     mapQuery: siteConfig.workshopMapQuery,
-    mapTitle: "Map of the Madlas Global workshop in Ilepa, Ifo, Ogun State",
+    mapEmbed: siteConfig.workshopMapEmbed,
+    mapTitle: "Map of the Madlas Global office and workshop in Ilepa, Ifo, Ogun State",
   },
 ];
 

@@ -18,7 +18,7 @@ export function Team({
   showViewAll?: boolean;
 }) {
   return (
-    <section className="bg-cream py-20 sm:py-28">
+    <section className="bg-cream py-8 sm:py-16">
       <Container>
         <SectionHeading
           eyebrow={eyebrow}
