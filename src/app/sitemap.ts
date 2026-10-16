@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
-import { blogPosts, projects, services } from "@/lib/data";
+import { blogPosts, services } from "@/lib/data";
 import { serviceAreas } from "@/lib/service-areas";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -41,12 +41,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  const projectRoutes: MetadataRoute.Sitemap = projects.map((project) => ({
-    url: `${siteConfig.url}/projects#${project.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.5,
-  }));
-
-  return [...staticRoutes, ...serviceRoutes, ...areaRoutes, ...blogRoutes, ...projectRoutes];
+  return [...staticRoutes, ...serviceRoutes, ...areaRoutes, ...blogRoutes];
 }

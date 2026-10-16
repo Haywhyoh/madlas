@@ -6,11 +6,9 @@ import { mapsSearchUrl, navLinks, placeQuery, siteConfig, whatsappUrl } from "@/
 import { services } from "@/lib/data";
 
 const socialLinks: { name: string; href: string; icon: IconName }[] = [
-  { name: "Facebook", href: siteConfig.social.facebook, icon: "facebook" },
-  { name: "Twitter", href: siteConfig.social.twitter, icon: "twitter" },
-  { name: "LinkedIn", href: siteConfig.social.linkedin, icon: "linkedin" },
   { name: "Instagram", href: siteConfig.social.instagram, icon: "instagram" },
-  { name: "YouTube", href: siteConfig.social.youtube, icon: "youtube" },
+  { name: "LinkedIn", href: siteConfig.social.linkedin, icon: "linkedin" },
+  { name: "TikTok", href: siteConfig.social.tiktok, icon: "tiktok" },
 ];
 
 export function Footer() {

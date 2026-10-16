@@ -57,11 +57,9 @@ export const siteConfig = {
   googleListing: "https://share.google/JebDl8IjelE05v1cz",
   founded: "1994",
   social: {
-    facebook: "https://facebook.com/madlasglobal",
-    twitter: "https://twitter.com/madlasglobal",
-    linkedin: "https://linkedin.com/company/madlasglobal",
     instagram: "https://instagram.com/madlasglobal",
-    youtube: "https://youtube.com/@madlasglobal",
+    linkedin: "https://www.linkedin.com/company/madlas-global-investment-company",
+    tiktok: "https://www.tiktok.com/@madlasglobal",
   },
   keywords: [
     "Madlas",

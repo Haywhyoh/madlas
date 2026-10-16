@@ -24,11 +24,9 @@ export type IconName =
   | "chevron-down"
   | "star"
   | "play"
-  | "facebook"
-  | "twitter"
   | "linkedin"
   | "instagram"
-  | "youtube"
+  | "tiktok"
   | "spark";
 
 const paths: Record<IconName, React.ReactNode> = {
@@ -120,12 +118,6 @@ const paths: Record<IconName, React.ReactNode> = {
   "chevron-down": <path d="M6 9l6 6 6-6" />,
   star: <path d="M12 3.5 14.6 9l6.1.6-4.6 4 1.4 6-5.5-3.2L6.5 19.6l1.4-6-4.6-4L9.4 9 12 3.5Z" />,
   play: <path d="M8 5.5v13l11-6.5-11-6.5Z" />,
-  facebook: (
-    <path d="M14 8.5h2.5V5.2H14c-2.2 0-3.7 1.5-3.7 3.9V11H8v3h2.3v7h3.2v-7h2.4l.4-3h-2.8V9.3c0-.6.3-.8.8-.8Z" />
-  ),
-  twitter: (
-    <path d="M21 6.4c-.7.3-1.4.6-2.2.7a3.7 3.7 0 0 0 1.6-2 7.3 7.3 0 0 1-2.4.9 3.7 3.7 0 0 0-6.3 3.4A10.4 10.4 0 0 1 4.4 5a3.7 3.7 0 0 0 1.1 5 3.6 3.6 0 0 1-1.7-.5 3.7 3.7 0 0 0 3 3.6 3.7 3.7 0 0 1-1.7.1 3.7 3.7 0 0 0 3.5 2.6A7.4 7.4 0 0 1 3 17.1a10.4 10.4 0 0 0 5.6 1.7c6.8 0 10.5-5.7 10.5-10.6v-.5A7.6 7.6 0 0 0 21 6.4Z" />
-  ),
   linkedin: (
     <>
       <rect x="3.5" y="9" width="3" height="10.5" />
@@ -140,11 +132,12 @@ const paths: Record<IconName, React.ReactNode> = {
       <circle cx="16.8" cy="7.2" r="1" />
     </>
   ),
-  youtube: (
-    <>
-      <rect x="3" y="6" width="18" height="12" rx="3" />
-      <path d="M11 9.5v5l4.5-2.5-4.5-2.5Z" fill="currentColor" stroke="none" />
-    </>
+  tiktok: (
+    <path
+      d="M14.2 4.2c.4 2.2 1.8 3.8 3.8 4.3v2.6c-1.3 0-2.5-.4-3.6-1.1v5.6a5.4 5.4 0 1 1-5.4-5.4c.3 0 .6 0 .9.1v2.7a2.7 2.7 0 1 0 1.8 2.6V4.2h2.5Z"
+      fill="currentColor"
+      stroke="none"
+    />
   ),
   spark: <path d="M12 2v6M12 16v6M4.5 6.5 9 9M15 15l4.5 2.5M2 12h6M16 12h6M4.5 17.5 9 15M15 9l4.5-2.5" />,
 };
