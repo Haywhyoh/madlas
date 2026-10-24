@@ -9,6 +9,7 @@ import { TrustTicker } from "@/components/sections/trust-ticker";
 import { IntroAbout } from "@/components/sections/intro-about";
 import { StatsBar } from "@/components/sections/stats-bar";
 import { ServicesGrid } from "@/components/sections/services-grid";
+import { WorkshopMachines } from "@/components/sections/workshop-machines";
 import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { Industries } from "@/components/sections/industries";
 import { Process } from "@/components/sections/process";
@@ -73,6 +74,7 @@ export default function HomePage() {
       <IntroAbout />
       <StatsBar />
       <ServicesGrid />
+      <WorkshopMachines />
       <WhyChooseUs />
       <Industries />
       <Process />

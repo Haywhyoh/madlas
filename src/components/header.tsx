@@ -118,6 +118,21 @@ export function Header() {
                             </span>
                           </Link>
                         ))}
+                        <Link
+                          href="/services#workshop-machines"
+                          onClick={() => setServicesOpen(false)}
+                          className="col-span-2 flex items-center justify-between rounded-xl border border-gold/15 bg-gold/5 px-4 py-3 transition hover:bg-gold/10"
+                        >
+                          <span>
+                            <span className="block font-display text-sm font-bold text-cream">
+                              Borrow a workshop machine
+                            </span>
+                            <span className="mt-1 block text-xs font-normal normal-case tracking-normal text-cream/50">
+                              Rolling, bending, dishing, cutting, drilling, and punching
+                            </span>
+                          </span>
+                          <Icon name="arrow-right" className="h-4 w-4 flex-shrink-0 text-gold" />
+                        </Link>
                       </div>
                       <Link
                         href="/services"
@@ -208,7 +223,7 @@ export function Header() {
                     </button>
                     <div
                       className={`overflow-hidden transition-all duration-300 ${
-                        mobileServicesOpen ? "max-h-[32rem]" : "max-h-0"
+                        mobileServicesOpen ? "max-h-[44rem]" : "max-h-0"
                       }`}
                     >
                       <div className="flex flex-col gap-1 py-1 pl-3">
@@ -223,6 +238,13 @@ export function Header() {
                             {service.title}
                           </Link>
                         ))}
+                        <Link
+                          href="/services#workshop-machines"
+                          onClick={() => setOpen(false)}
+                          className="rounded-md px-3 py-2.5 text-xs font-bold uppercase tracking-wide text-gold hover:bg-gold/5"
+                        >
+                          Borrow a Workshop Machine →
+                        </Link>
                         <Link
                           href="/services"
                           onClick={() => setOpen(false)}

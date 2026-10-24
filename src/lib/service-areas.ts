@@ -324,7 +324,7 @@ export const serviceAreas: ServiceArea[] = [
       "We do not run a second workshop in Abeokuta or in Sango. Those towns are served from Ilepa. If the site is in Ogun, the fabrication address is still Km 30, Ilepa, Ifo.",
     ],
     localContext:
-      "Ifo is an Ogun town on the expressway between Sango-Ota and Abeokuta. Ilepa is the stretch at about kilometre 30 from Abeokuta toward Lagos, which is where the gate is. Sango-Ota, in Ado-Odo/Ota, is the next major commercial town down that road.",
+      "Ifo is an Ogun town on the expressway between Sango-Ota and Abeokuta. Ilepa is the stretch where the workshop gate is, at Km 30 on the Abeokuta–Lagos Expressway. Sango-Ota, in Ado-Odo/Ota, is the next major commercial town toward Lagos on that road.",
     points: [
       "Office and workshop at Km 30, Abeokuta / Lagos Expressway, Ilepa, Ifo, Ogun State",
       "Fuel tanker shells, storage tanks, frames, and truck bodies are fabricated here",

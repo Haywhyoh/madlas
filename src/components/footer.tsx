@@ -3,7 +3,7 @@ import { Logo } from "@/components/logo";
 import { Icon, type IconName } from "@/components/icons/icon";
 import { Container } from "@/components/ui/container";
 import { mapsSearchUrl, navLinks, placeQuery, siteConfig, whatsappUrl } from "@/lib/site-config";
-import { services } from "@/lib/data";
+import { services, workshopMachines } from "@/lib/data";
 import { serviceAreas } from "@/lib/service-areas";
 
 const socialLinks: { name: string; href: string; icon: IconName }[] = [
@@ -111,6 +111,16 @@ export function Footer() {
               <li key={service.slug}>
                 <Link href={`/services/${service.slug}`} className="transition hover:text-gold">
                   {service.title}
+                </Link>
+              </li>
+            ))}
+            {workshopMachines.map((machine) => (
+              <li key={machine.slug}>
+                <Link
+                  href={`/services#${machine.slug}`}
+                  className="transition hover:text-gold"
+                >
+                  {machine.name}
                 </Link>
               </li>
             ))}

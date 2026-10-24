@@ -818,6 +818,54 @@ export const services: Service[] = [
   },
 ];
 
+export type WorkshopMachine = {
+  slug: string;
+  name: string;
+  /** Capacity shown on the card, as given for this machine. */
+  capacity: string;
+  description: string;
+};
+
+/** Plate machines people can come to the Ilepa workshop and borrow. */
+export const workshopMachines: WorkshopMachine[] = [
+  {
+    slug: "rolling-machine",
+    name: "Rolling Machine",
+    capacity: "1–6 mm",
+    description: "Rolls steel plate from 1 mm to 6 mm.",
+  },
+  {
+    slug: "bending-machine",
+    name: "Bending Machine",
+    capacity: "1–12 mm",
+    description: "Bends steel plate from 1 mm to 12 mm.",
+  },
+  {
+    slug: "dishing-machine",
+    name: "Dishing Machine",
+    capacity: "All covers",
+    description: "Dishes all covers.",
+  },
+  {
+    slug: "cutting-machine",
+    name: "Cutting Machine",
+    capacity: "1–6 mm",
+    description: "Cuts steel plate from 1 mm to 6 mm.",
+  },
+  {
+    slug: "drilling-machine",
+    name: "Drilling Machine",
+    capacity: "All sizes",
+    description: "Drills all sizes.",
+  },
+  {
+    slug: "punching-machine",
+    name: "Punching Machine",
+    capacity: "All sizes",
+    description: "Punches all sizes.",
+  },
+];
+
 export type Stat = {
   label: string;
   value: number;
@@ -1196,5 +1244,10 @@ export const faqs: Faq[] = [
     question: "Do you erect the steel on site?",
     answer:
       "Yes. We fabricate in the Ogun State workshop and our crews erect frames, canopies, roofs, and towers on site.",
+  },
+  {
+    question: "Can I borrow a machine for my own project?",
+    answer:
+      "Yes. Come to the Ilepa workshop and borrow a rolling machine (1–6 mm), bending machine (1–12 mm), dishing machine for all covers, cutting machine (1–6 mm), drilling machine, or punching machine. Photos of the machines are coming soon — message us to arrange a time.",
   },
 ];

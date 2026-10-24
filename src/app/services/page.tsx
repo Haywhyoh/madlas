@@ -10,7 +10,8 @@ import { Icon, type IconName } from "@/components/icons/icon";
 import { Button } from "@/components/ui/button";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { ProjectsShowcase } from "@/components/sections/projects-showcase";
-import { services } from "@/lib/data";
+import { services, workshopMachines } from "@/lib/data";
+import { WorkshopMachines } from "@/components/sections/workshop-machines";
 import { whatsappUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
@@ -18,10 +19,15 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Madlas Global Investment Company fabricates fuel tankers, storage tanks, steel structures, filling station canopies, truck bodies, and water-tank towers for companies across Nigeria.",
   path: "/services",
-  keywords: services.flatMap((service) => [
-    service.primaryKeyword,
-    ...service.secondaryKeywords,
-  ]),
+  keywords: [
+    ...services.flatMap((service) => [
+      service.primaryKeyword,
+      ...service.secondaryKeywords,
+    ]),
+    ...workshopMachines.map((machine) => `${machine.name} hire Nigeria`),
+    "borrow plate rolling machine",
+    "workshop machine hire Ogun State",
+  ],
 });
 
 const iconMap: Record<string, IconName> = {
@@ -75,11 +81,21 @@ export default function ServicesPage() {
           )}
         />
       ))}
+      <script
+        {...jsonLdScriptProps(
+          serviceJsonLd({
+            name: "Workshop Machine Hire",
+            description:
+              "Come to the Ilepa workshop and borrow a rolling machine (1–6 mm), bending machine (1–12 mm), dishing machine for all covers, cutting machine (1–6 mm), drilling machine, or punching machine for your own project.",
+            path: "/services#workshop-machines",
+          })
+        )}
+      />
 
       <PageHero
         eyebrow="Our Services"
         title="Steel Fabrication Services Across Nigeria"
-        description="Madlas Global fabricates fuel tankers, storage tanks, steel structures, filling stations, truck bodies, and elevated water-tank towers, then erects them for companies in 20+ states."
+        description="Madlas Global fabricates fuel tankers, storage tanks, steel structures, filling stations, truck bodies, and elevated water-tank towers, then erects them for companies in 20+ states. You can also come to the Ilepa workshop and borrow our plate machines for your own project."
         crumb="Services"
       />
 
@@ -165,6 +181,8 @@ export default function ServicesPage() {
           </div>
         </Container>
       </section>
+
+      <WorkshopMachines />
 
       {/* Capabilities: pinnacle highlight + product range */}
       <section className="relative overflow-hidden bg-ink py-20 sm:py-28">

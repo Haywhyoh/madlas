@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { Icon } from "@/components/icons/icon";
-import { services } from "@/lib/data";
+import { services, workshopMachines } from "@/lib/data";
 import { siteConfig, whatsappUrl } from "@/lib/site-config";
 
 export function ContactForm() {
@@ -123,11 +123,20 @@ export function ContactForm() {
             defaultValue=""
           >
             <option value="" disabled>
-              Select a fabrication service
+              Select a service
             </option>
-            {services.map((service) => (
-              <option key={service.slug}>{service.title}</option>
-            ))}
+            <optgroup label="Fabrication">
+              {services.map((service) => (
+                <option key={service.slug}>{service.title}</option>
+              ))}
+            </optgroup>
+            <optgroup label="Borrow a workshop machine">
+              {workshopMachines.map((machine) => (
+                <option key={machine.slug}>
+                  {machine.name} ({machine.capacity})
+                </option>
+              ))}
+            </optgroup>
             <option>Other / General Inquiry</option>
           </select>
         </div>

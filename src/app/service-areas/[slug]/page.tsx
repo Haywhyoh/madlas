@@ -215,7 +215,7 @@ export default async function ServiceAreaPage({
             Steelwork we fabricate for {area.name}
           </h2>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-ink/70">
-            Every service below is built at the Ilepa workshop and can be erected on a {area.name} site.
+            Every service below is built at the Ilepa workshop and can be erected on a site in {area.name}.
             Open a service to see the process, specifications, and workshop photos.
           </p>
           <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -263,7 +263,7 @@ export default async function ServiceAreaPage({
       <section className="bg-cream py-16 sm:py-24">
         <Container className="grid gap-12 lg:grid-cols-2">
           <div>
-            <h2 className="text-3xl font-bold text-ink">How a {area.name} job starts</h2>
+            <h2 className="text-3xl font-bold text-ink">How a job in {area.name} starts</h2>
             <ol className="mt-8 space-y-6">
               {area.steps.map((step, index) => (
                 <li key={step.title} className="flex gap-4">
