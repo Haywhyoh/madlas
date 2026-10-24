@@ -32,7 +32,7 @@ export function Accordion({ items }: { items: Faq[] }) {
             </button>
             <div
               className={`overflow-hidden transition-all duration-300 ${
-                isOpen ? "max-h-40 pb-5" : "max-h-0"
+                isOpen ? "max-h-96 pb-5" : "max-h-0"
               }`}
             >
               <p className="max-w-3xl text-sm leading-relaxed text-ink/65">{item.answer}</p>

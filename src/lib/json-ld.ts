@@ -129,6 +129,9 @@ export function localBusinessJsonLd() {
     },
     hasMap: siteConfig.googleListing,
     areaServed: [
+      { "@type": "City", name: "Ifo" },
+      { "@type": "City", name: "Sango-Ota" },
+      { "@type": "City", name: "Agege" },
       { "@type": "City", name: "Lagos" },
       { "@type": "AdministrativeArea", name: "Ogun State" },
       { "@type": "Country", name: "Nigeria" },
@@ -251,6 +254,28 @@ export function articleJsonLd(article: {
     },
     publisher: { "@id": `${siteConfig.url}/#organization` },
     mainEntityOfPage: absoluteUrl(article.path),
+  };
+}
+
+export function areaServiceJsonLd(area: {
+  name: string;
+  description: string;
+  path: string;
+  placeType: "City" | "AdministrativeArea" | "Country";
+  placeName: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `Steel fabrication and steel construction in ${area.name}`,
+    serviceType: "Steel fabrication and steel construction",
+    description: area.description,
+    provider: { "@id": `${siteConfig.url}/#localbusiness` },
+    areaServed: {
+      "@type": area.placeType,
+      name: area.placeName,
+    },
+    url: absoluteUrl(area.path),
   };
 }
 

@@ -4,6 +4,7 @@ import { Icon, type IconName } from "@/components/icons/icon";
 import { Container } from "@/components/ui/container";
 import { mapsSearchUrl, navLinks, placeQuery, siteConfig, whatsappUrl } from "@/lib/site-config";
 import { services } from "@/lib/data";
+import { serviceAreas } from "@/lib/service-areas";
 
 const socialLinks: { name: string; href: string; icon: IconName }[] = [
   { name: "Instagram", href: siteConfig.social.instagram, icon: "instagram" },
@@ -25,6 +26,20 @@ export function Footer() {
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream/60">
             {siteConfig.description}
           </p>
+          <nav aria-label="Service areas" className="mt-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold/70">
+              Where we work
+            </p>
+            <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-cream/70">
+              {serviceAreas.map((area) => (
+                <li key={area.slug}>
+                  <Link href={`/service-areas/${area.slug}`} className="transition hover:text-gold">
+                    {area.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
           <ul className="mt-6 flex items-center gap-3">
             {socialLinks.map((social) => (
               <li key={social.name}>

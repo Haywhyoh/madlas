@@ -9,11 +9,19 @@ import { MapEmbed } from "@/components/map-embed";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Steel Fabrication Service Areas",
+  title: "Steel Fabrication Company Locations",
   description:
-    "Madlas Global fabricates steel at its office and workshop in Ilepa, Ifo, Ogun State, and erects it for companies across Nigeria.",
+    "Steel fabrication company pages for Ifo, Lagos, Ogun State, Sango, Agege, and Nigeria. Workshop in Ilepa. Steel construction on your site.",
   path: "/service-areas",
-  keywords: ["steel fabrication Lagos", "steel fabrication Ogun", "metal construction Nigeria"],
+  keywords: [
+    "steel fabrication company in Ifo",
+    "steel fabrication company in Lagos",
+    "steel fabrication company in Nigeria",
+    "steel fabrication company in Ogun State",
+    "steel fabrication company in Sango",
+    "steel fabrication company in Agege",
+    "steel construction company in Nigeria",
+  ],
 });
 
 export default function ServiceAreasPage() {
@@ -30,21 +38,22 @@ export default function ServiceAreasPage() {
 
       <PageHero
         eyebrow="Where we work"
-        title="Service Areas for Steel Fabrication"
-        description="Visit the office and workshop in Ilepa, Ifo, Ogun State. Site erection runs from that yard to companies in Lagos and more than 20 states."
+        title="Steel Fabrication and Steel Construction Locations"
+        description="The office and workshop are in Ilepa, Ifo, Ogun State. These pages explain steel fabrication and steel construction for Ifo, Lagos, Sango, Agege, Ogun State, and Nigeria."
         crumb="Service Areas"
       />
 
       <section className="bg-cream py-16 sm:py-24">
         <Container>
           <h2 className="max-w-2xl text-3xl font-bold text-ink">
-            What is a Madlas service area?
+            One workshop. Steel construction on your site.
           </h2>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-ink/70">
-            A service area is where the steel is used, not a second company.
-            Steel fabrication happens at the office and workshop in Ilepa, Ifo.
-            Steel construction is the erection of that steel on your site. Jobs
-            are agreed at that yard.
+            Madlas Global is a steel fabrication company. Cutting, welding, and
+            painting happen at Km 30, Abeokuta / Lagos Expressway, Ilepa, Ifo.
+            Steel construction is the erection of that steel on the site you
+            name, in Ifo, across Lagos and Ogun, and for companies in more than
+            20 states.
           </p>
 
           <div className="mt-10 overflow-x-auto rounded-2xl border border-ink/10 bg-white">
@@ -68,7 +77,7 @@ export default function ServiceAreasPage() {
               <tbody>
                 {[
                   ["Role", "Meetings, cutting, welding, and painting", "Erection and handover"],
-                  ["Area", "Ilepa, Ifo", "Lagos and other states"],
+                  ["Area", "Ilepa, Ifo, Ogun State", "Ifo, Lagos, Sango, Agege, and other states"],
                   ["Address", siteConfig.address.street, "The project address"],
                   ["Work", "Steel fabrication and metal fabrication", "Steel construction and metal construction"],
                 ].map((row) => (
@@ -84,31 +93,36 @@ export default function ServiceAreasPage() {
             </table>
           </div>
 
-          <div className="mt-12 grid gap-8 lg:grid-cols-2">
-            {serviceAreas.map((area) => (
-              <article key={area.slug} className="overflow-hidden rounded-2xl border border-ink/10 bg-white">
-                <MapEmbed
-                  title={area.mapTitle}
-                  query={area.mapEmbed ? undefined : area.mapQuery}
-                  src={area.mapEmbed}
-                  className="rounded-none border-0"
-                />
-                <div className="p-7">
-                  <h2 className="text-2xl font-bold text-ink">
-                    <Link href={`/service-areas/${area.slug}`} className="hover:text-gold-dark">
-                      {area.h1}
+          <div className="mt-12 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <MapEmbed
+              title="Map of the Madlas Global office and workshop in Ilepa, Ifo"
+              src={siteConfig.workshopMapEmbed}
+              className="h-80"
+            />
+            <div>
+              <h2 className="text-2xl font-bold text-ink">Choose the place the site is in</h2>
+              <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                Each page is written for that place: how far the workshop is, what
+                companies there usually order, and how steel construction is erected
+                after fabrication in Ifo.
+              </p>
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                {serviceAreas.map((area) => (
+                  <li key={area.slug}>
+                    <Link
+                      href={`/service-areas/${area.slug}`}
+                      className="block h-full rounded-2xl border border-ink/10 bg-white p-5 transition hover:border-gold/50"
+                    >
+                      <h3 className="text-lg font-bold leading-snug text-ink">{area.h1}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-ink/65">{area.summary}</p>
+                      <span className="mt-3 inline-flex text-sm font-semibold text-gold-dark">
+                        {area.name} details
+                      </span>
                     </Link>
-                  </h2>
-                  <p className="mt-3 text-sm leading-relaxed text-ink/70">{area.lede}</p>
-                  <Link
-                    href={`/service-areas/${area.slug}`}
-                    className="mt-5 inline-flex text-sm font-semibold text-gold-dark hover:text-ink"
-                  >
-                    {area.name} details
-                  </Link>
-                </div>
-              </article>
-            ))}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Container>
       </section>

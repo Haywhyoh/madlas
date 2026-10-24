@@ -76,6 +76,15 @@ export const siteConfig = {
     "metal construction Nigeria",
     "steel fabrication company Nigeria",
     "steel fabricators Nigeria",
+    "steel fabrication company in Ifo",
+    "steel fabrication company in Lagos",
+    "steel fabrication company in Nigeria",
+    "steel fabrication company in Ogun State",
+    "steel fabrication company in Sango",
+    "steel fabrication company in Agege",
+    "steel construction company in Nigeria",
+    "steel construction in Lagos",
+    "steel construction in Ifo",
   ],
 } as const;
 

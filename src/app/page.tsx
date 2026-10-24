@@ -15,6 +15,7 @@ import { Process } from "@/components/sections/process";
 import { Team } from "@/components/sections/team";
 import { Testimonials } from "@/components/sections/testimonials";
 import { ProjectsShowcase } from "@/components/sections/projects-showcase";
+import { LocationsStrip } from "@/components/sections/locations-strip";
 import { BlogPreview } from "@/components/sections/blog-preview";
 import { FaqSection } from "@/components/sections/faq-section";
 import { CtaBanner } from "@/components/sections/cta-banner";
@@ -78,6 +79,7 @@ export default function HomePage() {
       <Team showViewAll />
       <Testimonials />
       <ProjectsShowcase />
+      <LocationsStrip />
       <BlogPreview />
       <FaqSection />
       <CtaBanner />
